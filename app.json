@@ -2,7 +2,7 @@
   "expo": {
     "name": "RSS Scroll",
     "slug": "rss-reels",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "rssscroll",
@@ -21,7 +21,7 @@
       },
       "predictiveBackGestureEnabled": true,
       "package": "com.ryo08271154.rssreels",
-      "versionCode": 5,
+      "versionCode": 6,
       "blockedPermissions": ["android.permission.SYSTEM_ALERT_WINDOW"]
     },
     "web": {
@@ -52,7 +52,9 @@
         }
       ],
       "expo-web-browser",
-      "react-native-legal"
+      "react-native-legal",
+      "expo-image",
+      "expo-background-task"
     ],
     "experiments": {
       "typedRoutes": true,

@@ -47,6 +47,13 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
       value: false,
     },
     {
+      name: t("settingNotificationsName"),
+      description: t("settingNotificationsDescription"),
+      type: "switch",
+      key: "notifications",
+      value: false,
+    },
+    {
       name: t("version"),
       type: "info",
       key: "version",
@@ -83,6 +90,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   }
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadSettings();
   }, []);
 
