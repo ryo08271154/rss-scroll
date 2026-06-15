@@ -1,5 +1,9 @@
 import { SettingsContext } from "@/context/SettingsContext";
 import { ThemeContext } from "@/context/ThemeContext";
+import {
+  cancelAllNotifications,
+  requestNotificationPermission,
+} from "@/lib/notifications";
 import { reloadAppAsync } from "expo";
 import Constants from "expo-constants";
 import { openBrowserAsync } from "expo-web-browser";
@@ -26,10 +30,34 @@ export default function SettingsScreen() {
 
   const c = useContext(ThemeContext);
 
-  function handleChange(key: string, value: any) {
+  async function handleChange(key: string, value: any) {
     const newSettings = settings.map((item) =>
       item.key === key ? { ...item, value } : item,
     );
+
+    if (key === "notifications") {
+      if (value === true) {
+        const status = await requestNotificationPermission();
+        if (status === false) {
+          Alert.alert(
+            t("error"),
+            "Notification permission is required to enable notifications.",
+            [
+              {
+                text: t("ok"),
+                onPress: () => {
+                  Linking.openSettings();
+                },
+              },
+            ],
+          );
+          return;
+        }
+      } else {
+        cancelAllNotifications();
+      }
+    }
+
     setSettings(newSettings);
     saveSettings(newSettings);
   }

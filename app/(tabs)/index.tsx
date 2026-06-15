@@ -1,6 +1,7 @@
 import CategoryPicker from "@/components/CategoryPicker";
 import ReelCard from "@/components/ReelCard";
 import { SettingsContext } from "@/context/SettingsContext";
+import { scheduleArticleNotifications } from "@/lib/notifications";
 import { getRssArticles } from "@/lib/rss";
 import { addViewedArticleId, getViewedArticleIds } from "@/lib/viewedArticles";
 import { Article } from "@/types/article";
@@ -115,6 +116,17 @@ export default function HomeScreen() {
         });
 
         setArticles(articlesData);
+      }
+
+      //通知設定がオンのとき
+      if (
+        settings.find((setting) => setting.key === "notifications")?.value &&
+        category === t("all")
+      ) {
+        // 通知登録
+        await scheduleArticleNotifications(
+          [...unseenArticles].reverse().slice(0, 6),
+        );
       }
 
       // 最後までスクロールしたときのための記事を追加
