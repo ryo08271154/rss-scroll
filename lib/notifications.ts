@@ -75,3 +75,8 @@ export async function scheduleArticleNotifications(articles: Article[]) {
     seconds += 3600;
   }
 }
+export async function cancelAllNotifications() {
+  const Notifications = getNotifications();
+  if (!Notifications) return;
+  await Notifications.cancelAllScheduledNotificationsAsync();
+}

@@ -1,5 +1,5 @@
 import { SavedArticleIdsProvider } from "@/context/SavedArticleIdsContext";
-import { SettingsContext, SettingsProvider } from "@/context/SettingsContext";
+import { SettingsProvider } from "@/context/SettingsContext";
 import { ThemeProvider as MyThemeProvider } from "@/context/ThemeContext";
 import useNotificationObserver from "@/hooks/useNotificationObserver";
 import "@/lib/i18n";
@@ -9,6 +9,8 @@ import {
   requestNotificationPermission,
 } from "@/lib/notifications";
 import "@/tasks/articleNotificationsTask";
+import { SettingItem } from "@/types/settings";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as BackgroundTask from "expo-background-task";
 import { Stack } from "expo-router";
 import {
@@ -17,14 +19,13 @@ import {
   ThemeProvider,
 } from "expo-router/react-navigation";
 import { StatusBar } from "expo-status-bar";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Toast from "react-native-toast-message";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const { settings } = useContext(SettingsContext);
 
   // 通知
   useEffect(() => {
@@ -35,6 +36,11 @@ export default function RootLayout() {
     }
 
     (async () => {
+      const data = await AsyncStorage.getItem("settings");
+      if (!data) {
+        return;
+      }
+      const settings = JSON.parse(data) as SettingItem[];
       if (!settings.find((setting) => setting.key === "notifications")?.value) {
         return;
       }

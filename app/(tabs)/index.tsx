@@ -119,7 +119,10 @@ export default function HomeScreen() {
       }
 
       //通知設定がオンのとき
-      if (settings.find((setting) => setting.key === "notifications")?.value) {
+      if (
+        settings.find((setting) => setting.key === "notifications")?.value &&
+        category === t("all")
+      ) {
         // 通知登録
         await scheduleArticleNotifications(
           [...unseenArticles].reverse().slice(0, 6),
