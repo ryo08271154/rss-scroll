@@ -28,13 +28,20 @@ export function getNotifications() {
   return Notifications;
 }
 
-export async function requestNotificationPermission() {
-  if (!Notifications) return;
+export async function requestNotificationPermission(): Promise<boolean> {
+  if (!Notifications) return false;
 
-  const { status } = await Notifications.getPermissionsAsync();
+  await Notifications.setNotificationChannelAsync("article-notifications", {
+    name: "Article Notifications",
+    importance: Notifications.AndroidImportance.DEFAULT,
+  });
+
+  let { status } = await Notifications.getPermissionsAsync();
   if (status !== "granted") {
-    await Notifications.requestPermissionsAsync();
+    const result = await Notifications.requestPermissionsAsync();
+    status = result.status;
   }
+  return status === "granted";
 }
 
 export async function scheduleArticleNotifications(articles: Article[]) {
