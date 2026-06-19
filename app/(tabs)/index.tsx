@@ -19,6 +19,10 @@ import {
   Text,
   View,
 } from "react-native";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
 const appIcon = require("@/assets/images/icon.png");
 
@@ -37,6 +41,7 @@ export default function HomeScreen() {
   const router = useRouter();
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
+  const insets = useSafeAreaInsets();
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
@@ -234,13 +239,10 @@ export default function HomeScreen() {
 
       <Stack.Screen options={{ headerShown: false }} />
 
-      <View
+      <SafeAreaView
         pointerEvents="box-none"
         style={{
           position: "absolute",
-          top: 60,
-          left: 0,
-          right: 0,
           zIndex: 100,
         }}
       >
@@ -248,7 +250,7 @@ export default function HomeScreen() {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-      </View>
+      </SafeAreaView>
       <FlatList
         data={articles}
         keyExtractor={(item) => item.id}
@@ -272,7 +274,11 @@ export default function HomeScreen() {
           />
         )}
         refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            progressViewOffset={insets.top + 16}
+          />
         }
         ref={flatListRef}
         onMomentumScrollEnd={(e) => {
