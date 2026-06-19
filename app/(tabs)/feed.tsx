@@ -23,16 +23,16 @@ export default function FeedScreen() {
   const flatListRef = useRef<FlatList>(null);
 
   const updateArticles = useCallback(
-    async (useCache: boolean = true, category?: string): Promise<Article[]> => {
+    async (useCache: boolean = true): Promise<Article[]> => {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        category === "All" || category === "すべて" ? undefined : category,
+        selectedCategory === t("all") ? undefined : selectedCategory,
       );
       setArticles(articlesData);
       return articlesData;
     },
-    [settings],
+    [selectedCategory, settings, t],
   );
 
   const onRefresh = useCallback(async () => {
@@ -65,7 +65,7 @@ export default function FeedScreen() {
   // カテゴリー変更で記事を更新
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    updateArticles(true, selectedCategory);
+    updateArticles(true);
   }, [selectedCategory, updateArticles]);
 
   return (

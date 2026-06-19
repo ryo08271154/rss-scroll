@@ -42,7 +42,7 @@ export default function HomeScreen() {
   const [autoScroll, setAutoScroll] = useState(false);
 
   const updateArticles = useCallback(
-    async (useCache: boolean = true, category?: string): Promise<Article[]> => {
+    async (useCache: boolean = true): Promise<Article[]> => {
       const hintArticles: Article[] = [
         {
           id: "1",
@@ -79,7 +79,7 @@ export default function HomeScreen() {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        category === "All" || category === "すべて" ? undefined : category,
+        selectedCategory === t("all") ? undefined : selectedCategory,
       );
 
       const viewedArticleIds = await getViewedArticleIds();
@@ -121,7 +121,7 @@ export default function HomeScreen() {
       //通知設定がオンのとき
       if (
         settings.find((setting) => setting.key === "notifications")?.value &&
-        category === t("all")
+        selectedCategory === t("all")
       ) {
         // 通知登録
         await scheduleArticleNotifications(
@@ -145,7 +145,7 @@ export default function HomeScreen() {
       ]);
       return articlesData;
     },
-    [settings, t],
+    [selectedCategory, settings, t],
   );
 
   const onRefresh = useCallback(async () => {
@@ -166,7 +166,8 @@ export default function HomeScreen() {
         setAutoScroll(JSON.parse(savedAutoScroll));
       }
     })();
-  }, [onRefresh]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ホームタブで再読み込み
   useEffect(() => {
@@ -181,7 +182,7 @@ export default function HomeScreen() {
   // カテゴリー変更で記事を更新
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    updateArticles(true, selectedCategory);
+    updateArticles(true);
   }, [selectedCategory, updateArticles]);
 
   // 自動スクロール
