@@ -15,10 +15,14 @@ export default function useNotificationObserver() {
       const url = notification.request.content.data?.url;
 
       if (typeof id === "string") {
-        addViewedArticleId(id);
+        setTimeout(() => {
+          addViewedArticleId(id);
+        }, 1000);
       }
       if (typeof url === "string") {
-        router.push(`/reader?url=${encodeURIComponent(url)}`);
+        setTimeout(() => {
+          router.push(`/reader?url=${encodeURIComponent(url)}`);
+        }, 1000);
       }
     }
 

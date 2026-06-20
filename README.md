@@ -5,7 +5,8 @@ RSS Scrollは、ExpoとReact Nativeを使って作成されたRSSリーダーア
 ## ダウンロード
 
 - **Android**
-  - [GitHub Releases](https://github.com/ryo08271154/rss-scroll/releases)
+  - [GitHub Releases](https://github.com/ryo08271154/rss-scroll/releases/latest)
+    - "Assets" から `apk` をダウンロードし、端末にインストールしてください。
   - [Meta Horizon Store](https://www.meta.com/ja-jp/experiences/rss-scroll/27065469556422282)
 - **iOS**
   - 現在、iOS版は公開されていません。
