@@ -1,3 +1,4 @@
+import UpdateAvailable from "@/components/UpdateAvailable";
 import { SettingsContext } from "@/context/SettingsContext";
 import { ThemeContext } from "@/context/ThemeContext";
 import {
@@ -5,9 +6,12 @@ import {
   requestNotificationPermission,
 } from "@/lib/notifications";
 import { reloadAppAsync } from "expo";
+import * as Application from "expo-application";
 import Constants from "expo-constants";
+import * as Device from "expo-device";
+import { Tabs } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Alert,
@@ -29,6 +33,8 @@ export default function SettingsScreen() {
   const [newUrl, setNewUrl] = useState("");
 
   const c = useContext(ThemeContext);
+
+  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
 
   async function handleChange(key: string, value: any) {
     const newSettings = settings.map((item) =>
@@ -105,8 +111,31 @@ export default function SettingsScreen() {
     ReactNativeLegal.launchLicenseListScreen("OSS Notice");
   }
 
+  //アップデート確認
+  useEffect(() => {
+    (async () => {
+      if (Device.brand === "oculus") return;
+
+      const currentVersion = Application.nativeApplicationVersion;
+
+      const response = await fetch(
+        "https://api.github.com/repos/ryo08271154/rss-scroll/releases/latest",
+      );
+      if (!response.ok) return;
+
+      const data = await response.json();
+      const latestVersion: string = data.tag_name.replace("v", "");
+
+      setIsUpdateAvailable(currentVersion !== latestVersion);
+    })();
+  }, []);
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {isUpdateAvailable && <UpdateAvailable />}
+      <Tabs.Screen
+        options={{ tabBarBadge: isUpdateAvailable ? "!" : undefined }}
+      />
+
       {settings.map((item, index) => {
         const setting = settings.find((s) => s.key === item.key) || item;
         return (
