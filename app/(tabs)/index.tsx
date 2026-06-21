@@ -1,6 +1,7 @@
 import CategoryPicker from "@/components/CategoryPicker";
 import ReelCard from "@/components/ReelCard";
 import { SettingsContext } from "@/context/SettingsContext";
+import { scheduleArticleNotifications } from "@/lib/notifications";
 import { getRssArticles } from "@/lib/rss";
 import { addViewedArticleId, getViewedArticleIds } from "@/lib/viewedArticles";
 import { Article } from "@/types/article";
@@ -18,6 +19,10 @@ import {
   Text,
   View,
 } from "react-native";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
 const appIcon = require("@/assets/images/icon.png");
 
@@ -36,12 +41,13 @@ export default function HomeScreen() {
   const router = useRouter();
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
+  const insets = useSafeAreaInsets();
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
 
   const updateArticles = useCallback(
-    async (useCache: boolean = true, category?: string): Promise<Article[]> => {
+    async (useCache: boolean = true): Promise<Article[]> => {
       const hintArticles: Article[] = [
         {
           id: "1",
@@ -78,7 +84,7 @@ export default function HomeScreen() {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        category === "All" || category === "すべて" ? undefined : category,
+        selectedCategory === t("all") ? undefined : selectedCategory,
       );
 
       const viewedArticleIds = await getViewedArticleIds();
@@ -117,6 +123,17 @@ export default function HomeScreen() {
         setArticles(articlesData);
       }
 
+      //通知設定がオンのとき
+      if (
+        settings.find((setting) => setting.key === "notifications")?.value &&
+        selectedCategory === t("all")
+      ) {
+        // 通知登録
+        await scheduleArticleNotifications(
+          [...unseenArticles].reverse().slice(0, 6),
+        );
+      }
+
       // 最後までスクロールしたときのための記事を追加
       setArticles((prev) => [
         ...prev,
@@ -133,7 +150,7 @@ export default function HomeScreen() {
       ]);
       return articlesData;
     },
-    [settings, t],
+    [selectedCategory, settings, t],
   );
 
   const onRefresh = useCallback(async () => {
@@ -154,7 +171,8 @@ export default function HomeScreen() {
         setAutoScroll(JSON.parse(savedAutoScroll));
       }
     })();
-  }, [onRefresh]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ホームタブで再読み込み
   useEffect(() => {
@@ -169,7 +187,7 @@ export default function HomeScreen() {
   // カテゴリー変更で記事を更新
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    updateArticles(true, selectedCategory);
+    updateArticles(true);
   }, [selectedCategory, updateArticles]);
 
   // 自動スクロール
@@ -222,13 +240,10 @@ export default function HomeScreen() {
 
       <Stack.Screen options={{ headerShown: false }} />
 
-      <View
+      <SafeAreaView
         pointerEvents="box-none"
         style={{
           position: "absolute",
-          top: 60,
-          left: 0,
-          right: 0,
           zIndex: 100,
         }}
       >
@@ -236,7 +251,7 @@ export default function HomeScreen() {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-      </View>
+      </SafeAreaView>
       <FlatList
         data={articles}
         keyExtractor={(item) => item.id}
@@ -260,7 +275,11 @@ export default function HomeScreen() {
           />
         )}
         refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            progressViewOffset={insets.top + 16}
+          />
         }
         ref={flatListRef}
         onMomentumScrollEnd={(e) => {

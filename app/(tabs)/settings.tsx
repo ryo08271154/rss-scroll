@@ -1,9 +1,17 @@
+import UpdateAvailable from "@/components/UpdateAvailable";
 import { SettingsContext } from "@/context/SettingsContext";
 import { ThemeContext } from "@/context/ThemeContext";
+import {
+  cancelAllNotifications,
+  requestNotificationPermission,
+} from "@/lib/notifications";
 import { reloadAppAsync } from "expo";
+import * as Application from "expo-application";
 import Constants from "expo-constants";
+import * as Device from "expo-device";
+import { Tabs } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Alert,
@@ -26,10 +34,38 @@ export default function SettingsScreen() {
 
   const c = useContext(ThemeContext);
 
-  function handleChange(key: string, value: any) {
+  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
+  const [latestVersion, setLatestVersion] = useState("");
+  const [updateDescription, setUpdateDescription] = useState("");
+
+  async function handleChange(key: string, value: any) {
     const newSettings = settings.map((item) =>
       item.key === key ? { ...item, value } : item,
     );
+
+    if (key === "notifications") {
+      if (value === true) {
+        const status = await requestNotificationPermission();
+        if (status === false) {
+          Alert.alert(
+            t("error"),
+            "Notification permission is required to enable notifications.",
+            [
+              {
+                text: t("ok"),
+                onPress: () => {
+                  Linking.openSettings();
+                },
+              },
+            ],
+          );
+          return;
+        }
+      } else {
+        cancelAllNotifications();
+      }
+    }
+
     setSettings(newSettings);
     saveSettings(newSettings);
   }
@@ -77,8 +113,43 @@ export default function SettingsScreen() {
     ReactNativeLegal.launchLicenseListScreen("OSS Notice");
   }
 
+  //アップデート確認
+  useEffect(() => {
+    (async () => {
+      if (Device.brand === "oculus") return;
+
+      try {
+        const currentVersion = Application.nativeApplicationVersion;
+        if (!currentVersion) return;
+
+        const response = await fetch(
+          "https://api.github.com/repos/ryo08271154/rss-scroll/releases/latest",
+        );
+        if (!response.ok) return;
+
+        const data = await response.json();
+
+        const fetchedVersion = data.tag_name.replace("v", "");
+
+        setLatestVersion(fetchedVersion);
+        setIsUpdateAvailable(currentVersion !== fetchedVersion);
+        setUpdateDescription(data.body);
+      } catch {}
+    })();
+  }, []);
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      {isUpdateAvailable && (
+        <UpdateAvailable
+          version={latestVersion}
+          description={updateDescription}
+        />
+      )}
+      <Tabs.Screen
+        options={{ tabBarBadge: isUpdateAvailable ? "!" : undefined }}
+      />
+
       {settings.map((item, index) => {
         const setting = settings.find((s) => s.key === item.key) || item;
         return (

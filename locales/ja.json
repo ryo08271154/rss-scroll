@@ -21,7 +21,13 @@
   "settingRssDescription": "購読したいRSSフィードのURLを入力してください。",
   "settingReaderModeName": "リーダーモード",
   "settingReaderModeDescription": "リーダーモードを有効にすると、記事の内容がより読みやすくなります。",
+  "settingNotificationsName": "通知",
+  "settingNotificationsDescription": "ランダムな記事を通知します。",
   "version": "バージョン",
+
+  "updateAvailableTitle": "アップデート利用可能",
+  "updateAvailableDescription": "新しいバージョンが利用可能です。",
+  "updateAvailableButton": "アップデート",
 
   "hintSource": "ヒント",
 

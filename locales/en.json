@@ -21,7 +21,13 @@
   "settingRssDescription": "Enter the URL of the RSS feed you want to subscribe to.",
   "settingReaderModeName": "Reader Mode",
   "settingReaderModeDescription": "Enable reader mode to make article content more readable.",
+  "settingNotificationsName": "Notifications",
+  "settingNotificationsDescription": "Receive notifications for a random article.",
   "version": "Version",
+
+  "updateAvailableTitle": "Update available",
+  "updateAvailableDescription": "A new version is available.",
+  "updateAvailableButton": "Update",
 
   "hintSource": "Tips",
 
