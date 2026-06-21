@@ -120,6 +120,7 @@ export default function SettingsScreen() {
 
       try {
         const currentVersion = Application.nativeApplicationVersion;
+        if (!currentVersion) return;
 
         const response = await fetch(
           "https://api.github.com/repos/ryo08271154/rss-scroll/releases/latest",
@@ -128,8 +129,10 @@ export default function SettingsScreen() {
 
         const data = await response.json();
 
-        setLatestVersion(data.tag_name.replace("v", ""));
-        setIsUpdateAvailable(currentVersion !== latestVersion);
+        const fetchedVersion = data.tag_name.replace("v", "");
+
+        setLatestVersion(fetchedVersion);
+        setIsUpdateAvailable(currentVersion !== fetchedVersion);
         setUpdateDescription(data.body);
       } catch {}
     })();
