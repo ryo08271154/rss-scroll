@@ -35,6 +35,8 @@ export default function SettingsScreen() {
   const c = useContext(ThemeContext);
 
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
+  const [latestVersion, setLatestVersion] = useState("");
+  const [updateDescription, setUpdateDescription] = useState("");
 
   async function handleChange(key: string, value: any) {
     const newSettings = settings.map((item) =>
@@ -116,22 +118,31 @@ export default function SettingsScreen() {
     (async () => {
       if (Device.brand === "oculus") return;
 
-      const currentVersion = Application.nativeApplicationVersion;
+      try {
+        const currentVersion = Application.nativeApplicationVersion;
 
-      const response = await fetch(
-        "https://api.github.com/repos/ryo08271154/rss-scroll/releases/latest",
-      );
-      if (!response.ok) return;
+        const response = await fetch(
+          "https://api.github.com/repos/ryo08271154/rss-scroll/releases/latest",
+        );
+        if (!response.ok) return;
 
-      const data = await response.json();
-      const latestVersion: string = data.tag_name.replace("v", "");
+        const data = await response.json();
 
-      setIsUpdateAvailable(currentVersion !== latestVersion);
+        setLatestVersion(data.tag_name.replace("v", ""));
+        setIsUpdateAvailable(currentVersion !== latestVersion);
+        setUpdateDescription(data.body);
+      } catch {}
     })();
   }, []);
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {isUpdateAvailable && <UpdateAvailable />}
+      {isUpdateAvailable && (
+        <UpdateAvailable
+          version={latestVersion}
+          description={updateDescription}
+        />
+      )}
       <Tabs.Screen
         options={{ tabBarBadge: isUpdateAvailable ? "!" : undefined }}
       />
