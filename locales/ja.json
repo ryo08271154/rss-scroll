@@ -25,6 +25,10 @@
   "settingNotificationsDescription": "ランダムな記事を通知します。",
   "version": "バージョン",
 
+  "updateAvailableTitle": "アップデート利用可能",
+  "updateAvailableDescription": "新しいバージョンが利用可能です。",
+  "updateAvailableButton": "アップデート",
+
   "hintSource": "ヒント",
 
   "hint1Title": "使い方",

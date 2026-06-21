@@ -1,5 +1,5 @@
 import { ThemeContext } from "@/context/ThemeContext";
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@react-native-vector-icons/ionicons";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import { useContext } from "react";

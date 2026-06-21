@@ -25,6 +25,10 @@
   "settingNotificationsDescription": "Receive notifications for a random article.",
   "version": "Version",
 
+  "updateAvailableTitle": "Update available",
+  "updateAvailableDescription": "A new version is available.",
+  "updateAvailableButton": "Update",
+
   "hintSource": "Tips",
 
   "hint1Title": "How to Use",
