@@ -1,0 +1,68 @@
+{
+  "home": "Accueil",
+  "feed": "Fil",
+  "saved": "Enregistrés",
+  "settings": "Paramètres",
+
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "articleSaved": "L'article a été enregistré dans votre liste.",
+  "articleRemoved": "L'article a été supprimé de votre liste.",
+  "noSavedArticlesTitle": "Aucun article enregistré pour le moment.",
+  "noSavedArticlesDescription": "Appuyez longuement sur un article dans le fil ou double-cliquez sur un article dans la vue en cartes pour l'enregistrer dans votre liste.",
+  "enterValue": "Saisir une valeur",
+  "noUrls": "Aucune URL ajoutée pour le moment.",
+  "invalidUrl": "URL invalide.",
+  "languageSettings": "Paramètres de langue",
+  "resetSettings": "Réinitialiser les paramètres",
+  "openSourceLicenses": "Licences open source",
+
+  "settingRssName": "URL RSS",
+  "settingRssDescription": "Saisissez l'URL du flux RSS que vous souhaitez abonner.",
+  "settingReaderModeName": "Mode lecture",
+  "settingReaderModeDescription": "Activez le mode lecture pour rendre le contenu des articles plus lisible.",
+  "settingNotificationsName": "Notifications",
+  "settingNotificationsDescription": "Recevez des notifications pour un article aléatoire.",
+  "version": "Version",
+
+  "updateAvailableTitle": "Mise à jour disponible",
+  "updateAvailableDescription": "Une nouvelle version est disponible.",
+  "updateAvailableButton": "Mettre à jour",
+
+  "hintSource": "Conseils",
+
+  "hint1Title": "Comment utiliser",
+  "hint1Description": "RSS Scroll est une application qui affiche les derniers articles de vos flux RSS abonnés au format carte. Appuyez sur un article pour lire le contenu complet sur le site d'origine. Ajoutez des URL de flux RSS dans l'onglet Paramètres pour personnaliser l'application selon vos préférences.",
+  "hint1Summary": "Bienvenue dans RSS Scroll ! Cette application affiche les flux RSS dans un format de carte court et captivant. Ajoutez vos URL de flux RSS dans l'onglet Paramètres.",
+
+  "hint2Title": "Onglet Fil",
+  "hint2Description": "Dans l'onglet Fil, vous pouvez parcourir les derniers articles de vos flux RSS ajoutés.",
+  "hint2Summary": "Dans l'onglet Fil, vous pouvez parcourir les derniers articles de vos flux RSS ajoutés. Appuyez sur n'importe quel article pour afficher ses détails.",
+
+  "hint3Title": "Onglet Paramètres",
+  "hint3Description": "Dans l'onglet Paramètres, vous pouvez ajouter ou supprimer des URL de flux RSS et configurer d'autres paramètres.",
+  "hint3Summary": "Dans l'onglet Paramètres, vous pouvez ajouter ou supprimer des URL de flux RSS et configurer d'autres paramètres. Vous pouvez également vérifier les informations de version de l'application ici.",
+
+  "all": "Tout",
+
+  "autoScroll": "Défilement automatique",
+  "autoScrollHint": "Les articles avancent automatiquement toutes les 5 secondes. Appuyez longuement sur un article pour ouvrir les paramètres.",
+
+  "noNewArticlesTitle": "Aucun nouvel article",
+  "noNewArticlesMessage": "Il n'y a pas de nouveaux articles, nous affichons donc les articles déjà consultés.",
+  "allArticlesDisplayedTitle": "Tous les articles sont affichés",
+  "allArticlesDisplayedDescription": "Tous les articles sont affichés. Veuillez patienter jusqu'à l'ajout de nouveaux articles.",
+  "allArticlesDisplayedSummary": "Veuillez patienter jusqu'à l'ajout de nouveaux articles.",
+
+  "yes": "Oui",
+  "no": "Non",
+  "cancel": "Annuler",
+  "ok": "OK",
+  "error": "Erreur",
+  "success": "Succès",
+  "warning": "Avertissement",
+  "info": "Info",
+
+  "externalLink.title": "Lien externe",
+  "externalLink.message": "Ouvrir {{hostname}} ?"
+}

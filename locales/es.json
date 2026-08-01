@@ -1,0 +1,68 @@
+{
+  "home": "Inicio",
+  "feed": "Feed",
+  "saved": "Guardados",
+  "settings": "Configuración",
+
+  "add": "Añadir",
+  "remove": "Eliminar",
+  "articleSaved": "El artículo se ha guardado en tu lista.",
+  "articleRemoved": "El artículo se ha eliminado de tu lista.",
+  "noSavedArticlesTitle": "Aún no hay artículos guardados.",
+  "noSavedArticlesDescription": "Mantén presionado un artículo en el feed o toca dos veces un artículo en la vista de tarjetas para guardarlo en tu lista.",
+  "enterValue": "Introduce un valor",
+  "noUrls": "Todavía no hay URLs añadidas.",
+  "invalidUrl": "URL no válida.",
+  "languageSettings": "Configuración de idioma",
+  "resetSettings": "Restablecer configuración",
+  "openSourceLicenses": "Licencias de código abierto",
+
+  "settingRssName": "URL RSS",
+  "settingRssDescription": "Introduce la URL del feed RSS que deseas suscribirte.",
+  "settingReaderModeName": "Modo lector",
+  "settingReaderModeDescription": "Activa el modo lector para que el contenido de los artículos sea más legible.",
+  "settingNotificationsName": "Notificaciones",
+  "settingNotificationsDescription": "Recibe notificaciones sobre un artículo aleatorio.",
+  "version": "Versión",
+
+  "updateAvailableTitle": "Actualización disponible",
+  "updateAvailableDescription": "Hay una nueva versión disponible.",
+  "updateAvailableButton": "Actualizar",
+
+  "hintSource": "Consejos",
+
+  "hint1Title": "Cómo usar",
+  "hint1Description": "RSS Scroll es una aplicación que muestra los últimos artículos de tus feeds RSS suscritos en formato de tarjeta. Toca un artículo para leer el contenido completo en el sitio original. Añade URLs de feeds RSS en la pestaña Configuración para personalizar la aplicación a tus preferencias.",
+  "hint1Summary": "¡Bienvenido a RSS Scroll! Esta aplicación muestra feeds RSS en un formato corto y atractivo. Añade tus URLs de feeds RSS en la pestaña Configuración.",
+
+  "hint2Title": "Pestaña Feed",
+  "hint2Description": "En la pestaña Feed, puedes explorar los últimos artículos de los feeds RSS añadidos.",
+  "hint2Summary": "En la pestaña Feed, puedes explorar los últimos artículos de los feeds RSS añadidos. Toca cualquier artículo para ver sus detalles.",
+
+  "hint3Title": "Pestaña Configuración",
+  "hint3Description": "En la pestaña Configuración, puedes añadir o eliminar URLs de feeds RSS y configurar otros ajustes.",
+  "hint3Summary": "En la pestaña Configuración, puedes añadir o eliminar URLs de feeds RSS y configurar otros ajustes. También puedes consultar la información de la versión de la aplicación aquí.",
+
+  "all": "Todo",
+
+  "autoScroll": "Desplazamiento automático",
+  "autoScrollHint": "Los artículos avanzarán automáticamente cada 5 segundos. Mantén presionado un artículo para abrir la configuración.",
+
+  "noNewArticlesTitle": "No hay artículos nuevos",
+  "noNewArticlesMessage": "No hay artículos nuevos, así que estamos mostrando artículos ya vistos.",
+  "allArticlesDisplayedTitle": "Se muestran todos los artículos",
+  "allArticlesDisplayedDescription": "Se muestran todos los artículos. Espera a que se añadan artículos nuevos.",
+  "allArticlesDisplayedSummary": "Espera a que se añadan artículos nuevos.",
+
+  "yes": "Sí",
+  "no": "No",
+  "cancel": "Cancelar",
+  "ok": "Aceptar",
+  "error": "Error",
+  "success": "Correcto",
+  "warning": "Advertencia",
+  "info": "Información",
+
+  "externalLink.title": "Enlace externo",
+  "externalLink.message": "¿Abrir {{hostname}}?"
+}
