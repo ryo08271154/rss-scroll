@@ -1,0 +1,68 @@
+{
+  "home": "Startseite",
+  "feed": "Feed",
+  "saved": "Gespeichert",
+  "settings": "Einstellungen",
+
+  "add": "Hinzufügen",
+  "remove": "Entfernen",
+  "articleSaved": "Der Artikel wurde in Ihrer Liste gespeichert.",
+  "articleRemoved": "Der Artikel wurde aus Ihrer Liste entfernt.",
+  "noSavedArticlesTitle": "Noch keine gespeicherten Artikel.",
+  "noSavedArticlesDescription": "Halten Sie einen Artikel im Feed gedrückt oder doppeltippen Sie einen Artikel in der Kartenansicht, um ihn in Ihrer Liste zu speichern.",
+  "enterValue": "Wert eingeben",
+  "noUrls": "Noch keine URLs hinzugefügt.",
+  "invalidUrl": "Ungültige URL.",
+  "languageSettings": "Spracheinstellungen",
+  "resetSettings": "Einstellungen zurücksetzen",
+  "openSourceLicenses": "Open-Source-Lizenzen",
+
+  "settingRssName": "RSS-URL",
+  "settingRssDescription": "Geben Sie die URL des RSS-Feeds ein, den Sie abonnieren möchten.",
+  "settingReaderModeName": "Lesemodus",
+  "settingReaderModeDescription": "Aktivieren Sie den Lesemodus, damit Artikel leichter lesbar sind.",
+  "settingNotificationsName": "Benachrichtigungen",
+  "settingNotificationsDescription": "Erhalten Sie Benachrichtigungen über einen zufälligen Artikel.",
+  "version": "Version",
+
+  "updateAvailableTitle": "Update verfügbar",
+  "updateAvailableDescription": "Eine neue Version ist verfügbar.",
+  "updateAvailableButton": "Aktualisieren",
+
+  "hintSource": "Tipps",
+
+  "hint1Title": "So funktioniert es",
+  "hint1Description": "RSS Scroll ist eine App, die die neuesten Artikel aus Ihren abonnierten RSS-Feeds im Kartenformat anzeigt. Tippen Sie auf einen Artikel, um den vollständigen Inhalt auf der Originalwebsite zu lesen. Fügen Sie RSS-Feed-URLs im Bereich „Einstellungen“ hinzu, um die App nach Ihren Wünschen anzupassen.",
+  "hint1Summary": "Willkommen bei RSS Scroll! Diese App zeigt RSS-Feeds in einem kurzen und ansprechenden Kartenformat an. Fügen Sie Ihre RSS-Feed-URLs im Bereich „Einstellungen“ hinzu.",
+
+  "hint2Title": "Feed-Bereich",
+  "hint2Description": "Im Feed-Bereich können Sie die neuesten Artikel aus den von Ihnen hinzugefügten RSS-Feeds durchsuchen.",
+  "hint2Summary": "Im Feed-Bereich können Sie die neuesten Artikel aus den von Ihnen hinzugefügten RSS-Feeds durchsuchen. Tippen Sie auf einen Artikel, um Details anzuzeigen.",
+
+  "hint3Title": "Einstellungen-Bereich",
+  "hint3Description": "Im Bereich „Einstellungen“ können Sie RSS-Feed-URLs hinzufügen oder entfernen und andere Einstellungen konfigurieren.",
+  "hint3Summary": "Im Bereich „Einstellungen“ können Sie RSS-Feed-URLs hinzufügen oder entfernen und andere Einstellungen konfigurieren. Hier können Sie auch die App-Version prüfen.",
+
+  "all": "Alle",
+
+  "autoScroll": "Automatisches Scrollen",
+  "autoScrollHint": "Die Artikel werden alle 5 Sekunden automatisch weitergeschaltet. Halten Sie einen Artikel gedrückt, um die Einstellungen zu öffnen.",
+
+  "noNewArticlesTitle": "Keine neuen Artikel",
+  "noNewArticlesMessage": "Es gibt keine neuen Artikel, daher zeigen wir bereits angesehene Artikel an.",
+  "allArticlesDisplayedTitle": "Alle Artikel werden angezeigt",
+  "allArticlesDisplayedDescription": "Alle Artikel werden angezeigt. Bitte warten Sie, bis neue Artikel hinzugefügt werden.",
+  "allArticlesDisplayedSummary": "Bitte warten Sie, bis neue Artikel hinzugefügt werden.",
+
+  "yes": "Ja",
+  "no": "Nein",
+  "cancel": "Abbrechen",
+  "ok": "OK",
+  "error": "Fehler",
+  "success": "Erfolg",
+  "warning": "Warnung",
+  "info": "Info",
+
+  "externalLink.title": "Externer Link",
+  "externalLink.message": "{{hostname}} öffnen?"
+}

@@ -1,0 +1,68 @@
+﻿{
+  "home": "홈",
+  "feed": "피드",
+  "saved": "저장됨",
+  "settings": "설정",
+
+  "add": "추가",
+  "remove": "삭제",
+  "articleSaved": "기사가 목록에 저장되었습니다.",
+  "articleRemoved": "기사가 목록에서 삭제되었습니다.",
+  "noSavedArticlesTitle": "아직 저장된 기사가 없습니다.",
+  "noSavedArticlesDescription": "피드에서 기사를 길게 누르거나 카드 보기에서 기사를 두 번 탭하면 목록에 저장됩니다.",
+  "enterValue": "값 입력",
+  "noUrls": "추가된 URL이 아직 없습니다.",
+  "invalidUrl": "잘못된 URL입니다.",
+  "languageSettings": "언어 설정",
+  "resetSettings": "설정 초기화",
+  "openSourceLicenses": "오픈 소스 라이선스",
+
+  "settingRssName": "RSS URL",
+  "settingRssDescription": "구독하려는 RSS 피드의 URL을 입력하세요.",
+  "settingReaderModeName": "리더 모드",
+  "settingReaderModeDescription": "리더 모드를 사용하면 기사 내용을 더 쉽게 읽을 수 있습니다.",
+  "settingNotificationsName": "알림",
+  "settingNotificationsDescription": "무작위 기사의 알림을 받습니다.",
+  "version": "버전",
+
+  "updateAvailableTitle": "업데이트 가능",
+  "updateAvailableDescription": "새 버전이 있습니다.",
+  "updateAvailableButton": "업데이트",
+
+  "hintSource": "팁",
+
+  "hint1Title": "사용 방법",
+  "hint1Description": "RSS Scroll은 구독한 RSS 피드의 최신 기사를 카드 형식으로 보여주는 앱입니다. 기사를 탭하면 원본 웹사이트에서 전체 내용을 볼 수 있습니다. 설정 탭에서 RSS 피드 URL을 추가해 취향에 맞게 앱을 사용자 지정하세요.",
+  "hint1Summary": "RSS Scroll에 오신 것을 환영합니다! 이 앱은 RSS 피드를 짧고 매력적인 카드 형식으로 보여줍니다. 설정 탭에서 RSS 피드 URL을 추가하세요.",
+
+  "hint2Title": "피드 탭",
+  "hint2Description": "피드 탭에서는 추가한 RSS 피드의 최신 기사를 둘러볼 수 있습니다.",
+  "hint2Summary": "피드 탭에서는 추가한 RSS 피드의 최신 기사를 둘러볼 수 있습니다. 기사를 탭하면 자세한 내용을 볼 수 있습니다.",
+
+  "hint3Title": "설정 탭",
+  "hint3Description": "설정 탭에서는 RSS 피드 URL을 추가하거나 삭제하고 다른 설정을 구성할 수 있습니다.",
+  "hint3Summary": "설정 탭에서는 RSS 피드 URL을 추가하거나 삭제하고 다른 설정을 구성할 수 있습니다. 여기서 앱 버전 정보도 확인할 수 있습니다.",
+
+  "all": "전체",
+
+  "autoScroll": "자동 스크롤",
+  "autoScrollHint": "기사는 5초마다 자동으로 넘어갑니다. 기사를 길게 누르면 설정이 열립니다.",
+
+  "noNewArticlesTitle": "새 기사가 없습니다",
+  "noNewArticlesMessage": "새 기사가 없어서 이미 본 기사를 표시하고 있습니다.",
+  "allArticlesDisplayedTitle": "모든 기사가 표시되었습니다",
+  "allArticlesDisplayedDescription": "모든 기사가 표시되었습니다. 새 기사가 추가될 때까지 기다려 주세요.",
+  "allArticlesDisplayedSummary": "새 기사가 추가될 때까지 기다려 주세요.",
+
+  "yes": "예",
+  "no": "아니요",
+  "cancel": "취소",
+  "ok": "확인",
+  "error": "오류",
+  "success": "성공",
+  "warning": "경고",
+  "info": "정보",
+
+  "externalLink.title": "외부 링크",
+  "externalLink.message": "{{hostname}}을(를) 열까요?"
+}
