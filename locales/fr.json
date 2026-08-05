@@ -18,7 +18,7 @@
   "openSourceLicenses": "Licences open source",
 
   "settingRssName": "URL RSS",
-  "settingRssDescription": "Saisissez l'URL du flux RSS que vous souhaitez abonner.",
+  "settingRssDescription": "Saisissez l'URL du flux RSS auquel vous souhaitez vous abonner.",
   "settingReaderModeName": "Mode lecture",
   "settingReaderModeDescription": "Activez le mode lecture pour rendre le contenu des articles plus lisible.",
   "settingNotificationsName": "Notifications",
