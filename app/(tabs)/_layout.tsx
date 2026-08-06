@@ -1,12 +1,20 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { Tabs } from "expo-router";
 import { useTranslation } from "react-i18next";
+import { useWindowDimensions } from "react-native";
 
 export default function TabLayout() {
   const { t } = useTranslation();
+  const { width } = useWindowDimensions();
 
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarPosition: width >= 768 ? "left" : "bottom",
+        tabBarVariant: width >= 768 ? "material" : "uikit",
+        tabBarLabelPosition: "below-icon",
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{

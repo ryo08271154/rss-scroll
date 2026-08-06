@@ -6,7 +6,12 @@ import { Article } from "@/types/article";
 import { useNavigation, useRouter } from "expo-router";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, RefreshControl, View } from "react-native";
+import {
+  FlatList,
+  RefreshControl,
+  useWindowDimensions,
+  View,
+} from "react-native";
 
 export default function FeedScreen() {
   const { t } = useTranslation();
@@ -18,6 +23,7 @@ export default function FeedScreen() {
     useContext(SettingsContext);
 
   const router = useRouter();
+  const { width } = useWindowDimensions();
 
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
@@ -30,6 +36,10 @@ export default function FeedScreen() {
         selectedCategory === t("all") ? undefined : selectedCategory,
       );
       setArticles(articlesData);
+
+      try {
+        flatListRef.current?.scrollToIndex({ animated: true, index: 0 });
+      } catch (e) {}
       return articlesData;
     },
     [selectedCategory, settings, t],
@@ -39,9 +49,6 @@ export default function FeedScreen() {
     setRefreshing(true);
 
     await updateArticles(false);
-    try {
-      flatListRef.current?.scrollToIndex({ animated: true, index: 0 });
-    } catch (e) {}
 
     setRefreshing(false);
   }, [updateArticles]);
@@ -90,6 +97,8 @@ export default function FeedScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
         ref={flatListRef}
+        key={width >= 768 ? "grid" : "list"}
+        numColumns={width >= 768 ? 2 : 1}
       />
     </View>
   );
