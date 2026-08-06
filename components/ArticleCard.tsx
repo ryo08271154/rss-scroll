@@ -5,7 +5,7 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Toast from "react-native-toast-message";
 type Props = {
   article: ArticleType;
@@ -45,7 +45,7 @@ export default function ArticleCard({ article, onPress }: Props) {
   }
 
   return (
-    <Pressable
+    <TouchableOpacity
       onPress={handlePress}
       onLongPress={handleLongPress}
       style={styles.pressed}
@@ -72,13 +72,14 @@ export default function ArticleCard({ article, onPress }: Props) {
           {article.description}
         </Text>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {},
   pressed: {
+    flex: 1,
     opacity: 0.9,
   },
   image: {

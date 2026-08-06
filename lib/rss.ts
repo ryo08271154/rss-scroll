@@ -145,7 +145,10 @@ export async function getRssArticles(
       articles.push({
         id: extractText(item.guid) || extractText(item.id) || url,
         title: extractText(item.title) || "No Title",
-        description: extractDescription(item),
+        description: extractDescription(item)
+          .split("\n")
+          .slice(0, 2)
+          .join("\n"),
         imageUrl: extractImageUrl(item),
         url,
         pubDate: item.pubDate ?? item.published ?? item.updated,
