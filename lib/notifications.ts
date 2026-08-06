@@ -72,7 +72,7 @@ export async function scheduleArticleNotifications(articles: Article[]) {
     });
 
     // 1時間ごとに通知
-    seconds += 3600;
+    seconds += 3600 + Math.floor(Math.random() * 3000);
   }
 }
 export async function cancelAllNotifications() {

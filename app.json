@@ -2,7 +2,7 @@
   "expo": {
     "name": "RSS Scroll",
     "slug": "rss-reels",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "rssscroll",
@@ -21,7 +21,7 @@
       },
       "predictiveBackGestureEnabled": true,
       "package": "com.ryo08271154.rssreels",
-      "versionCode": 6,
+      "versionCode": 7,
       "blockedPermissions": ["android.permission.SYSTEM_ALERT_WINDOW"]
     },
     "web": {
@@ -46,8 +46,8 @@
         "expo-localization",
         {
           "supportedLocales": {
-            "ios": ["en", "ja"],
-            "android": ["en", "ja"]
+            "ios": ["de", "en", "es", "fr", "it", "ja", "ko", "pt"],
+            "android": ["de", "en", "es", "fr", "it", "ja", "ko", "pt"]
           }
         }
       ],

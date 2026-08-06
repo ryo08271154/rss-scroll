@@ -6,7 +6,13 @@ import { getRssArticles } from "@/lib/rss";
 import { Article } from "@/types/article";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
 
 export default function SavedScreen() {
   const { settings, setSettings, saveSettings, resetSettings } =
@@ -16,6 +22,8 @@ export default function SavedScreen() {
   );
   const theme = useContext(ThemeContext);
   const { t } = useTranslation();
+  const { width } = useWindowDimensions();
+
   const [savedArticles, setSavedArticles] = useState<Article[]>([]);
 
   // 保存した記事IDから記事の詳細を読み込む
@@ -46,6 +54,8 @@ export default function SavedScreen() {
       contentContainerStyle={
         savedArticles.length === 0 ? styles.emptyContent : undefined
       }
+      key={width >= 768 ? "grid" : "list"}
+      numColumns={width >= 768 ? 2 : 1}
       ListEmptyComponent={
         <View style={styles.emptyContainer}>
           <Text style={[styles.emptyTitle, { color: theme.text }]}>

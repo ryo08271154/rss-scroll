@@ -1,4 +1,5 @@
 import {
+  cancelAllNotifications,
   getNotifications,
   initNotifications,
   scheduleArticleNotifications,
@@ -34,34 +35,15 @@ TaskManager.defineTask("ARTICLE_NOTIFICATIONS_TASK", async () => {
   const articles = await getRssArticles(false, settings);
   const viewedArticleIds = await getViewedArticleIds();
 
-  // 表示された記事を除外してランダム１個
-  const article = articles.filter(
-    (article) => !viewedArticleIds.includes(article.id),
-  )[0];
-
-  if (!article) {
+  if (!articles || articles.length === 0) {
     return;
   }
 
-  scheduleArticleNotifications(
+  await cancelAllNotifications();
+
+  await scheduleArticleNotifications(
     articles
       .filter((article) => !viewedArticleIds.includes(article.id))
-      .slice(1, 6),
+      .slice(0, 6),
   );
-
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: article.title,
-      subtitle: article.source,
-      body: article.description,
-      data: {
-        articleId: article.id,
-        url: article.url,
-      },
-    },
-
-    trigger: {
-      channelId: "article-notifications",
-    },
-  });
 });
