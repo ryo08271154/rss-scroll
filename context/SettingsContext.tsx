@@ -11,6 +11,7 @@ import {
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
+import { Platform } from "react-native";
 
 type SettingsContextType = {
   settings: SettingItem[];
@@ -44,7 +45,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
       description: t("settingReaderModeDescription"),
       type: "switch",
       key: "readerMode",
-      value: false,
+      value: Platform.isTV,
     },
     {
       name: t("settingNotificationsName"),

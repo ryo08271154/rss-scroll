@@ -46,7 +46,7 @@
   "all": "Tutto",
 
   "autoScroll": "Scorrimento automatico",
-  "autoScrollHint": "Gli articoli avanzano automaticamente ogni 5 secondi. Tieni premuto un articolo per aprire le impostazioni.",
+  "autoScrollHint": "Gli articoli avanzano automaticamente ogni 10 secondi. Tieni premuto un articolo per aprire le impostazioni.",
 
   "noNewArticlesTitle": "Nessun nuovo articolo",
   "noNewArticlesMessage": "Non ci sono nuovi articoli, quindi stiamo mostrando gli articoli già visualizzati.",

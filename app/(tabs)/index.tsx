@@ -220,7 +220,7 @@ export default function HomeScreen() {
       } else {
         onRefresh();
       }
-    }, 5000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
@@ -242,6 +242,8 @@ export default function HomeScreen() {
         `/reader?url=${encodeURIComponent(articles[indexRef.current].url)}`,
       );
     } else if (event.eventType === "down") {
+      if (indexRef.current >= articles.length - 1) return;
+
       flatListRef.current?.scrollToIndex({
         animated: true,
         index: indexRef.current + 1,
@@ -253,7 +255,20 @@ export default function HomeScreen() {
         animated: true,
         index: indexRef.current - 1,
       });
+    } else if (event.eventType === "longDown") {
+      if (indexRef.current >= articles.length - 1) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current + 1,
+      });
     } else if (event.eventType === "longUp") {
+      if (indexRef.current === 0) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current - 1,
+      });
     } else if (event.eventType === "right") {
       if (autoScroll) {
         toggleSavedArticle(articles[indexRef.current].id);
