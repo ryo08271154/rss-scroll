@@ -3,7 +3,7 @@ import { getCategories, getRssArticles } from "@/lib/rss";
 import { Article } from "@/types/article";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, Platform, StyleSheet } from "react-native";
 import CategoryItem from "./CategoryItem";
 
 type Props = {
@@ -30,6 +30,8 @@ export default function CategoryPicker({
       setAllArticles(allArticlesData);
     })();
   }, [settings]);
+
+  if (Platform.isTV) return null;
 
   return (
     <FlatList

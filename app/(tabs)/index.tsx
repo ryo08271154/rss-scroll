@@ -1,6 +1,7 @@
 import CategoryPicker from "@/components/CategoryPicker";
 import ReelCard from "@/components/ReelCard";
 import { SettingsContext } from "@/context/SettingsContext";
+import { useToggleSavedArticle } from "@/hooks/useToggleSavedArticle";
 import { scheduleArticleNotifications } from "@/lib/notifications";
 import { getRssArticles } from "@/lib/rss";
 import { addViewedArticleId, getViewedArticleIds } from "@/lib/viewedArticles";
@@ -18,12 +19,14 @@ import {
   Switch,
   Text,
   View,
+  useTVEventHandler,
 } from "react-native";
 import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
+
 const appIcon = require("@/assets/images/icon.png");
 
 export default function HomeScreen() {
@@ -45,6 +48,9 @@ export default function HomeScreen() {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
+
+  const [isFocused, setIsFocused] = useState(false);
+  const { toggleSavedArticle } = useToggleSavedArticle();
 
   const updateArticles = useCallback(
     async (useCache: boolean = true): Promise<Article[]> => {
@@ -227,10 +233,49 @@ export default function HomeScreen() {
     AsyncStorage.setItem("autoScroll", JSON.stringify(autoScroll));
   }, [autoScroll]);
 
+  // TV用
+  useTVEventHandler((event) => {
+    if (!isFocused) return;
+
+    if (event.eventType === "select") {
+      router.push(
+        `/reader?url=${encodeURIComponent(articles[indexRef.current].url)}`,
+      );
+    } else if (event.eventType === "down") {
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current + 1,
+      });
+    } else if (event.eventType === "up") {
+      if (indexRef.current === 0) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current - 1,
+      });
+    } else if (event.eventType === "longUp") {
+    } else if (event.eventType === "right") {
+      if (autoScroll) {
+        toggleSavedArticle(articles[indexRef.current].id);
+        return;
+      }
+
+      setAutoScroll(true);
+    } else if (event.eventType === "left") {
+      setAutoScroll(false);
+    }
+  });
+
   return (
     <View
       style={{ flex: 1 }}
       onLayout={(e) => setHeight(e.nativeEvent.layout.height)}
+      onFocus={() => {
+        setIsFocused(true);
+      }}
+      onBlur={() => {
+        setIsFocused(false);
+      }}
     >
       {autoScroll ? (
         <Tabs.Screen options={{ tabBarStyle: { display: "none" } }} />
