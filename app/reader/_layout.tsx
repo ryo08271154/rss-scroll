@@ -67,24 +67,26 @@ export default function ReaderLayout() {
         />
       </Stack>
 
-      <Modal
-        transparent={true}
-        visible={isQrVisible}
-        onRequestClose={() => {
-          setIsQrVisible(false);
-        }}
-      >
-        <Pressable
-          style={{
-            flex: 1,
-            alignItems: "center",
-            justifyContent: "center",
+      {isQrVisible && (
+        <Modal
+          transparent={true}
+          visible={true}
+          onRequestClose={() => {
+            setIsQrVisible(false);
           }}
-          onPress={() => setIsQrVisible(false)}
         >
-          <QRCode size={300} value={url} logo={appIcon} />
-        </Pressable>
-      </Modal>
+          <Pressable
+            style={{
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onPress={() => setIsQrVisible(false)}
+          >
+            <QRCode size={300} value={url} logo={appIcon} />
+          </Pressable>
+        </Modal>
+      )}
     </>
   );
 }
