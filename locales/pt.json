@@ -46,7 +46,7 @@
   "all": "Todos",
 
   "autoScroll": "Rolagem automática",
-  "autoScrollHint": "Os artigos avançam automaticamente a cada 5 segundos. Pressione e segure um artigo para abrir as configurações.",
+  "autoScrollHint": "Os artigos avançam automaticamente a cada 10 segundos. Pressione e segure um artigo para abrir as configurações.",
 
   "noNewArticlesTitle": "Nenhum artigo novo",
   "noNewArticlesMessage": "Não há artigos novos, então estamos exibindo os artigos já visualizados.",

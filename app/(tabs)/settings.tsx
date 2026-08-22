@@ -18,6 +18,7 @@ import {
   AppState,
   Button,
   Linking,
+  Platform,
   ScrollView,
   StyleSheet,
   Switch,
@@ -45,6 +46,15 @@ export default function SettingsScreen() {
 
     if (key === "notifications") {
       if (value === true) {
+        // TV用
+        if (Platform.isTV) {
+          Alert.alert(
+            t("error"),
+            "Notifications are not supported on TV devices.",
+          );
+          return;
+        }
+
         const status = await requestNotificationPermission();
         if (status === false) {
           Alert.alert(
@@ -208,29 +218,31 @@ export default function SettingsScreen() {
           </View>
         );
       })}
-      <Button
-        title={t("languageSettings")}
-        onPress={() => {
-          // 設定画面から戻ってきたら再読み込みして言語を反映する
-          const sub = AppState.addEventListener("change", (state) => {
-            if (state === "active") {
-              sub.remove();
-              reloadAppAsync();
+      {!Platform.isTV && Device.brand !== "oculus" && (
+        <Button
+          title={t("languageSettings")}
+          onPress={() => {
+            // 設定画面から戻ってきたら再読み込みして言語を反映する
+            const sub = AppState.addEventListener("change", (state) => {
+              if (state === "active") {
+                sub.remove();
+                reloadAppAsync();
+              }
+            });
+
+            Alert.alert(
+              "Open Settings",
+              "Please open the app settings to change language.",
+            );
+
+            try {
+              Linking.openSettings();
+            } catch (e) {
+              console.log(e);
             }
-          });
-
-          Alert.alert(
-            "Open Settings",
-            "Please open the app settings to change language.",
-          );
-
-          try {
-            Linking.openSettings();
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
+          }}
+        />
+      )}
       <Button title={t("resetSettings")} onPress={resetSettings} />
       <Button
         title="GitHub"

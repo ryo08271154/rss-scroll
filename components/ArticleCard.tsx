@@ -1,12 +1,10 @@
-import { SavedArticleIdsContext } from "@/context/SavedArticleIdsContext";
 import { ThemeContext } from "@/context/ThemeContext";
+import { useToggleSavedArticle } from "@/hooks/useToggleSavedArticle";
 import { Article as ArticleType } from "@/types/article";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { useContext } from "react";
-import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Toast from "react-native-toast-message";
 type Props = {
   article: ArticleType;
   onPress?: () => void;
@@ -15,8 +13,7 @@ type Props = {
 export default function ArticleCard({ article, onPress }: Props) {
   const c = useContext(ThemeContext);
   const router = useRouter();
-  const { t } = useTranslation();
-  const { toggleSavedArticleId } = useContext(SavedArticleIdsContext);
+  const { toggleSavedArticle } = useToggleSavedArticle();
 
   async function handlePress() {
     if (onPress) {
@@ -26,22 +23,7 @@ export default function ArticleCard({ article, onPress }: Props) {
     router.push(`/reader?url=${encodeURIComponent(article.url)}`);
   }
   async function handleLongPress() {
-    const isSaved = await toggleSavedArticleId(article.id);
-    if (isSaved) {
-      Toast.show({
-        type: "success",
-        text1: t("add"),
-        text2: t("articleSaved"),
-        position: "bottom",
-      });
-    } else {
-      Toast.show({
-        type: "error",
-        text1: t("remove"),
-        text2: t("articleRemoved"),
-        position: "bottom",
-      });
-    }
+    toggleSavedArticle(article.id);
   }
 
   return (
