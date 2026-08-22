@@ -46,7 +46,7 @@
   "all": "All",
 
   "autoScroll": "Auto Scroll",
-  "autoScrollHint": "The articles will automatically advance every 5 seconds. Long press an article to open the settings.",
+  "autoScrollHint": "The articles will automatically advance every 10 seconds. Long press an article to open the settings.",
 
   "noNewArticlesTitle": "No new articles",
   "noNewArticlesMessage": "There are no new articles, so we are showing already viewed articles.",

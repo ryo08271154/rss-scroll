@@ -46,6 +46,15 @@ export default function SettingsScreen() {
 
     if (key === "notifications") {
       if (value === true) {
+        // TV用
+        if (Platform.isTV) {
+          Alert.alert(
+            t("error"),
+            "Notifications are not supported on TV devices.",
+          );
+          return;
+        }
+
         const status = await requestNotificationPermission();
         if (status === false) {
           Alert.alert(
@@ -214,7 +223,7 @@ export default function SettingsScreen() {
           </View>
         );
       })}
-      {Platform.OS !== "web" && (
+      {!Platform.isTV && Device.brand !== "oculus" && Platform.OS !== "web" && (
         <Button
           title={t("languageSettings")}
           onPress={() => {

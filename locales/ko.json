@@ -46,7 +46,7 @@
   "all": "전체",
 
   "autoScroll": "자동 스크롤",
-  "autoScrollHint": "기사는 5초마다 자동으로 넘어갑니다. 기사를 길게 누르면 설정이 열립니다.",
+  "autoScrollHint": "기사는 10초마다 자동으로 넘어갑니다. 기사를 길게 누르면 설정이 열립니다.",
 
   "noNewArticlesTitle": "새 기사가 없습니다",
   "noNewArticlesMessage": "새 기사가 없어서 이미 본 기사를 표시하고 있습니다.",

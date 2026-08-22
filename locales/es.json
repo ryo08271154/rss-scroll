@@ -46,7 +46,7 @@
   "all": "Todo",
 
   "autoScroll": "Desplazamiento automático",
-  "autoScrollHint": "Los artículos avanzarán automáticamente cada 5 segundos. Mantén presionado un artículo para abrir la configuración.",
+  "autoScrollHint": "Los artículos avanzarán automáticamente cada 10 segundos. Mantén presionado un artículo para abrir la configuración.",
 
   "noNewArticlesTitle": "No hay artículos nuevos",
   "noNewArticlesMessage": "No hay artículos nuevos, así que estamos mostrando artículos ya vistos.",

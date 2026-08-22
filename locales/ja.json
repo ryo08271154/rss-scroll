@@ -46,7 +46,7 @@
   "all": "すべて",
 
   "autoScroll": "自動スクロール",
-  "autoScrollHint": "カードは5秒ごとに自動でスクロールします。記事を長押しすると設定が開きます。",
+  "autoScrollHint": "カードは10秒ごとに自動でスクロールします。記事を長押しすると設定が開きます。",
 
   "noNewArticlesTitle": "新しい記事はありません",
   "noNewArticlesMessage": "新しい記事がないため、表示済みの記事を表示しています。",

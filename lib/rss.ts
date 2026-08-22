@@ -112,7 +112,9 @@ function extractText(value: any): string {
 }
 function extractDescription(item: any): string {
   const raw = item.description?.__cdata ?? item.description ?? "";
-  return raw.replace(/<[^>]*>/g, "").trim();
+  return String(raw)
+    .replace(/<[^>]*>/g, "")
+    .trim();
 }
 function shuffle<T>(array: T[]): T[] {
   const arr = [...array];

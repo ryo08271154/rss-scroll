@@ -23,6 +23,11 @@ export default function ReaderScreen() {
       openBrowserAsync(url);
       router.back();
     }
+
+    if (!url.startsWith("http")) {
+      router.back();
+      openBrowserAsync(url);
+    }
   }, [settings, url, router]);
 
   function handleNavigationStateChange(navState: WebViewNavigation) {
@@ -70,6 +75,11 @@ export default function ReaderScreen() {
       `}
         onNavigationStateChange={handleNavigationStateChange}
         onShouldStartLoadWithRequest={(request) => {
+          if (!url.startsWith("http")) {
+            openBrowserAsync(url);
+            return false;
+          }
+
           if (!url) return false;
           try {
             const hostname = new URL(request.url).hostname;

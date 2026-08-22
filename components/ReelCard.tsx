@@ -1,15 +1,13 @@
-import { SavedArticleIdsContext } from "@/context/SavedArticleIdsContext";
 import { ThemeContext } from "@/context/ThemeContext";
+import { useToggleSavedArticle } from "@/hooks/useToggleSavedArticle";
 import { Article } from "@/types/article";
 import { ImageBackground } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 
 import { useContext } from "react";
-import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
-import Toast from "react-native-toast-message";
 const styles = StyleSheet.create({
   card: {
     justifyContent: "flex-end",
@@ -38,8 +36,7 @@ export default function ReelCard({
 }: Props) {
   const c = useContext(ThemeContext);
   const router = useRouter();
-  const { t } = useTranslation();
-  const { toggleSavedArticleId } = useContext(SavedArticleIdsContext);
+  const { toggleSavedArticle } = useToggleSavedArticle();
 
   const nativeGesture = Gesture.Native();
 
@@ -54,22 +51,7 @@ export default function ReelCard({
     .runOnJS(true)
     .numberOfTaps(2)
     .onEnd(async () => {
-      const isSaved = await toggleSavedArticleId(article.id);
-      if (isSaved) {
-        Toast.show({
-          type: "success",
-          text1: t("add"),
-          text2: t("articleSaved"),
-          position: "bottom",
-        });
-      } else {
-        Toast.show({
-          type: "error",
-          text1: t("remove"),
-          text2: t("articleRemoved"),
-          position: "bottom",
-        });
-      }
+      toggleSavedArticle(article.id);
     });
 
   const longPress = Gesture.LongPress()
