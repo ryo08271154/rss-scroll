@@ -2,7 +2,7 @@ import { Article } from "@/types/article";
 import { SettingItem } from "@/types/settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { XMLParser } from "fast-xml-parser";
-import { Alert } from "react-native";
+import { Alert, Platform } from "react-native";
 export async function fetchRss(url: string): Promise<any> {
   const parser = new XMLParser({
     ignoreAttributes: false,
@@ -12,7 +12,13 @@ export async function fetchRss(url: string): Promise<any> {
     isArray: (name) => ["item", "entry", "media:content"].includes(name),
   });
 
-  const res = await fetch(url);
+  // Web 環境では CORS 回避のためプロキシ API を経由する
+  let fetchUrl = url;
+  if (Platform.OS === "web") {
+    fetchUrl = `/api/rss?url=${encodeURIComponent(url)}`;
+  }
+
+  const res = await fetch(fetchUrl);
   console.log(`Fetching RSS: ${url} - Status: ${res.status}`);
   const xml = await res.text();
 
@@ -20,6 +26,7 @@ export async function fetchRss(url: string): Promise<any> {
 
   return parsed;
 }
+
 
 export async function fetchAllRss(
   useCache: boolean = true,

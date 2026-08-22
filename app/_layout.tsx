@@ -75,6 +75,10 @@ export default function RootLayout() {
               <Stack>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="reader" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="licenses"
+                  options={{ headerShown: false }}
+                />
               </Stack>
               <StatusBar style="auto" />
               <Toast />

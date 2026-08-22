@@ -9,7 +9,7 @@ import { reloadAppAsync } from "expo";
 import * as Application from "expo-application";
 import Constants from "expo-constants";
 import * as Device from "expo-device";
-import { Tabs } from "expo-router";
+import { router, Tabs } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -18,6 +18,7 @@ import {
   AppState,
   Button,
   Linking,
+  Platform,
   ScrollView,
   StyleSheet,
   Switch,
@@ -109,8 +110,13 @@ export default function SettingsScreen() {
       );
       return;
     }
-    const { ReactNativeLegal } = require("react-native-legal");
-    ReactNativeLegal.launchLicenseListScreen("OSS Notice");
+
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      const { ReactNativeLegal } = require("react-native-legal");
+      ReactNativeLegal.launchLicenseListScreen("OSS Notice");
+    } else {
+      router.push("/licenses");
+    }
   }
 
   //アップデート確認
@@ -208,29 +214,31 @@ export default function SettingsScreen() {
           </View>
         );
       })}
-      <Button
-        title={t("languageSettings")}
-        onPress={() => {
-          // 設定画面から戻ってきたら再読み込みして言語を反映する
-          const sub = AppState.addEventListener("change", (state) => {
-            if (state === "active") {
-              sub.remove();
-              reloadAppAsync();
+      {Platform.OS !== "web" && (
+        <Button
+          title={t("languageSettings")}
+          onPress={() => {
+            // 設定画面から戻ってきたら再読み込みして言語を反映する
+            const sub = AppState.addEventListener("change", (state) => {
+              if (state === "active") {
+                sub.remove();
+                reloadAppAsync();
+              }
+            });
+
+            Alert.alert(
+              "Open Settings",
+              "Please open the app settings to change language.",
+            );
+
+            try {
+              Linking.openSettings();
+            } catch (e) {
+              console.log(e);
             }
-          });
-
-          Alert.alert(
-            "Open Settings",
-            "Please open the app settings to change language.",
-          );
-
-          try {
-            Linking.openSettings();
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
+          }}
+        />
+      )}
       <Button title={t("resetSettings")} onPress={resetSettings} />
       <Button
         title="GitHub"

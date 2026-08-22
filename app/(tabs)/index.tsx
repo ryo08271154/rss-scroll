@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import {
   FlatList,
   Modal,
+  Platform,
   Pressable,
   RefreshControl,
   Switch,
@@ -192,34 +193,36 @@ export default function HomeScreen() {
 
   // 自動スクロール
   useEffect(() => {
-    if (!autoScroll) {
-      deactivateKeepAwake();
-      return;
-    }
-
-    Toast.show({
-      type: "info",
-      text1: t("autoScroll"),
-      text2: t("autoScrollHint"),
-      position: "bottom",
-    });
-
-    activateKeepAwakeAsync();
-    const interval = setInterval(() => {
-      if (indexRef.current < articles.length - 1) {
-        flatListRef.current?.scrollToIndex({
-          animated: true,
-          index: indexRef.current + 1,
-        });
-      } else {
-        onRefresh();
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      if (!autoScroll) {
+        deactivateKeepAwake();
+        return;
       }
-    }, 5000);
 
-    return () => {
-      clearInterval(interval);
-      deactivateKeepAwake();
-    };
+      Toast.show({
+        type: "info",
+        text1: t("autoScroll"),
+        text2: t("autoScrollHint"),
+        position: "bottom",
+      });
+
+      activateKeepAwakeAsync();
+      const interval = setInterval(() => {
+        if (indexRef.current < articles.length - 1) {
+          flatListRef.current?.scrollToIndex({
+            animated: true,
+            index: indexRef.current + 1,
+          });
+        } else {
+          onRefresh();
+        }
+      }, 5000);
+
+      return () => {
+        clearInterval(interval);
+        deactivateKeepAwake();
+      };
+    }
   }, [t, autoScroll, articles.length, onRefresh]);
 
   // 自動スクロールの状態を保存

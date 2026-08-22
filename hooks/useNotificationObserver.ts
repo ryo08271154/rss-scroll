@@ -4,9 +4,12 @@ import { Notification } from "expo-notifications";
 
 import { router } from "expo-router";
 import { useEffect } from "react";
+import { Platform } from "react-native";
 
 export default function useNotificationObserver() {
   useEffect(() => {
+    if (Platform.OS === "web") return;
+
     const Notifications = getNotifications();
     if (!Notifications) return;
 

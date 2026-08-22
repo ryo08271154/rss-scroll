@@ -11,6 +11,7 @@ import {
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
+import { Platform } from "react-native";
 
 type SettingsContextType = {
   settings: SettingItem[];
@@ -90,6 +91,9 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   }
 
   useEffect(() => {
+    if (Platform.OS === "web") {
+      settingItems.splice(1);
+    }
     // eslint-disable-next-line react-hooks/set-state-in-effect
     loadSettings();
   }, []);
