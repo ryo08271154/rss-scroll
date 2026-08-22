@@ -237,7 +237,7 @@ export default function HomeScreen() {
   }, [autoScroll]);
 
   // TV用
-  useTVEventHandler((event) => {
+  useTVEventHandler?.((event) => {
     if (!isFocused) return;
 
     if (event.eventType === "select") {
