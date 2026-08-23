@@ -199,36 +199,41 @@ export default function HomeScreen() {
 
   // 自動スクロール
   useEffect(() => {
-    if (Platform.OS === "android" || Platform.OS === "ios") {
-      if (!autoScroll) {
+    if (!autoScroll) {
+      if (Platform.OS === "android" || Platform.OS === "ios") {
         deactivateKeepAwake();
-        return;
       }
-
-      Toast.show({
-        type: "info",
-        text1: t("autoScroll"),
-        text2: t("autoScrollHint"),
-        position: "bottom",
-      });
-
-      activateKeepAwakeAsync();
-      const interval = setInterval(() => {
-        if (indexRef.current < articles.length - 1) {
-          flatListRef.current?.scrollToIndex({
-            animated: true,
-            index: indexRef.current + 1,
-          });
-        } else {
-          onRefresh();
-        }
-      }, 10000);
-
-      return () => {
-        clearInterval(interval);
-        deactivateKeepAwake();
-      };
+      return;
     }
+
+    Toast.show({
+      type: "info",
+      text1: t("autoScroll"),
+      text2: t("autoScrollHint"),
+      position: "bottom",
+    });
+
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      activateKeepAwakeAsync();
+    }
+
+    const interval = setInterval(() => {
+      if (indexRef.current < articles.length - 1) {
+        flatListRef.current?.scrollToIndex({
+          animated: true,
+          index: indexRef.current + 1,
+        });
+      } else {
+        onRefresh();
+      }
+    }, 10000);
+
+    return () => {
+      if (Platform.OS === "android" || Platform.OS === "ios") {
+        deactivateKeepAwake();
+      }
+      clearInterval(interval);
+    };
   }, [t, autoScroll, articles.length, onRefresh]);
 
   // 自動スクロールの状態を保存

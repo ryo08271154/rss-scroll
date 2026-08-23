@@ -1,12 +1,13 @@
-import { useEffect } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+import { useContext } from "react";
 import { ScrollView, Text } from "react-native";
 import licenses from "../assets/licenses.json";
 export default function LicensesScreen() {
-  useEffect(() => {}, []);
+  const c = useContext(ThemeContext);
 
   return (
     <ScrollView>
-      <Text>{JSON.stringify(licenses, null, 2)}</Text>
+      <Text style={{ color: c.text }}>{JSON.stringify(licenses, null, 2)}</Text>
     </ScrollView>
   );
 }
