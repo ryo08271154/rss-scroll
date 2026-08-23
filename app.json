@@ -63,7 +63,9 @@
       "expo-web-browser",
       "react-native-legal",
       "expo-image",
-      "expo-background-task"
+      "expo-background-task",
+      "expo-font",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true,
