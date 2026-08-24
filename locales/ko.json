@@ -1,8 +1,12 @@
-﻿{
+{
   "home": "홈",
   "feed": "피드",
   "saved": "저장됨",
   "settings": "설정",
+  "app": "앱",
+
+  "installHowToTv": "Android TV 설치 방법 (Downloader)",
+  "installTvInstructions": "① Android TV에서 \"Downloader by AFTVnews\" 앱을 설치하고 실행\n② 입력란에 코드 \"{{code}}\" 입력\n③ \"Download APK (Android / Android TV / Google TV)\" 선택\n④ 다운로드 완료 후 화면 안내에 따라 설치\n※ 최초 1회 설정에서 \"알 수 없는 앱 설치\" 허용이 필요합니다",
 
   "add": "추가",
   "remove": "삭제",

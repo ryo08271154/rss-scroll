@@ -25,8 +25,9 @@
       "blockedPermissions": ["android.permission.SYSTEM_ALERT_WINDOW"]
     },
     "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "output": "server",
+      "favicon": "./assets/images/favicon.png",
+      "name": "RSS Scroll"
     },
     "plugins": [
       "expo-router",
@@ -62,7 +63,9 @@
       "expo-web-browser",
       "react-native-legal",
       "expo-image",
-      "expo-background-task"
+      "expo-background-task",
+      "expo-font",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true,

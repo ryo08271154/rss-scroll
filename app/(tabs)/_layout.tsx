@@ -1,7 +1,7 @@
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { Tabs } from "expo-router";
 import { useTranslation } from "react-i18next";
-import { useWindowDimensions } from "react-native";
+import { Platform, useWindowDimensions } from "react-native";
 
 export default function TabLayout() {
   const { t } = useTranslation();
@@ -48,6 +48,17 @@ export default function TabLayout() {
           title: t("settings"),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="settings" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="app"
+        options={{
+          title: t("app"),
+          href: Platform.OS === "android" ? null : "/app",
+          tabBarBadge: /Android/i.test(navigator.userAgent) ? "!" : undefined,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="logo-android" size={size} color={color} />
           ),
         }}
       />

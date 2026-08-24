@@ -24,7 +24,7 @@ export default function ReaderLayout() {
   const route = useRoute();
   const [isQrVisible, setIsQrVisible] = useState(false);
 
-  useTVEventHandler((event) => {
+  useTVEventHandler?.((event) => {
     if (!isQrVisible) return;
 
     setIsQrVisible(false);

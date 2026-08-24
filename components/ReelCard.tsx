@@ -38,6 +38,8 @@ export default function ReelCard({
   const router = useRouter();
   const { toggleSavedArticle } = useToggleSavedArticle();
 
+  const nativeGesture = Gesture.Native();
+
   const singleTap = Gesture.Tap()
     .runOnJS(true)
     .numberOfTaps(1)
@@ -60,7 +62,10 @@ export default function ReelCard({
     });
 
   // 優先順位
-  const composed = Gesture.Exclusive(longPress, doubleTap, singleTap);
+  const composed = Gesture.Simultaneous(
+    nativeGesture,
+    Gesture.Exclusive(longPress, doubleTap, singleTap),
+  );
 
   return (
     <GestureDetector gesture={composed}>

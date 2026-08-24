@@ -3,6 +3,10 @@
   "feed": "フィード",
   "saved": "保存",
   "settings": "設定",
+  "app": "アプリ",
+
+  "installHowToTv": "Android TV のインストール方法 (Downloader)",
+  "installTvInstructions": "① Android TVで「Downloader by AFTVnews」アプリをインストールして起動\n② 入力欄にコード「{{code}}」を入力\n③ Download APK (Android / Android TV / Google TV)を選択\n④ ダウンロード完了後、画面の指示に従ってインストール\n※ 初回のみ設定で「提供元不明のアプリ」の許可が必要です",
 
   "add": "追加",
   "remove": "削除",

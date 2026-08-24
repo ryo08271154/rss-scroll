@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import {
   FlatList,
   Modal,
+  Platform,
   Pressable,
   RefreshControl,
   Switch,
@@ -199,7 +200,9 @@ export default function HomeScreen() {
   // 自動スクロール
   useEffect(() => {
     if (!autoScroll) {
-      deactivateKeepAwake();
+      if (Platform.OS === "android" || Platform.OS === "ios") {
+        deactivateKeepAwake();
+      }
       return;
     }
 
@@ -210,7 +213,10 @@ export default function HomeScreen() {
       position: "bottom",
     });
 
-    activateKeepAwakeAsync();
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      activateKeepAwakeAsync();
+    }
+
     const interval = setInterval(() => {
       if (indexRef.current < articles.length - 1) {
         flatListRef.current?.scrollToIndex({
@@ -223,8 +229,10 @@ export default function HomeScreen() {
     }, 10000);
 
     return () => {
+      if (Platform.OS === "android" || Platform.OS === "ios") {
+        deactivateKeepAwake();
+      }
       clearInterval(interval);
-      deactivateKeepAwake();
     };
   }, [t, autoScroll, articles.length, onRefresh]);
 
@@ -234,7 +242,7 @@ export default function HomeScreen() {
   }, [autoScroll]);
 
   // TV用
-  useTVEventHandler((event) => {
+  useTVEventHandler?.((event) => {
     if (!isFocused) return;
 
     if (event.eventType === "select") {

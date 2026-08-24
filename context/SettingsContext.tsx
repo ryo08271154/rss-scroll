@@ -91,6 +91,9 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   }
 
   useEffect(() => {
+    if (Platform.OS === "web") {
+      settingItems.splice(1);
+    }
     // eslint-disable-next-line react-hooks/set-state-in-effect
     loadSettings();
   }, []);

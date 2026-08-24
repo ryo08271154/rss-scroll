@@ -76,7 +76,7 @@ export default function FeedScreen() {
   }, [selectedCategory, updateArticles]);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <View
         pointerEvents="box-none"
         style={{
