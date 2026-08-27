@@ -3,6 +3,7 @@ import CategoryPicker from "@/components/CategoryPicker";
 import { SettingsContext } from "@/context/SettingsContext";
 import { getRssArticles } from "@/lib/rss";
 import { Article } from "@/types/article";
+import { Category } from "@/types/categories";
 import { useNavigation, useRouter } from "expo-router";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -16,7 +17,10 @@ import {
 export default function FeedScreen() {
   const { t } = useTranslation();
   const [articles, setArticles] = useState<Article[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>(t("all"));
+  const [selectedCategory, setSelectedCategory] = useState<Category>({
+    name: t("all"),
+    keywords: [],
+  });
 
   const [refreshing, setRefreshing] = useState(false);
   const { settings, setSettings, saveSettings, resetSettings } =
@@ -33,7 +37,9 @@ export default function FeedScreen() {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        selectedCategory === t("all") ? undefined : selectedCategory,
+        selectedCategory.name === t("all")
+          ? undefined
+          : selectedCategory.keywords,
       );
       setArticles(articlesData);
 

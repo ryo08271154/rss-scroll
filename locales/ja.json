@@ -27,6 +27,10 @@
   "settingReaderModeDescription": "リーダーモードを有効にすると、記事の内容がより読みやすくなります。",
   "settingNotificationsName": "通知",
   "settingNotificationsDescription": "ランダムな記事を通知します。",
+  "settingCategoryCustomizationName": "カテゴリーカスタマイズ",
+  "settingCategoryCustomizationDescription": "カテゴリーの表示順や表示/非表示をカスタマイズできます。",
+  "categoryName": "カテゴリー名",
+  "keywords": "キーワード",
   "version": "バージョン",
 
   "updateAvailableTitle": "アップデート利用可能",

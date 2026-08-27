@@ -1,4 +1,5 @@
 import { Article } from "@/types/article";
+import { Category } from "@/types/categories";
 import { SettingItem } from "@/types/settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { XMLParser } from "fast-xml-parser";
@@ -26,7 +27,6 @@ export async function fetchRss(url: string): Promise<any> {
 
   return parsed;
 }
-
 
 export async function fetchAllRss(
   useCache: boolean = true,
@@ -127,7 +127,7 @@ function shuffle<T>(array: T[]): T[] {
 export async function getRssArticles(
   useCache: boolean = true,
   settings: SettingItem[],
-  category?: string,
+  keywords?: string[],
 ): Promise<Article[]> {
   const feeds = await getRss(useCache, settings);
   const articles: Article[] = [];
@@ -143,10 +143,14 @@ export async function getRssArticles(
       const url = item.link?.["@_href"] ?? item.link ?? "";
 
       // カテゴリーでフィルタリング
-      if (category) {
+      if (keywords) {
         const text =
           extractText(item.title) + extractText(item.description) + source;
-        if (!text.includes(category)) {
+        if (
+          !keywords.some((keyword) =>
+            text.toLowerCase().includes(keyword.toLowerCase()),
+          )
+        ) {
           continue;
         }
       }
@@ -177,8 +181,8 @@ export async function getArticleById(
   return articles.find((article) => article.id === id);
 }
 
-export function getCategories(articles: Article[]): string[] {
-  const categories: string[] = [];
+export function getCategories(articles: Article[]): Category[] {
+  const categories: Category[] = [];
   const excludedWords = [
     "、",
     "。",
@@ -358,7 +362,10 @@ export function getCategories(articles: Article[]): string[] {
       ${article.title}
       ${article.description}
     `;
-    categories.push(article.source ?? "Unknown Source");
+    categories.push({
+      name: article.source ?? "Unknown Source",
+      keywords: [article.source ?? "Unknown Source"],
+    });
     const words =
       text.match(
         /[A-Z]?[a-z]+|[A-Z]+(?![a-z])|[一-龠]+|[ぁ-ん]+|[ァ-ヶー]+|\d+/g,
@@ -372,7 +379,7 @@ export function getCategories(articles: Article[]): string[] {
         continue;
       }
 
-      categories.push(word);
+      categories.push({ name: word, keywords: [word] });
     }
   }
 
@@ -380,14 +387,18 @@ export function getCategories(articles: Article[]): string[] {
   const counts = new Map<string, number>();
 
   for (const category of categories) {
-    counts.set(category, (counts.get(category) ?? 0) + 1);
+    counts.set(category.name, (counts.get(category.name) ?? 0) + 1);
   }
 
-  // 10回以上出たものだけ残す
+  // 出現回数が10回以上のものだけ残す
   const filtered = categories.filter(
-    (category) => (counts.get(category) ?? 0) >= 10,
+    (category) => (counts.get(category.name) ?? 0) >= 10,
   );
 
-  // 重複削除
-  return Array.from(new Set(filtered));
+  // name をキーにして重複削除
+  const uniqueCategories = Array.from(
+    new Map(filtered.map((category) => [category.name, category])).values(),
+  );
+
+  return uniqueCategories;
 }

@@ -3409,14 +3409,14 @@
     "parentPackageResolvedVersion": "0.84.5",
     "dependencyType": "transitiveDependency"
   },
-  "@types/node@26.1.2": {
+  "@types/node@26.2.0": {
     "name": "@types/node",
     "content": "    MIT License\n\n    Copyright (c) Microsoft Corporation.\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the \"Software\"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all\n    copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n    SOFTWARE\n",
     "file": "LICENSE",
     "description": "TypeScript definitions for node",
     "type": "MIT",
     "url": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "version": "26.1.2",
+    "version": "26.2.0",
     "requiredVersion": "*",
     "parentPackages": [
       {
@@ -3442,11 +3442,11 @@
       {
         "name": "@types/node",
         "requiredVersion": "*",
-        "resolvedVersion": "26.1.2"
+        "resolvedVersion": "26.2.0"
       }
     ],
     "parentPackageRequiredVersion": "*",
-    "parentPackageResolvedVersion": "26.1.2",
+    "parentPackageResolvedVersion": "26.2.0",
     "dependencyType": "transitiveDependency"
   },
   "jest-util@29.7.0": {
@@ -9020,6 +9020,11 @@
         "resolvedVersion": "57.0.7"
       },
       {
+        "name": "react-native-draggable-flatlist",
+        "requiredVersion": "^4.0.3",
+        "resolvedVersion": "4.0.3"
+      },
+      {
         "name": "react-native-worklets",
         "requiredVersion": "0.10.1",
         "resolvedVersion": "0.10.1"
@@ -11577,6 +11582,17 @@
     "parentPackageRequiredVersion": "npm:react-native-tvos@0.86-stable",
     "parentPackageResolvedVersion": "0.86.2-0",
     "dependencyType": "transitiveDependency"
+  },
+  "react-native-draggable-flatlist@4.0.3": {
+    "name": "react-native-draggable-flatlist",
+    "author": "Daniel Merrill",
+    "description": "A drag-and-drop-enabled FlatList component for React Native",
+    "type": "MIT",
+    "url": "https://github.com/computerjazz/react-native-draggable-flatlist",
+    "version": "4.0.3",
+    "requiredVersion": "^4.0.3",
+    "parentPackages": [],
+    "dependencyType": "dependency"
   },
   "react-native-gesture-handler@2.32.0": {
     "name": "react-native-gesture-handler",

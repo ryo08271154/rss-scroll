@@ -20,12 +20,14 @@ import {
 } from "expo-router/react-navigation";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Toast from "react-native-toast-message";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+  const { t } = useTranslation();
 
   // 通知
   useEffect(() => {
@@ -75,6 +77,10 @@ export default function RootLayout() {
               <Stack>
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
                 <Stack.Screen name="reader" options={{ headerShown: false }} />
+                <Stack.Screen
+                  name="category-customization"
+                  options={{ title: t("settingCategoryCustomizationName") }}
+                />
                 <Stack.Screen name="licenses" />
               </Stack>
               <StatusBar style="auto" />

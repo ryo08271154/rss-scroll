@@ -27,6 +27,10 @@
   "settingReaderModeDescription": "Aktivieren Sie den Lesemodus, damit Artikel leichter lesbar sind.",
   "settingNotificationsName": "Benachrichtigungen",
   "settingNotificationsDescription": "Erhalten Sie Benachrichtigungen über einen zufälligen Artikel.",
+  "settingCategoryCustomizationName": "Kategorien anpassen",
+  "settingCategoryCustomizationDescription": "Reihenfolge und Sichtbarkeit der Kategorien anpassen.",
+  "categoryName": "Kategoriename",
+  "keywords": "Schlüsselwörter",
   "version": "Version",
 
   "updateAvailableTitle": "Update verfügbar",

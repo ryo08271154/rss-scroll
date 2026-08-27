@@ -220,6 +220,9 @@ export default function SettingsScreen() {
                 )}
               </View>
             )}
+            {item.action && item.value && (
+              <Button onPress={item.action} title={item.name} />
+            )}
           </View>
         );
       })}

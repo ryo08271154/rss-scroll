@@ -1,6 +1,7 @@
 import { SettingItem } from "@/types/settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Application from "expo-application";
+import { useRouter } from "expo-router";
 import {
   createContext,
   Dispatch,
@@ -32,6 +33,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   children: ReactNode;
 }) => {
   const { t } = useTranslation();
+  const router = useRouter();
   const settingItems: SettingItem[] = [
     {
       name: t("settingRssName"),
@@ -53,6 +55,13 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
       type: "switch",
       key: "notifications",
       value: false,
+    },
+    {
+      name: t("settingCategoryCustomizationName"),
+      description: t("settingCategoryCustomizationDescription"),
+      type: "switch",
+      key: "categoryCustomizationEnabled",
+      action: () => router.push("/category-customization"),
     },
     {
       name: t("version"),

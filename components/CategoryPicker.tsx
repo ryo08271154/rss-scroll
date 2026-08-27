@@ -1,14 +1,15 @@
 import { SettingsContext } from "@/context/SettingsContext";
 import { getCategories, getRssArticles } from "@/lib/rss";
-import { Article } from "@/types/article";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { Category } from "@/types/categories";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, Platform, StyleSheet } from "react-native";
 import CategoryItem from "./CategoryItem";
 
 type Props = {
-  selectedCategory: string;
-  setSelectedCategory: (category: string) => void;
+  selectedCategory: Category;
+  setSelectedCategory: (category: Category) => void;
 };
 export default function CategoryPicker({
   selectedCategory,
@@ -18,18 +19,33 @@ export default function CategoryPicker({
   const { settings, setSettings, saveSettings, resetSettings } =
     useContext(SettingsContext);
 
-  const [allArticles, setAllArticles] = useState<Article[]>([]);
-  const categories = useMemo(() => {
-    return [t("all"), ...getCategories(allArticles)];
-  }, [allArticles, t]);
+  const [categories, setCategories] = useState<Category[]>([]);
 
   // カテゴリー表示用
   useEffect(() => {
     (async () => {
+      if (
+        settings.find(
+          (setting) => setting.key === "categoryCustomizationEnabled",
+        )?.value === true
+      ) {
+        const userCategories = await AsyncStorage.getItem("categories");
+        if (userCategories) {
+          setCategories([
+            { name: t("all"), keywords: [] },
+            ...JSON.parse(userCategories),
+          ]);
+          return;
+        }
+      }
+
       const allArticlesData = await getRssArticles(true, settings);
-      setAllArticles(allArticlesData);
+      setCategories([
+        { name: t("all"), keywords: [] },
+        ...(await getCategories(allArticlesData)),
+      ]);
     })();
-  }, [settings]);
+  }, [settings, t]);
 
   if (Platform.isTV) return null;
 
@@ -39,8 +55,8 @@ export default function CategoryPicker({
       data={categories}
       renderItem={({ item }) => (
         <CategoryItem
-          category={item}
-          selected={selectedCategory === item}
+          category={item.name}
+          selected={selectedCategory.name === item.name}
           onPress={() => {
             setSelectedCategory(item);
           }}
