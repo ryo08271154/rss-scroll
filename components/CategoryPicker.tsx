@@ -40,10 +40,14 @@ export default function CategoryPicker({
       }
 
       const allArticlesData = await getRssArticles(true, settings);
-      setCategories([
-        { name: t("all"), keywords: [] },
-        ...(await getCategories(allArticlesData)),
-      ]);
+      const defaultCategories = await getCategories(allArticlesData);
+
+      setCategories([{ name: t("all"), keywords: [] }, ...defaultCategories]);
+
+      await AsyncStorage.setItem(
+        "categories",
+        JSON.stringify(defaultCategories),
+      );
     })();
   }, [settings, t]);
 

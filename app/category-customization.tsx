@@ -1,6 +1,7 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import { Category } from "@/types/categories";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Ionicons from "@react-native-vector-icons/ionicons";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -10,6 +11,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  View,
 } from "react-native";
 import DraggableFlatList from "react-native-draggable-flatlist";
 
@@ -33,6 +35,7 @@ export default function CategoryCustomizationScreen() {
 
   return (
     <>
+      <Text style={{ color: c.title }}>{t("categoryName")}</Text>
       <TextInput
         style={[styles.input, { color: c.text }]}
         placeholder={t("categoryName")}
@@ -41,6 +44,7 @@ export default function CategoryCustomizationScreen() {
           setNewCategoryName(text);
         }}
       />
+      <Text style={{ color: c.title }}>{t("keywords")}</Text>
       <TextInput
         style={[styles.input, { color: c.text }]}
         placeholder={t("keywords")}
@@ -69,6 +73,9 @@ export default function CategoryCustomizationScreen() {
         }}
       />
 
+      <Text style={[styles.itemText, { color: c.title }]}>
+        {t("settingCategoryCustomizationName")}
+      </Text>
       <DraggableFlatList
         data={categories}
         keyExtractor={(item: Category) => item.name}
@@ -76,30 +83,37 @@ export default function CategoryCustomizationScreen() {
           <TouchableOpacity
             style={[styles.item, { backgroundColor: c.background }]}
             onPress={() => {
-              Alert.alert(t("remove"), item.name, [
-                {
-                  text: t("no"),
-                  style: "cancel",
-                },
-                {
-                  text: t("yes"),
-                  style: "destructive",
-                  onPress: () => {
-                    setCategories(
-                      categories.filter((c) => c.name !== item.name),
-                    );
+              Alert.alert(
+                t("remove"),
+                `${t("categoryName")}: ${item.name}\n${t("keywords")}: ${item.keywords.join(", ")}`,
+                [
+                  {
+                    text: t("no"),
+                    style: "cancel",
                   },
-                },
-              ]);
+                  {
+                    text: t("yes"),
+                    style: "destructive",
+                    onPress: () => {
+                      setCategories(
+                        categories.filter((c) => c.name !== item.name),
+                      );
+                    },
+                  },
+                ],
+              );
             }}
             onLongPress={() => {
               drag();
             }}
           >
-            <Text style={[styles.itemText, { color: c.text }]}>
-              {item.name}
-            </Text>
-            <Text style={{ color: c.text }}>{item.keywords.join(", ")}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.itemText, { color: c.text }]}>
+                {item.name}
+              </Text>
+              <Text style={{ color: c.text }}>{item.keywords.join(", ")}</Text>
+            </View>
+            <Ionicons name="reorder-three-outline" size={28} color={c.text} />
           </TouchableOpacity>
         )}
         onDragEnd={({ data }) => setCategories(data)}
@@ -118,9 +132,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   item: {
-    justifyContent: "space-between",
+    flexDirection: "row",
     paddingVertical: 8,
-    borderBottomWidth: 1,
+    borderWidth: 1,
+    borderColor: "#eee",
   },
   itemText: {
     fontSize: 20,

@@ -379,7 +379,7 @@ export function getCategories(articles: Article[]): Category[] {
         continue;
       }
 
-      categories.push({ name: word, keywords: [word] });
+      categories.push({ name: word, keywords: word.split(/[\s,、]+/) });
     }
   }
 

@@ -102,6 +102,8 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   useEffect(() => {
     if (Platform.OS === "web") {
       settingItems.splice(1);
+    } else if (Platform.isTV) {
+      settingItems.splice(2);
     }
     // eslint-disable-next-line react-hooks/set-state-in-effect
     loadSettings();
