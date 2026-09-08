@@ -2,6 +2,7 @@ import {
   ScrollViewStyleReset,
   useServerDocumentContext,
 } from "expo-router/html";
+import { Analytics } from "@vercel/analytics/react";
 import type { PropsWithChildren } from "react";
 
 // This file is web-only and used to configure the root HTML for every
@@ -38,6 +39,7 @@ export default function Root({ children }: PropsWithChildren) {
       <body {...bodyAttributes}>
         {children}
         {bodyNodes}
+        <Analytics />
       </body>
     </html>
   );
