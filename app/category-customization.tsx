@@ -2,11 +2,13 @@ import { ThemeContext } from "@/context/ThemeContext";
 import { Category } from "@/types/categories";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Ionicons from "@react-native-vector-icons/ionicons";
+import { Stack } from "expo-router";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Alert,
   Button,
+  Modal,
   StyleSheet,
   Text,
   TextInput,
@@ -21,6 +23,7 @@ export default function CategoryCustomizationScreen() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [newCategoryName, setNewCategoryName] = useState<string>("");
   const [newCategoryKeywords, setNewCategoryKeywords] = useState<string>("");
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem("categories").then((value) => {
@@ -35,44 +38,76 @@ export default function CategoryCustomizationScreen() {
 
   return (
     <>
-      <Text style={{ color: c.title }}>{t("categoryName")}</Text>
-      <TextInput
-        style={[styles.input, { color: c.text }]}
-        placeholder={t("categoryName")}
-        value={newCategoryName}
-        onChangeText={(text) => {
-          setNewCategoryName(text);
+      <Stack.Screen
+        options={{
+          headerRight: () => (
+            <Ionicons
+              name="add"
+              size={24}
+              color={c.text}
+              onPress={() => setIsModalVisible(true)}
+            />
+          ),
         }}
       />
-      <Text style={{ color: c.title }}>{t("keywords")}</Text>
-      <TextInput
-        style={[styles.input, { color: c.text }]}
-        placeholder={t("keywords")}
-        value={newCategoryKeywords}
-        onChangeText={(text) => {
-          setNewCategoryKeywords(text);
-        }}
-      />
-      <Button
-        title={t("add")}
-        onPress={() => {
-          if (!newCategoryName || !newCategoryKeywords) return;
-          if (categories.find((c) => c.name === newCategoryName)) return;
+      <Modal
+        animationType="slide"
+        visible={isModalVisible}
+        onRequestClose={() => setIsModalVisible(false)}
+      >
+        <View
+          style={{
+            flex: 1,
+            gap: 16,
+            backgroundColor: c.background,
+          }}
+        >
+          <Text style={{ color: c.title }}>{t("categoryName")}</Text>
+          <TextInput
+            style={[styles.input, { color: c.text }]}
+            placeholder={t("categoryName")}
+            value={newCategoryName}
+            onChangeText={(text) => {
+              setNewCategoryName(text);
+            }}
+          />
+          <Text style={{ color: c.title }}>{t("keywords")}</Text>
+          <TextInput
+            style={[styles.input, { color: c.text }]}
+            placeholder={t("keywords")}
+            value={newCategoryKeywords}
+            onChangeText={(text) => {
+              setNewCategoryKeywords(text);
+            }}
+          />
+          <Button
+            title={t("add")}
+            onPress={() => {
+              if (!newCategoryName || !newCategoryKeywords) return;
+              if (categories.find((c) => c.name === newCategoryName)) return;
 
-          setCategories([
-            ...categories,
-            {
-              name: newCategoryName,
-              keywords: newCategoryKeywords
-                .split(/[\s,、]+/)
-                .filter((k) => k !== ""),
-            },
-          ]);
-          setNewCategoryName("");
-          setNewCategoryKeywords("");
-        }}
-      />
-
+              setCategories([
+                ...categories,
+                {
+                  name: newCategoryName,
+                  keywords: newCategoryKeywords
+                    .split(/[\s,、]+/)
+                    .filter((k) => k !== ""),
+                },
+              ]);
+              setNewCategoryName("");
+              setNewCategoryKeywords("");
+              setIsModalVisible(false);
+            }}
+          />
+          <Button
+            title={t("cancel")}
+            onPress={() => {
+              setIsModalVisible(false);
+            }}
+          />
+        </View>
+      </Modal>
       <Text style={[styles.itemText, { color: c.title }]}>
         {t("settingCategoryCustomizationName")}
       </Text>
