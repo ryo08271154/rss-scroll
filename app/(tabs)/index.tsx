@@ -6,6 +6,7 @@ import { scheduleArticleNotifications } from "@/lib/notifications";
 import { getRssArticles } from "@/lib/rss";
 import { addViewedArticleId, getViewedArticleIds } from "@/lib/viewedArticles";
 import { Article } from "@/types/article";
+import { Category } from "@/types/categories";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { activateKeepAwakeAsync, deactivateKeepAwake } from "expo-keep-awake";
 import { Stack, Tabs, useNavigation, useRouter } from "expo-router";
@@ -36,7 +37,10 @@ export default function HomeScreen() {
 
   const indexRef = useRef(0);
   const [articles, setArticles] = useState<Article[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>(t("all"));
+  const [selectedCategory, setSelectedCategory] = useState<Category>({
+    name: t("all"),
+    keywords: [],
+  });
 
   const [refreshing, setRefreshing] = useState(false);
   const { settings, setSettings, saveSettings, resetSettings } =
@@ -91,7 +95,9 @@ export default function HomeScreen() {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        selectedCategory === t("all") ? undefined : selectedCategory,
+        selectedCategory.name === t("all")
+          ? undefined
+          : selectedCategory.keywords,
       );
 
       const viewedArticleIds = await getViewedArticleIds();
@@ -133,7 +139,7 @@ export default function HomeScreen() {
       //通知設定がオンのとき
       if (
         settings.find((setting) => setting.key === "notifications")?.value &&
-        selectedCategory === t("all")
+        selectedCategory.name === t("all")
       ) {
         // 通知登録
         await scheduleArticleNotifications(

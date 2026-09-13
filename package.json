@@ -37,6 +37,7 @@
     "react-dom": "19.2.3",
     "react-i18next": "^17.0.7",
     "react-native": "npm:react-native-tvos@0.86-stable",
+    "react-native-draggable-flatlist": "^4.0.3",
     "react-native-gesture-handler": "~2.32.0",
     "react-native-legal": "^1.6.3",
     "react-native-qrcode-svg": "^6.3.21",

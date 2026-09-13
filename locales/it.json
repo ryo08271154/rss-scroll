@@ -27,6 +27,10 @@
   "settingReaderModeDescription": "Abilita la modalità lettura per rendere il contenuto degli articoli più leggibile.",
   "settingNotificationsName": "Notifiche",
   "settingNotificationsDescription": "Ricevi notifiche su un articolo casuale.",
+  "settingCategoryCustomizationName": "Personalizza categorie",
+  "settingCategoryCustomizationDescription": "Personalizza l’ordine e la visibilità delle categorie.",
+  "categoryName": "Nome della categoria",
+  "keywords": "Parole chiave",
   "version": "Versione",
 
   "updateAvailableTitle": "Aggiornamento disponibile",

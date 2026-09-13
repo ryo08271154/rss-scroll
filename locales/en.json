@@ -27,6 +27,10 @@
   "settingReaderModeDescription": "Enable reader mode to make article content more readable.",
   "settingNotificationsName": "Notifications",
   "settingNotificationsDescription": "Receive notifications for a random article.",
+  "settingCategoryCustomizationName": "Category Customization",
+  "settingCategoryCustomizationDescription": "Customize the order and visibility of categories.",
+  "categoryName": "Category name",
+  "keywords": "Keywords",
   "version": "Version",
 
   "updateAvailableTitle": "Update available",
