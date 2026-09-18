@@ -323,7 +323,7 @@
     "parentPackageResolvedVersion": "3.1.1",
     "dependencyType": "transitiveDependency"
   },
-  "expo@57.0.15": {
+  "expo@57.0.22": {
     "name": "expo",
     "author": "Expo",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -331,8 +331,8 @@
     "description": "The Expo SDK",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.15",
-    "requiredVersion": "^57.0.15",
+    "version": "57.0.22",
+    "requiredVersion": "~57.0.22",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -349,8 +349,8 @@
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       },
       {
         "name": "metro-runtime",
@@ -368,11 +368,11 @@
         "resolvedVersion": "0.21.2"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/cli@57.0.17": {
+  "@expo/cli@57.0.24": {
     "name": "@expo/cli",
     "author": "Expo",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -380,17 +380,17 @@
     "description": "The Expo CLI",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.17",
-    "requiredVersion": "^57.0.17",
+    "version": "57.0.24",
+    "requiredVersion": "^57.0.24",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "@expo/code-signing-certificates@0.0.6": {
@@ -406,12 +406,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "node-forge@1.4.0": {
@@ -435,44 +435,44 @@
     "parentPackageResolvedVersion": "0.0.6",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/config@57.0.8": {
+  "@expo/config@57.0.9": {
     "name": "@expo/config",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
     "file": "LICENSE",
     "description": "A library for interacting with the app.json",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.8",
-    "requiredVersion": "~57.0.8",
+    "version": "57.0.9",
+    "requiredVersion": "~57.0.9",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/config-plugins@57.0.8": {
+  "@expo/config-plugins@57.0.9": {
     "name": "@expo/config-plugins",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
     "file": "LICENSE",
     "description": "A library for Expo config plugins",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.8",
-    "requiredVersion": "~57.0.8",
+    "version": "57.0.9",
+    "requiredVersion": "~57.0.9",
     "parentPackages": [
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@expo/config-types@57.0.2": {
@@ -487,12 +487,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@expo/json-file@11.0.1": {
@@ -507,17 +507,17 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@babel/code-frame@7.29.7": {
@@ -631,12 +631,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@xmldom/xmldom@0.8.13": {
@@ -659,24 +659,24 @@
     "parentPackageResolvedVersion": "0.8.1",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/require-utils@57.0.4": {
+  "@expo/require-utils@57.0.5": {
     "name": "@expo/require-utils",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2025-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "Reusable require and Node resolution utilities library for Expo",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.4",
-    "requiredVersion": "^57.0.4",
+    "version": "57.0.5",
+    "requiredVersion": "^57.0.5",
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@babel/core@7.29.7": {
@@ -692,13 +692,13 @@
     "parentPackages": [
       {
         "name": "@expo/require-utils",
-        "requiredVersion": "^57.0.4",
-        "resolvedVersion": "57.0.4"
+        "requiredVersion": "^57.0.5",
+        "resolvedVersion": "57.0.5"
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       },
       {
         "name": "eslint-plugin-react-hooks",
@@ -706,8 +706,8 @@
         "resolvedVersion": "7.1.1"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.4",
-    "parentPackageResolvedVersion": "57.0.4",
+    "parentPackageRequiredVersion": "^57.0.5",
+    "parentPackageResolvedVersion": "57.0.5",
     "dependencyType": "transitiveDependency"
   },
   "@babel/generator@7.29.8": {
@@ -738,8 +738,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
     "parentPackageRequiredVersion": "^7.25.2",
@@ -867,8 +867,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
     "parentPackageRequiredVersion": "^7.29.7",
@@ -898,8 +898,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
     "parentPackageRequiredVersion": "^0.3.12",
@@ -1073,8 +1073,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       },
       {
         "name": "core-js-compat",
@@ -1326,8 +1326,8 @@
       },
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
     "parentPackageRequiredVersion": "^7.29.7",
@@ -1430,13 +1430,13 @@
       },
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "@expo/env",
-        "requiredVersion": "~2.4.2",
-        "resolvedVersion": "2.4.2"
+        "requiredVersion": "~2.4.3",
+        "resolvedVersion": "2.4.3"
       },
       {
         "name": "metro",
@@ -1450,8 +1450,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       },
       {
         "name": "@babel/helper-define-polyfill-provider",
@@ -1590,8 +1590,8 @@
     "parentPackages": [
       {
         "name": "@expo/require-utils",
-        "requiredVersion": "^57.0.4",
-        "resolvedVersion": "57.0.4"
+        "requiredVersion": "^57.0.5",
+        "resolvedVersion": "57.0.5"
       },
       {
         "name": "@babel/preset-typescript",
@@ -1599,8 +1599,8 @@
         "resolvedVersion": "7.29.7"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.4",
-    "parentPackageResolvedVersion": "57.0.4",
+    "parentPackageRequiredVersion": "^57.0.5",
+    "parentPackageResolvedVersion": "57.0.5",
     "dependencyType": "transitiveDependency"
   },
   "@babel/helper-plugin-utils@7.29.7": {
@@ -1644,12 +1644,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "chalk@4.1.2": {
@@ -1664,22 +1664,22 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "@expo/env",
-        "requiredVersion": "~2.4.2",
-        "resolvedVersion": "2.4.2"
+        "requiredVersion": "~2.4.3",
+        "resolvedVersion": "2.4.3"
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "ansi-styles@4.3.0": {
@@ -1815,12 +1815,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "glob@13.0.6": {
@@ -1836,12 +1836,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "minimatch@10.2.6": {
@@ -1996,13 +1996,13 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "npm-package-arg",
@@ -2035,8 +2035,8 @@
         "resolvedVersion": "0.35.3"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "slugify@1.6.9": {
@@ -2052,17 +2052,17 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       },
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "xcode@3.0.1": {
@@ -2078,12 +2078,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "simple-plist@1.3.1": {
@@ -2220,12 +2220,12 @@
     "parentPackages": [
       {
         "name": "@expo/config-plugins",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "sax@1.6.1": {
@@ -2280,12 +2280,12 @@
     "parentPackages": [
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "resolve-workspace-root@2.0.1": {
@@ -2301,12 +2301,12 @@
     "parentPackages": [
       {
         "name": "@expo/config",
-        "requiredVersion": "~57.0.8",
-        "resolvedVersion": "57.0.8"
+        "requiredVersion": "~57.0.9",
+        "resolvedVersion": "57.0.9"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.8",
-    "parentPackageResolvedVersion": "57.0.8",
+    "parentPackageRequiredVersion": "~57.0.9",
+    "parentPackageResolvedVersion": "57.0.9",
     "dependencyType": "transitiveDependency"
   },
   "@expo/devcert@1.2.1": {
@@ -2320,12 +2320,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/sudo-prompt@9.3.2": {
@@ -2375,49 +2375,49 @@
     "parentPackageResolvedVersion": "1.2.1",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/env@2.4.2": {
+  "@expo/env@2.4.3": {
     "name": "@expo/env",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2023-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "hydrate environment variables from .env files into process.env",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "2.4.2",
-    "requiredVersion": "~2.4.2",
+    "version": "2.4.3",
+    "requiredVersion": "~2.4.3",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       },
       {
         "name": "@expo/fingerprint",
-        "requiredVersion": "^0.20.9",
-        "resolvedVersion": "0.20.9"
+        "requiredVersion": "^0.20.13",
+        "resolvedVersion": "0.20.13"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/image-utils@0.11.4": {
+  "@expo/image-utils@0.11.5": {
     "name": "@expo/image-utils",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "A package used by Expo CLI for processing images",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "0.11.4",
-    "requiredVersion": "^0.11.4",
+    "version": "0.11.5",
+    "requiredVersion": "^0.11.5",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/spawn-async@1.8.0": {
@@ -2433,12 +2433,12 @@
     "parentPackages": [
       {
         "name": "@expo/image-utils",
-        "requiredVersion": "^0.11.4",
-        "resolvedVersion": "0.11.4"
+        "requiredVersion": "^0.11.5",
+        "resolvedVersion": "0.11.5"
       }
     ],
-    "parentPackageRequiredVersion": "^0.11.4",
-    "parentPackageResolvedVersion": "0.11.4",
+    "parentPackageRequiredVersion": "^0.11.5",
+    "parentPackageResolvedVersion": "0.11.5",
     "dependencyType": "transitiveDependency"
   },
   "cross-spawn@7.0.6": {
@@ -2577,12 +2577,12 @@
     "parentPackages": [
       {
         "name": "@expo/image-utils",
-        "requiredVersion": "^0.11.4",
-        "resolvedVersion": "0.11.4"
+        "requiredVersion": "^0.11.5",
+        "resolvedVersion": "0.11.5"
       }
     ],
-    "parentPackageRequiredVersion": "^0.11.4",
-    "parentPackageResolvedVersion": "0.11.4",
+    "parentPackageRequiredVersion": "^0.11.5",
+    "parentPackageResolvedVersion": "0.11.5",
     "dependencyType": "transitiveDependency"
   },
   "parse-png@2.1.0": {
@@ -2598,12 +2598,12 @@
     "parentPackages": [
       {
         "name": "@expo/image-utils",
-        "requiredVersion": "^0.11.4",
-        "resolvedVersion": "0.11.4"
+        "requiredVersion": "^0.11.5",
+        "resolvedVersion": "0.11.5"
       }
     ],
-    "parentPackageRequiredVersion": "^0.11.4",
-    "parentPackageResolvedVersion": "0.11.4",
+    "parentPackageRequiredVersion": "^0.11.5",
+    "parentPackageResolvedVersion": "0.11.5",
     "dependencyType": "transitiveDependency"
   },
   "pngjs@3.4.0": {
@@ -2626,7 +2626,7 @@
     "parentPackageResolvedVersion": "2.1.0",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/inline-modules@0.1.6": {
+  "@expo/inline-modules@0.1.7": {
     "name": "@expo/inline-modules",
     "author": "Expo",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -2634,37 +2634,37 @@
     "description": "The Expo inline modules",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "0.1.6",
-    "requiredVersion": "^0.1.6",
+    "version": "0.1.7",
+    "requiredVersion": "^0.1.7",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/log-box@57.0.3": {
+  "@expo/log-box@57.0.4": {
     "name": "@expo/log-box",
     "author": "Expo",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "Error overlay for universal Expo apps.",
     "type": "MIT",
-    "version": "57.0.3",
-    "requiredVersion": "^57.0.3",
+    "version": "57.0.4",
+    "requiredVersion": "^57.0.4",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/dom-webview@57.0.1": {
@@ -2680,17 +2680,17 @@
     "parentPackages": [
       {
         "name": "@expo/log-box",
-        "requiredVersion": "^57.0.3",
-        "resolvedVersion": "57.0.3"
+        "requiredVersion": "^57.0.4",
+        "resolvedVersion": "57.0.4"
       },
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.3",
-    "parentPackageResolvedVersion": "57.0.3",
+    "parentPackageRequiredVersion": "^57.0.4",
+    "parentPackageResolvedVersion": "57.0.4",
     "dependencyType": "transitiveDependency"
   },
   "anser@1.4.10": {
@@ -2706,12 +2706,12 @@
     "parentPackages": [
       {
         "name": "@expo/log-box",
-        "requiredVersion": "^57.0.3",
-        "resolvedVersion": "57.0.3"
+        "requiredVersion": "^57.0.4",
+        "resolvedVersion": "57.0.4"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.3",
-    "parentPackageResolvedVersion": "57.0.3",
+    "parentPackageRequiredVersion": "^57.0.4",
+    "parentPackageResolvedVersion": "57.0.4",
     "dependencyType": "transitiveDependency"
   },
   "stacktrace-parser@0.1.11": {
@@ -2727,12 +2727,12 @@
     "parentPackages": [
       {
         "name": "@expo/log-box",
-        "requiredVersion": "^57.0.3",
-        "resolvedVersion": "57.0.3"
+        "requiredVersion": "^57.0.4",
+        "resolvedVersion": "57.0.4"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.3",
-    "parentPackageResolvedVersion": "57.0.3",
+    "parentPackageRequiredVersion": "^57.0.4",
+    "parentPackageResolvedVersion": "57.0.4",
     "dependencyType": "transitiveDependency"
   },
   "type-fest@0.7.1": {
@@ -2765,16 +2765,16 @@
     "type": "MIT",
     "url": "https://github.com/expo/expo-metro",
     "version": "56.0.2",
-    "requiredVersion": "~56.0.0",
+    "requiredVersion": "~56.0.2",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "metro@0.84.5": {
@@ -2787,7 +2787,7 @@
     "parentPackages": [
       {
         "name": "@expo/metro",
-        "requiredVersion": "~56.0.0",
+        "requiredVersion": "~56.0.2",
         "resolvedVersion": "56.0.2"
       },
       {
@@ -2796,7 +2796,7 @@
         "resolvedVersion": "0.86.2"
       }
     ],
-    "parentPackageRequiredVersion": "~56.0.0",
+    "parentPackageRequiredVersion": "~56.0.2",
     "parentPackageResolvedVersion": "56.0.2",
     "dependencyType": "transitiveDependency"
   },
@@ -2960,8 +2960,8 @@
       },
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
     "parentPackageRequiredVersion": "0.84.5",
@@ -3650,8 +3650,8 @@
       },
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
     "parentPackageRequiredVersion": "^29.7.0",
@@ -3744,8 +3744,8 @@
       },
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
     "parentPackageRequiredVersion": "0.84.5",
@@ -4196,8 +4196,8 @@
       },
       {
         "name": "@expo/metro-file-map",
-        "requiredVersion": "^57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "^57.0.3",
+        "resolvedVersion": "57.0.3"
       }
     ],
     "parentPackageRequiredVersion": "0.84.5",
@@ -4367,8 +4367,8 @@
       },
       {
         "name": "@expo/metro-file-map",
-        "requiredVersion": "^57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "^57.0.3",
+        "resolvedVersion": "57.0.3"
       }
     ],
     "parentPackageRequiredVersion": "0.84.5",
@@ -5058,24 +5058,24 @@
     "parentPackageResolvedVersion": "17.7.3",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/metro-config@57.0.9": {
+  "@expo/metro-config@57.0.12": {
     "name": "@expo/metro-config",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
     "file": "LICENSE",
     "description": "A Metro config for running React Native projects with the Metro bundler",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.9",
-    "requiredVersion": "~57.0.9",
+    "version": "57.0.12",
+    "requiredVersion": "~57.0.12",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "hermes-parser@0.36.1": {
@@ -5090,17 +5090,12 @@
     "parentPackages": [
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
-      },
-      {
-        "name": "babel-plugin-syntax-hermes-parser",
-        "requiredVersion": "^0.36.0",
-        "resolvedVersion": "0.36.1"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.9",
-    "parentPackageResolvedVersion": "57.0.9",
+    "parentPackageRequiredVersion": "~57.0.12",
+    "parentPackageResolvedVersion": "57.0.12",
     "dependencyType": "transitiveDependency"
   },
   "hermes-estree@0.36.1": {
@@ -5135,12 +5130,12 @@
     "parentPackages": [
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.9",
-    "parentPackageResolvedVersion": "57.0.9",
+    "parentPackageRequiredVersion": "~57.0.12",
+    "parentPackageResolvedVersion": "57.0.12",
     "dependencyType": "transitiveDependency"
   },
   "detect-libc@2.1.2": {
@@ -5202,15 +5197,15 @@
     "parentPackages": [
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.9",
-    "parentPackageResolvedVersion": "57.0.9",
+    "parentPackageRequiredVersion": "~57.0.12",
+    "parentPackageResolvedVersion": "57.0.12",
     "dependencyType": "transitiveDependency"
   },
-  "postcss@8.5.26": {
+  "postcss@8.5.28": {
     "name": "postcss",
     "author": "Andrey Sitnik <andrey@sitnik.es>",
     "content": "The MIT License (MIT)\n\nCopyright 2013 Andrey Sitnik <andrey@sitnik.es>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
@@ -5218,20 +5213,20 @@
     "description": "Tool for transforming styles with JS plugins",
     "type": "MIT",
     "url": "postcss/postcss",
-    "version": "8.5.26",
+    "version": "8.5.28",
     "requiredVersion": "^8.5.14",
     "parentPackages": [
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.9",
-    "parentPackageResolvedVersion": "57.0.9",
+    "parentPackageRequiredVersion": "~57.0.12",
+    "parentPackageResolvedVersion": "57.0.12",
     "dependencyType": "transitiveDependency"
   },
-  "nanoid@3.3.17": {
+  "nanoid@3.3.19": {
     "name": "nanoid",
     "author": "Andrey Sitnik <andrey@sitnik.ru>",
     "content": "The MIT License (MIT)\n\nCopyright 2017 Andrey Sitnik <andrey@sitnik.ru>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
@@ -5239,18 +5234,13 @@
     "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator",
     "type": "MIT",
     "url": "ai/nanoid",
-    "version": "3.3.17",
-    "requiredVersion": "^3.3.17",
+    "version": "3.3.19",
+    "requiredVersion": "^3.3.18",
     "parentPackages": [
       {
         "name": "postcss",
         "requiredVersion": "^8.5.14",
-        "resolvedVersion": "8.5.26"
-      },
-      {
-        "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "resolvedVersion": "8.5.28"
       },
       {
         "name": "postcss",
@@ -5259,7 +5249,7 @@
       }
     ],
     "parentPackageRequiredVersion": "^8.5.14",
-    "parentPackageResolvedVersion": "8.5.26",
+    "parentPackageResolvedVersion": "8.5.28",
     "dependencyType": "transitiveDependency"
   },
   "source-map-js@1.2.1": {
@@ -5276,11 +5266,11 @@
       {
         "name": "postcss",
         "requiredVersion": "^8.5.14",
-        "resolvedVersion": "8.5.26"
+        "resolvedVersion": "8.5.28"
       }
     ],
     "parentPackageRequiredVersion": "^8.5.14",
-    "parentPackageResolvedVersion": "8.5.26",
+    "parentPackageResolvedVersion": "8.5.28",
     "dependencyType": "transitiveDependency"
   },
   "resolve-from@5.0.0": {
@@ -5296,32 +5286,32 @@
     "parentPackages": [
       {
         "name": "@expo/metro-config",
-        "requiredVersion": "~57.0.9",
-        "resolvedVersion": "57.0.9"
+        "requiredVersion": "~57.0.12",
+        "resolvedVersion": "57.0.12"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.9",
-    "parentPackageResolvedVersion": "57.0.9",
+    "parentPackageRequiredVersion": "~57.0.12",
+    "parentPackageResolvedVersion": "57.0.12",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/metro-file-map@57.0.1": {
+  "@expo/metro-file-map@57.0.3": {
     "name": "@expo/metro-file-map",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "A metro-file-map fork for Expo used with the Metro bundler",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "^57.0.1",
+    "version": "57.0.3",
+    "requiredVersion": "^57.0.3",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/osascript@2.7.1": {
@@ -5336,12 +5326,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/package-manager@1.13.1": {
@@ -5356,12 +5346,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "npm-package-arg@11.0.3": {
@@ -5896,45 +5886,45 @@
     "parentPackageResolvedVersion": "1.0.4",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/prebuild-config@57.0.13": {
+  "@expo/prebuild-config@57.0.16": {
     "name": "@expo/prebuild-config",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
     "file": "LICENSE",
     "description": "Get the prebuild config",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.13",
-    "requiredVersion": "^57.0.13",
+    "version": "57.0.16",
+    "requiredVersion": "^57.0.16",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/normalize-colors@0.86.2": {
+  "@react-native/normalize-colors@0.86.3": {
     "name": "@react-native/normalize-colors",
     "description": "Color normalization for React Native.",
     "type": "MIT",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "@expo/prebuild-config",
-        "requiredVersion": "^57.0.13",
-        "resolvedVersion": "57.0.13"
+        "requiredVersion": "^57.0.16",
+        "resolvedVersion": "57.0.16"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.13",
-    "parentPackageResolvedVersion": "57.0.13",
+    "parentPackageRequiredVersion": "^57.0.16",
+    "parentPackageResolvedVersion": "57.0.16",
     "dependencyType": "transitiveDependency"
   },
-  "expo-modules-autolinking@57.0.10": {
+  "expo-modules-autolinking@57.0.13": {
     "name": "expo-modules-autolinking",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -5942,17 +5932,17 @@
     "description": "Scripts that autolink Expo modules.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.10",
-    "requiredVersion": "~57.0.10",
+    "version": "57.0.13",
+    "requiredVersion": "~57.0.13",
     "parentPackages": [
       {
         "name": "@expo/prebuild-config",
-        "requiredVersion": "^57.0.13",
-        "resolvedVersion": "57.0.13"
+        "requiredVersion": "^57.0.16",
+        "resolvedVersion": "57.0.16"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.13",
-    "parentPackageResolvedVersion": "57.0.13",
+    "parentPackageRequiredVersion": "^57.0.16",
+    "parentPackageResolvedVersion": "57.0.16",
     "dependencyType": "transitiveDependency"
   },
   "commander@7.2.0": {
@@ -5968,15 +5958,15 @@
     "parentPackages": [
       {
         "name": "expo-modules-autolinking",
-        "requiredVersion": "~57.0.10",
-        "resolvedVersion": "57.0.10"
+        "requiredVersion": "~57.0.13",
+        "resolvedVersion": "57.0.13"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.10",
-    "parentPackageResolvedVersion": "57.0.10",
+    "parentPackageRequiredVersion": "~57.0.13",
+    "parentPackageResolvedVersion": "57.0.13",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/router-server@57.0.7": {
+  "@expo/router-server@57.0.9": {
     "name": "@expo/router-server",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -5984,17 +5974,17 @@
     "description": "Expo Router is a file-based router for React Native and web applications.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.7",
-    "requiredVersion": "^57.0.7",
+    "version": "57.0.9",
+    "requiredVersion": "^57.0.9",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/schema-utils@57.0.2": {
@@ -6009,12 +5999,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/ws-tunnel@2.0.0": {
@@ -6025,31 +6015,31 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/xcpretty@4.4.4": {
+  "@expo/xcpretty@4.4.5": {
     "name": "@expo/xcpretty",
     "author": "Evan Bacon <bacon@expo.io> (https://github.com/evanbacon)",
     "description": "Parse and format xcodebuild logs",
     "type": "BSD-3-Clause",
     "url": "https://github.com/expo/expo-cli",
-    "version": "4.4.4",
+    "version": "4.4.5",
     "requiredVersion": "^4.4.4",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "js-yaml@4.3.1": {
@@ -6066,7 +6056,7 @@
       {
         "name": "@expo/xcpretty",
         "requiredVersion": "^4.4.4",
-        "resolvedVersion": "4.4.4"
+        "resolvedVersion": "4.4.5"
       },
       {
         "name": "@eslint/eslintrc",
@@ -6075,7 +6065,7 @@
       }
     ],
     "parentPackageRequiredVersion": "^4.4.4",
-    "parentPackageResolvedVersion": "4.4.4",
+    "parentPackageResolvedVersion": "4.4.5",
     "dependencyType": "transitiveDependency"
   },
   "argparse@2.0.1": {
@@ -6098,22 +6088,22 @@
     "parentPackageResolvedVersion": "4.3.1",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/dev-middleware@0.86.2": {
+  "@react-native/dev-middleware@0.86.3": {
     "name": "@react-native/dev-middleware",
     "description": "Dev server middleware for React Native",
     "type": "MIT",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@isaacs/ttlcache@1.4.1": {
@@ -6129,48 +6119,48 @@
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/debugger-frontend@0.86.2": {
+  "@react-native/debugger-frontend@0.86.3": {
     "name": "@react-native/debugger-frontend",
     "description": "Debugger frontend for React Native based on Chrome DevTools",
     "type": "BSD-3-Clause",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/debugger-shell@0.86.2": {
+  "@react-native/debugger-shell@0.86.3": {
     "name": "@react-native/debugger-shell",
     "description": "Experimental debugger shell for React Native for use with @react-native/debugger-frontend",
     "type": "MIT",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "fb-dotslash@0.5.8": {
@@ -6183,12 +6173,12 @@
     "parentPackages": [
       {
         "name": "@react-native/debugger-shell",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "chrome-launcher@0.15.2": {
@@ -6204,12 +6194,12 @@
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "escape-string-regexp@4.0.0": {
@@ -6332,12 +6322,12 @@
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "mkdirp@1.0.4": {
@@ -6373,12 +6363,12 @@
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "serve-static@1.16.3": {
@@ -6394,12 +6384,12 @@
     "parentPackages": [
       {
         "name": "@react-native/dev-middleware",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "encodeurl@2.0.0": {
@@ -6445,8 +6435,8 @@
       },
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
     "parentPackageRequiredVersion": "^1.16.2",
@@ -6763,12 +6753,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "mime-types@2.1.35": {
@@ -6831,24 +6821,24 @@
     "parentPackageResolvedVersion": "1.3.8",
     "dependencyType": "transitiveDependency"
   },
-  "agent-cli-detector@0.1.6": {
+  "agent-cli-detector@0.1.7": {
     "name": "agent-cli-detector",
     "content": "MIT License\n\nCopyright (c) 2026 David Mokos\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "Detect whether a JavaScript CLI is running inside a coding agent.",
     "type": "MIT",
     "url": "https://github.com/expo/agent-cli-detector",
-    "version": "0.1.6",
-    "requiredVersion": "0.1.6",
+    "version": "0.1.7",
+    "requiredVersion": "0.1.7",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "arg@5.0.2": {
@@ -6864,12 +6854,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "bplist-parser@0.3.2": {
@@ -6883,32 +6873,32 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
-  "compression@1.8.1": {
+  "compression@1.8.2": {
     "name": "compression",
     "content": "(The MIT License)\n\nCopyright (c) 2014 Jonathan Ong <me@jongleberry.com>\nCopyright (c) 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
     "file": "LICENSE",
     "description": "Node.js compression middleware",
     "type": "MIT",
     "url": "expressjs/compression",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "requiredVersion": "^1.7.4",
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "bytes@3.1.2": {
@@ -6925,7 +6915,7 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       },
       {
         "name": "body-parser",
@@ -6939,7 +6929,7 @@
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "compressible@2.0.18": {
@@ -6955,11 +6945,11 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "negotiator@0.6.4": {
@@ -6975,11 +6965,11 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "on-headers@1.1.0": {
@@ -6996,11 +6986,11 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "safe-buffer@5.2.1": {
@@ -7017,11 +7007,11 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "vary@1.1.2": {
@@ -7038,7 +7028,7 @@
       {
         "name": "compression",
         "requiredVersion": "^1.7.4",
-        "resolvedVersion": "1.8.1"
+        "resolvedVersion": "1.8.2"
       },
       {
         "name": "express",
@@ -7047,7 +7037,7 @@
       }
     ],
     "parentPackageRequiredVersion": "^1.7.4",
-    "parentPackageResolvedVersion": "1.8.1",
+    "parentPackageResolvedVersion": "1.8.2",
     "dependencyType": "transitiveDependency"
   },
   "dnssd-advertise@1.1.6": {
@@ -7063,12 +7053,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "expo-server@57.0.3": {
@@ -7083,12 +7073,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "fetch-nodeshim@0.4.10": {
@@ -7104,12 +7094,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "lan-network@0.2.1": {
@@ -7125,12 +7115,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "multitars@1.0.2": {
@@ -7146,12 +7136,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "progress@2.0.3": {
@@ -7167,12 +7157,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "prompts@2.4.2": {
@@ -7188,12 +7178,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "kleur@3.0.3": {
@@ -7251,12 +7241,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "structured-headers@0.4.1": {
@@ -7270,12 +7260,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "terminal-link@2.1.1": {
@@ -7291,12 +7281,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "ansi-escapes@4.3.2": {
@@ -7375,12 +7365,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "ws@8.21.3": {
@@ -7396,12 +7386,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "zod@3.25.76": {
@@ -7417,12 +7407,12 @@
     "parentPackages": [
       {
         "name": "@expo/cli",
-        "requiredVersion": "^57.0.17",
-        "resolvedVersion": "57.0.17"
+        "requiredVersion": "^57.0.24",
+        "resolvedVersion": "57.0.24"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.17",
-    "parentPackageResolvedVersion": "57.0.17",
+    "parentPackageRequiredVersion": "^57.0.24",
+    "parentPackageResolvedVersion": "57.0.24",
     "dependencyType": "transitiveDependency"
   },
   "@expo/devtools@57.0.1": {
@@ -7437,15 +7427,15 @@
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/fingerprint@0.20.9": {
+  "@expo/fingerprint@0.20.13": {
     "name": "@expo/fingerprint",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
@@ -7453,17 +7443,17 @@
     "description": "A library to generate a fingerprint from a React Native project",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "0.20.9",
-    "requiredVersion": "^0.20.9",
+    "version": "0.20.13",
+    "requiredVersion": "^0.20.13",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "ignore@5.3.2": {
@@ -7477,8 +7467,8 @@
     "parentPackages": [
       {
         "name": "@expo/fingerprint",
-        "requiredVersion": "^0.20.9",
-        "resolvedVersion": "0.20.9"
+        "requiredVersion": "^0.20.13",
+        "resolvedVersion": "0.20.13"
       },
       {
         "name": "@eslint/eslintrc",
@@ -7486,28 +7476,28 @@
         "resolvedVersion": "3.3.6"
       }
     ],
-    "parentPackageRequiredVersion": "^0.20.9",
-    "parentPackageResolvedVersion": "0.20.9",
+    "parentPackageRequiredVersion": "^0.20.13",
+    "parentPackageResolvedVersion": "0.20.13",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/local-build-cache-provider@57.0.7": {
+  "@expo/local-build-cache-provider@57.0.8": {
     "name": "@expo/local-build-cache-provider",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
     "file": "LICENSE",
     "description": "Local build cache provider for Expo",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.7",
-    "requiredVersion": "^57.0.7",
+    "version": "57.0.8",
+    "requiredVersion": "^57.0.8",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "@ungap/structured-clone@1.3.3": {
@@ -7523,15 +7513,15 @@
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "babel-preset-expo@57.0.7": {
+  "babel-preset-expo@57.0.11": {
     "name": "babel-preset-expo",
     "author": "Expo <support@expo.dev>",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -7539,17 +7529,17 @@
     "description": "The Babel preset for Expo projects",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.7",
-    "requiredVersion": "~57.0.7",
+    "version": "57.0.11",
+    "requiredVersion": "~57.0.11",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-proposal-decorators@7.29.7": {
@@ -7565,12 +7555,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/helper-create-class-features-plugin@7.29.7": {
@@ -7733,12 +7723,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-dynamic-import@7.8.3": {
@@ -7753,12 +7743,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-export-default-from@7.29.7": {
@@ -7774,12 +7764,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-nullish-coalescing-operator@7.8.3": {
@@ -7794,12 +7784,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-optional-chaining@7.8.3": {
@@ -7814,12 +7804,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-async-generator-functions@7.29.7": {
@@ -7835,12 +7825,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/helper-remap-async-to-generator@7.29.7": {
@@ -7898,12 +7888,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-block-scoping@7.29.7": {
@@ -7919,12 +7909,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-class-properties@7.29.7": {
@@ -7940,8 +7930,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-worklets",
@@ -7949,8 +7939,8 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-class-static-block@7.29.7": {
@@ -7966,12 +7956,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-classes@7.29.7": {
@@ -7987,8 +7977,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-worklets",
@@ -7996,8 +7986,8 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-destructuring@7.29.7": {
@@ -8013,8 +8003,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "@babel/plugin-transform-object-rest-spread",
@@ -8022,8 +8012,8 @@
         "resolvedVersion": "7.29.7"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-export-namespace-from@7.29.7": {
@@ -8039,12 +8029,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-flow-strip-types@7.29.7": {
@@ -8060,12 +8050,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-flow@7.29.7": {
@@ -8107,12 +8097,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-logical-assignment-operators@7.29.7": {
@@ -8128,12 +8118,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-named-capturing-groups-regex@7.29.7": {
@@ -8149,12 +8139,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/helper-create-regexp-features-plugin@7.29.7": {
@@ -8361,8 +8351,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-worklets",
@@ -8370,8 +8360,8 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-object-rest-spread@7.29.7": {
@@ -8387,12 +8377,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-parameters@7.29.7": {
@@ -8413,8 +8403,8 @@
       },
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
     "parentPackageRequiredVersion": "^7.24.7",
@@ -8434,12 +8424,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-optional-chaining@7.29.7": {
@@ -8455,8 +8445,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-worklets",
@@ -8464,8 +8454,8 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-private-methods@7.29.7": {
@@ -8481,12 +8471,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-private-property-in-object@7.29.7": {
@@ -8502,12 +8492,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-react-display-name@7.29.7": {
@@ -8523,12 +8513,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-react-jsx@7.29.7": {
@@ -8544,8 +8534,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "@babel/plugin-transform-react-jsx-development",
@@ -8553,8 +8543,8 @@
         "resolvedVersion": "7.29.7"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-jsx@7.29.7": {
@@ -8591,12 +8581,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-react-pure-annotations@7.29.7": {
@@ -8612,12 +8602,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-transform-runtime@7.29.7": {
@@ -8633,12 +8623,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "babel-plugin-polyfill-corejs2@0.4.17": {
@@ -8943,8 +8933,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "@babel/preset-typescript",
@@ -8952,8 +8942,8 @@
         "resolvedVersion": "7.29.7"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/plugin-syntax-typescript@7.29.7": {
@@ -8990,8 +8980,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-worklets",
@@ -8999,8 +8989,8 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "@babel/preset-typescript@7.29.7": {
@@ -9016,8 +9006,8 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       },
       {
         "name": "react-native-draggable-flatlist",
@@ -9030,44 +9020,44 @@
         "resolvedVersion": "0.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/babel-plugin-codegen@0.86.2": {
+  "@react-native/babel-plugin-codegen@0.86.3": {
     "name": "@react-native/babel-plugin-codegen",
     "description": "Babel plugin to generate native module and view manager code for React Native.",
     "type": "MIT",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
-  "@react-native/codegen@0.86.2": {
+  "@react-native/codegen@0.86.3": {
     "name": "@react-native/codegen",
     "description": "Code generation tools for React Native",
     "type": "MIT",
     "url": "https://github.com/react/react-native",
-    "version": "0.86.2",
-    "requiredVersion": "0.86.2",
+    "version": "0.86.3",
+    "requiredVersion": "0.86.3",
     "parentPackages": [
       {
         "name": "@react-native/babel-plugin-codegen",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "hermes-parser@0.36.0": {
@@ -9082,12 +9072,12 @@
     "parentPackages": [
       {
         "name": "@react-native/codegen",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "hermes-estree@0.36.0": {
@@ -9123,8 +9113,8 @@
     "parentPackages": [
       {
         "name": "@react-native/codegen",
-        "requiredVersion": "0.86.2",
-        "resolvedVersion": "0.86.2"
+        "requiredVersion": "0.86.3",
+        "resolvedVersion": "0.86.3"
       },
       {
         "name": "eslint-import-resolver-typescript",
@@ -9132,8 +9122,8 @@
         "resolvedVersion": "3.10.1"
       }
     ],
-    "parentPackageRequiredVersion": "0.86.2",
-    "parentPackageResolvedVersion": "0.86.2",
+    "parentPackageRequiredVersion": "0.86.3",
+    "parentPackageResolvedVersion": "0.86.3",
     "dependencyType": "transitiveDependency"
   },
   "fdir@6.5.0": {
@@ -9167,12 +9157,12 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "babel-plugin-react-native-web@0.21.2": {
@@ -9188,32 +9178,37 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
-  "babel-plugin-syntax-hermes-parser@0.36.1": {
+  "babel-plugin-syntax-hermes-parser@0.36.0": {
     "name": "babel-plugin-syntax-hermes-parser",
     "content": "MIT License\n\nCopyright (c) Meta Platforms, Inc. and affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
     "file": "LICENSE",
     "description": "Babel plugin which switches Babel to use the Hermes parser.",
     "type": "MIT",
     "url": "https://github.com/facebook/hermes",
-    "version": "0.36.1",
+    "version": "0.36.0",
     "requiredVersion": "^0.36.0",
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
+      },
+      {
+        "name": "react-native",
+        "requiredVersion": "npm:react-native-tvos@0.86-stable",
+        "resolvedVersion": "0.86.2-0"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
   "babel-plugin-transform-flow-enums@0.0.2": {
@@ -9228,15 +9223,15 @@
     "parentPackages": [
       {
         "name": "babel-preset-expo",
-        "requiredVersion": "~57.0.7",
-        "resolvedVersion": "57.0.7"
+        "requiredVersion": "~57.0.11",
+        "resolvedVersion": "57.0.11"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.7",
-    "parentPackageResolvedVersion": "57.0.7",
+    "parentPackageRequiredVersion": "~57.0.11",
+    "parentPackageResolvedVersion": "57.0.11",
     "dependencyType": "transitiveDependency"
   },
-  "expo-asset@57.0.13": {
+  "expo-asset@57.0.17": {
     "name": "expo-asset",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9244,20 +9239,20 @@
     "description": "An Expo universal module to download assets and pass them into other APIs",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.13",
-    "requiredVersion": "~57.0.13",
+    "version": "57.0.17",
+    "requiredVersion": "~57.0.17",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "expo-constants@57.0.13": {
+  "expo-constants@57.0.18": {
     "name": "expo-constants",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9265,20 +9260,12 @@
     "description": "Provides system information that remains constant throughout the lifetime of your app.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.13",
+    "version": "57.0.18",
     "requiredVersion": "~57.0.13",
-    "parentPackages": [
-      {
-        "name": "expo-asset",
-        "requiredVersion": "~57.0.13",
-        "resolvedVersion": "57.0.13"
-      }
-    ],
-    "parentPackageRequiredVersion": "~57.0.13",
-    "parentPackageResolvedVersion": "57.0.13",
-    "dependencyType": "transitiveDependency"
+    "parentPackages": [],
+    "dependencyType": "dependency"
   },
-  "expo-file-system@57.0.5": {
+  "expo-file-system@57.0.7": {
     "name": "expo-file-system",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9286,20 +9273,20 @@
     "description": "Provides access to the local file system on the device.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.5",
-    "requiredVersion": "~57.0.5",
+    "version": "57.0.7",
+    "requiredVersion": "~57.0.7",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "expo-font@57.0.1": {
+  "expo-font@57.0.4": {
     "name": "expo-font",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9307,18 +9294,10 @@
     "description": "Load fonts at runtime and use them in React Native components.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
+    "version": "57.0.4",
     "requiredVersion": "~57.0.1",
-    "parentPackages": [
-      {
-        "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
-      }
-    ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
-    "dependencyType": "transitiveDependency"
+    "parentPackages": [],
+    "dependencyType": "dependency"
   },
   "fontfaceobserver@2.3.0": {
     "name": "fontfaceobserver",
@@ -9333,15 +9312,15 @@
     "parentPackages": [
       {
         "name": "expo-font",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.4",
+        "resolvedVersion": "57.0.4"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.4",
+    "parentPackageResolvedVersion": "57.0.4",
     "dependencyType": "transitiveDependency"
   },
-  "expo-keep-awake@57.0.1": {
+  "expo-keep-awake@57.0.2": {
     "name": "expo-keep-awake",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9349,20 +9328,20 @@
     "description": "Provides a React component that prevents the screen sleeping when rendered. It also exposes static methods to control the behavior imperatively.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "expo-modules-core@57.0.12": {
+  "expo-modules-core@57.0.18": {
     "name": "expo-modules-core",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9370,17 +9349,17 @@
     "description": "The core of Expo Modules architecture",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.12",
-    "requiredVersion": "~57.0.12",
+    "version": "57.0.18",
+    "requiredVersion": "~57.0.18",
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "@expo/expo-modules-macros-plugin@0.6.1": {
@@ -9396,15 +9375,15 @@
     "parentPackages": [
       {
         "name": "expo-modules-core",
-        "requiredVersion": "~57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "~57.0.18",
+        "resolvedVersion": "57.0.18"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "~57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
     "dependencyType": "transitiveDependency"
   },
-  "expo-modules-jsi@57.0.5": {
+  "expo-modules-jsi@57.1.0": {
     "name": "expo-modules-jsi",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9412,17 +9391,17 @@
     "description": "The JavaScript Interface for Expo Modules",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.5",
-    "requiredVersion": "~57.0.5",
+    "version": "57.1.0",
+    "requiredVersion": "~57.1.0",
     "parentPackages": [
       {
         "name": "expo-modules-core",
-        "requiredVersion": "~57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "~57.0.18",
+        "resolvedVersion": "57.0.18"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "~57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
     "dependencyType": "transitiveDependency"
   },
   "react-refresh@0.14.2": {
@@ -9437,8 +9416,8 @@
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       },
       {
         "name": "react-native",
@@ -9446,8 +9425,8 @@
         "resolvedVersion": "0.86.2-0"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
   "whatwg-url-minimum@0.1.2": {
@@ -9463,15 +9442,15 @@
     "parentPackages": [
       {
         "name": "expo",
-        "requiredVersion": "^57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.22",
+        "resolvedVersion": "57.0.22"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.22",
+    "parentPackageResolvedVersion": "57.0.22",
     "dependencyType": "transitiveDependency"
   },
-  "expo-application@57.0.2": {
+  "expo-application@57.0.3": {
     "name": "expo-application",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9479,12 +9458,12 @@
     "description": "A universal module that gets native application information such as its ID, app name, and build version at runtime",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.2",
-    "requiredVersion": "~57.0.2",
+    "version": "57.0.3",
+    "requiredVersion": "~57.0.3",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-background-task@57.0.12": {
+  "expo-background-task@57.0.17": {
     "name": "expo-background-task",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9492,12 +9471,12 @@
     "description": "Expo Android and iOS module for Background Task APIs",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.12",
-    "requiredVersion": "~57.0.12",
+    "version": "57.0.17",
+    "requiredVersion": "~57.0.17",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-task-manager@57.0.12": {
+  "expo-task-manager@57.0.17": {
     "name": "expo-task-manager",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9505,20 +9484,20 @@
     "description": "Expo module that provides support for tasks that can run in the background.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.12",
-    "requiredVersion": "~57.0.12",
+    "version": "57.0.17",
+    "requiredVersion": "~57.0.17",
     "parentPackages": [
       {
         "name": "expo-background-task",
-        "requiredVersion": "~57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "~57.0.17",
+        "resolvedVersion": "57.0.17"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "~57.0.17",
+    "parentPackageResolvedVersion": "57.0.17",
     "dependencyType": "transitiveDependency"
   },
-  "unimodules-app-loader@57.0.1": {
+  "unimodules-app-loader@57.0.2": {
     "name": "unimodules-app-loader",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9526,20 +9505,20 @@
     "description": "App loader for background applications",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [
       {
         "name": "expo-task-manager",
-        "requiredVersion": "~57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "~57.0.17",
+        "resolvedVersion": "57.0.17"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "~57.0.17",
+    "parentPackageResolvedVersion": "57.0.17",
     "dependencyType": "transitiveDependency"
   },
-  "expo-device@57.0.1": {
+  "expo-device@57.0.2": {
     "name": "expo-device",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9547,8 +9526,8 @@
     "description": "A universal module that gets physical information about the device running the application",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -9565,15 +9544,15 @@
     "parentPackages": [
       {
         "name": "expo-device",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
-  "expo-haptics@57.0.1": {
+  "expo-haptics@57.0.3": {
     "name": "expo-haptics",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9581,12 +9560,12 @@
     "description": "Provides access to the system's haptics engine on iOS, vibration effects on Android, and Web Vibration API on web.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.3",
+    "requiredVersion": "~57.0.3",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-image@57.0.3": {
+  "expo-image@57.0.5": {
     "name": "expo-image",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9594,8 +9573,8 @@
     "description": "A cross-platform, performant image component for React Native and Expo with Web support",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.3",
-    "requiredVersion": "~57.0.3",
+    "version": "57.0.5",
+    "requiredVersion": "~57.0.5",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -9611,25 +9590,25 @@
     "parentPackages": [
       {
         "name": "expo-image",
-        "requiredVersion": "~57.0.3",
-        "resolvedVersion": "57.0.3"
+        "requiredVersion": "~57.0.5",
+        "resolvedVersion": "57.0.5"
       },
       {
         "name": "@expo/ui",
-        "requiredVersion": "^57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "^57.0.18",
+        "resolvedVersion": "57.0.18"
       },
       {
         "name": "expo-symbols",
-        "requiredVersion": "^57.0.2",
-        "resolvedVersion": "57.0.2"
+        "requiredVersion": "^57.0.3",
+        "resolvedVersion": "57.0.3"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.3",
-    "parentPackageResolvedVersion": "57.0.3",
+    "parentPackageRequiredVersion": "~57.0.5",
+    "parentPackageResolvedVersion": "57.0.5",
     "dependencyType": "transitiveDependency"
   },
-  "expo-linear-gradient@57.0.1": {
+  "expo-linear-gradient@57.0.2": {
     "name": "expo-linear-gradient",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9637,12 +9616,12 @@
     "description": "Provides a React component that renders a gradient view.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-linking@57.0.7": {
+  "expo-linking@57.0.10": {
     "name": "expo-linking",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9650,12 +9629,12 @@
     "description": "Create and open deep links universally",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.7",
-    "requiredVersion": "~57.0.7",
+    "version": "57.0.10",
+    "requiredVersion": "~57.0.10",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-localization@57.0.1": {
+  "expo-localization@57.0.2": {
     "name": "expo-localization",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9663,8 +9642,8 @@
     "description": "Provides an interface for native user localization information.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -9681,15 +9660,15 @@
     "parentPackages": [
       {
         "name": "expo-localization",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
-  "expo-notifications@57.0.13": {
+  "expo-notifications@57.0.18": {
     "name": "expo-notifications",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9697,8 +9676,8 @@
     "description": "Provides an API to fetch push notification tokens and to present, schedule, receive, and respond to notifications.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.13",
-    "requiredVersion": "~57.0.13",
+    "version": "57.0.18",
+    "requiredVersion": "~57.0.18",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -9715,12 +9694,12 @@
     "parentPackages": [
       {
         "name": "expo-notifications",
-        "requiredVersion": "~57.0.13",
-        "resolvedVersion": "57.0.13"
+        "requiredVersion": "~57.0.18",
+        "resolvedVersion": "57.0.18"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.13",
-    "parentPackageResolvedVersion": "57.0.13",
+    "parentPackageRequiredVersion": "~57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
     "dependencyType": "transitiveDependency"
   },
   "event-target-shim@5.0.1": {
@@ -9755,26 +9734,102 @@
     "parentPackages": [
       {
         "name": "expo-notifications",
-        "requiredVersion": "~57.0.13",
-        "resolvedVersion": "57.0.13"
+        "requiredVersion": "~57.0.18",
+        "resolvedVersion": "57.0.18"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.13",
-    "parentPackageResolvedVersion": "57.0.13",
+    "parentPackageRequiredVersion": "~57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
     "dependencyType": "transitiveDependency"
   },
-  "expo-router@57.0.15": {
+  "expo-observe@57.0.21": {
+    "name": "expo-observe",
+    "author": "650 Industries, Inc.",
+    "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "file": "LICENSE",
+    "description": "Expo module that dispatches collected app metrics to EAS Observe",
+    "type": "MIT",
+    "url": "https://github.com/expo/expo",
+    "version": "57.0.21",
+    "requiredVersion": "~57.0.21",
+    "parentPackages": [],
+    "dependencyType": "dependency"
+  },
+  "expo-app-metrics@57.0.18": {
+    "name": "expo-app-metrics",
+    "author": "650 Industries, Inc.",
+    "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "file": "LICENSE",
+    "description": "Expo module that collects app startup, frame rate, memory, and session metrics",
+    "type": "MIT",
+    "url": "https://github.com/expo/expo",
+    "version": "57.0.18",
+    "requiredVersion": "~57.0.18",
+    "parentPackages": [
+      {
+        "name": "expo-observe",
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
+      }
+    ],
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
+    "dependencyType": "transitiveDependency"
+  },
+  "expo-updates-interface@57.0.2": {
+    "name": "expo-updates-interface",
+    "author": "650 Industries, Inc.",
+    "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "file": "LICENSE",
+    "description": "Native interface for modules that optionally depend on expo-updates, e.g. expo-dev-launcher.",
+    "type": "MIT",
+    "url": "https://github.com/expo/expo",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
+    "parentPackages": [
+      {
+        "name": "expo-app-metrics",
+        "requiredVersion": "~57.0.18",
+        "resolvedVersion": "57.0.18"
+      }
+    ],
+    "parentPackageRequiredVersion": "~57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
+    "dependencyType": "transitiveDependency"
+  },
+  "expo-eas-client@57.0.4": {
+    "name": "expo-eas-client",
+    "author": "650 Industries, Inc.",
+    "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "file": "LICENSE",
+    "description": "Stable client identifier for EAS services",
+    "type": "MIT",
+    "url": "https://github.com/expo/expo",
+    "version": "57.0.4",
+    "requiredVersion": "~57.0.4",
+    "parentPackages": [
+      {
+        "name": "expo-observe",
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
+      }
+    ],
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
+    "dependencyType": "transitiveDependency"
+  },
+  "expo-router@57.0.21": {
     "name": "expo-router",
     "author": "650 Industries, Inc.",
     "description": "Expo Router is a file-based router for React Native and web applications.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.15",
-    "requiredVersion": "~57.0.15",
+    "version": "57.0.21",
+    "requiredVersion": "~57.0.21",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "@expo/metro-runtime@57.0.12": {
+  "@expo/metro-runtime@57.0.15": {
     "name": "@expo/metro-runtime",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -9782,17 +9837,17 @@
     "description": "Tools for making advanced Metro bundler features work",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.12",
-    "requiredVersion": "^57.0.12",
+    "version": "57.0.15",
+    "requiredVersion": "^57.0.15",
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "whatwg-fetch@3.6.20": {
@@ -9807,31 +9862,31 @@
     "parentPackages": [
       {
         "name": "@expo/metro-runtime",
-        "requiredVersion": "^57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "^57.0.15",
+        "resolvedVersion": "57.0.15"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "^57.0.15",
+    "parentPackageResolvedVersion": "57.0.15",
     "dependencyType": "transitiveDependency"
   },
-  "@expo/ui@57.0.12": {
+  "@expo/ui@57.0.18": {
     "name": "@expo/ui",
     "author": "650 Industries, Inc.",
     "description": "A collection of UI components",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.12",
-    "requiredVersion": "^57.0.12",
+    "version": "57.0.18",
+    "requiredVersion": "^57.0.18",
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "vaul@1.1.2": {
@@ -9847,12 +9902,12 @@
     "parentPackages": [
       {
         "name": "@expo/ui",
-        "requiredVersion": "^57.0.12",
-        "resolvedVersion": "57.0.12"
+        "requiredVersion": "^57.0.18",
+        "resolvedVersion": "57.0.18"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.12",
-    "parentPackageResolvedVersion": "57.0.12",
+    "parentPackageRequiredVersion": "^57.0.18",
+    "parentPackageResolvedVersion": "57.0.18",
     "dependencyType": "transitiveDependency"
   },
   "@radix-ui/react-dialog@1.1.23": {
@@ -10204,8 +10259,8 @@
       },
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
     "parentPackageRequiredVersion": "2.1.10",
@@ -10375,12 +10430,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "@radix-ui/react-direction@1.1.4": {
@@ -10472,12 +10527,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "client-only@0.0.1": {
@@ -10489,8 +10544,8 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       },
       {
         "name": "styled-jsx",
@@ -10498,8 +10553,8 @@
         "resolvedVersion": "5.1.6"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "color@4.2.3": {
@@ -10514,12 +10569,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "color-string@1.9.1": {
@@ -10585,7 +10640,7 @@
     "parentPackageResolvedVersion": "0.2.4",
     "dependencyType": "transitiveDependency"
   },
-  "expo-glass-effect@57.0.1": {
+  "expo-glass-effect@57.0.3": {
     "name": "expo-glass-effect",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -10593,20 +10648,20 @@
     "description": "A component that renders a native glass effect view on iOS.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "^57.0.1",
+    "version": "57.0.3",
+    "requiredVersion": "^57.0.3",
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
-  "expo-symbols@57.0.2": {
+  "expo-symbols@57.0.3": {
     "name": "expo-symbols",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -10614,12 +10669,12 @@
     "description": "Provides access to the SF Symbols library on iOS, and Material Symbols on Android and web, for Expo and React Native apps.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.2",
-    "requiredVersion": "~57.0.2",
+    "version": "57.0.3",
+    "requiredVersion": "~57.0.3",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "@expo-google-fonts/material-symbols@0.4.44": {
+  "@expo-google-fonts/material-symbols@0.4.47": {
     "name": "@expo-google-fonts/material-symbols",
     "author": "Expo Team <team@expo.io>",
     "content": "MIT License\n\nCopyright (c) 2020 Expo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -10627,17 +10682,17 @@
     "description": "Use the Material Symbols font family from Google Fonts in your Expo app",
     "type": "MIT AND Apache-2.0",
     "url": "https://github.com/expo/google-fonts",
-    "version": "0.4.44",
+    "version": "0.4.47",
     "requiredVersion": "^0.4.1",
     "parentPackages": [
       {
         "name": "expo-symbols",
-        "requiredVersion": "^57.0.2",
-        "resolvedVersion": "57.0.2"
+        "requiredVersion": "^57.0.3",
+        "resolvedVersion": "57.0.3"
       }
     ],
-    "parentPackageRequiredVersion": "^57.0.2",
-    "parentPackageResolvedVersion": "57.0.2",
+    "parentPackageRequiredVersion": "^57.0.3",
+    "parentPackageResolvedVersion": "57.0.3",
     "dependencyType": "transitiveDependency"
   },
   "fast-deep-equal@3.1.3": {
@@ -10653,8 +10708,8 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       },
       {
         "name": "ajv",
@@ -10662,8 +10717,8 @@
         "resolvedVersion": "6.15.0"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "query-string@7.1.3": {
@@ -10679,12 +10734,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "decode-uri-component@0.2.2": {
@@ -10784,12 +10839,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "react-is@19.2.8": {
@@ -10804,12 +10859,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "react-native-drawer-layout@4.2.10": {
@@ -10824,12 +10879,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "use-latest-callback@0.2.6": {
@@ -10921,12 +10976,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "shallowequal@1.1.0": {
@@ -10942,12 +10997,12 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
   "standard-navigation@0.0.5": {
@@ -10961,15 +11016,15 @@
     "parentPackages": [
       {
         "name": "expo-router",
-        "requiredVersion": "~57.0.15",
-        "resolvedVersion": "57.0.15"
+        "requiredVersion": "~57.0.21",
+        "resolvedVersion": "57.0.21"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.15",
-    "parentPackageResolvedVersion": "57.0.15",
+    "parentPackageRequiredVersion": "~57.0.21",
+    "parentPackageResolvedVersion": "57.0.21",
     "dependencyType": "transitiveDependency"
   },
-  "expo-splash-screen@57.0.7": {
+  "expo-splash-screen@57.0.9": {
     "name": "expo-splash-screen",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -10977,8 +11032,8 @@
     "description": "Provides a module to allow keeping the native Splash Screen visible until you choose to hide it.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.7",
-    "requiredVersion": "~57.0.7",
+    "version": "57.0.9",
+    "requiredVersion": "~57.0.9",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -10995,7 +11050,7 @@
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-system-ui@57.0.2": {
+  "expo-system-ui@57.0.4": {
     "name": "expo-system-ui",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -11003,12 +11058,12 @@
     "description": "Interact with system UI elements",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.2",
-    "requiredVersion": "~57.0.2",
+    "version": "57.0.4",
+    "requiredVersion": "~57.0.4",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
-  "expo-web-browser@57.0.2": {
+  "expo-web-browser@57.0.3": {
     "name": "expo-web-browser",
     "author": "650 Industries, Inc.",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2015-present 650 Industries, Inc. (aka Expo)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -11016,8 +11071,8 @@
     "description": "Provides access to the system's web browser and supports handling redirects. On iOS, it uses SFSafariViewController or ASWebAuthenticationSession, depending on the method you call, and on Android it uses ChromeCustomTabs. As of iOS 11, SFSafariViewController no longer shares cookies with Safari, so if you are using WebBrowser for authentication you will want to use WebBrowser.openAuthSessionAsync, and if you just want to open a webpage (such as your app privacy policy), then use WebBrowser.openBrowserAsync.",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.2",
-    "requiredVersion": "~57.0.2",
+    "version": "57.0.3",
+    "requiredVersion": "~57.0.3",
     "parentPackages": [],
     "dependencyType": "dependency"
   },
@@ -11325,6 +11380,24 @@
     "parentPackageResolvedVersion": "0.86.2-0",
     "dependencyType": "transitiveDependency"
   },
+  "@react-native/codegen@0.86.2": {
+    "name": "@react-native/codegen",
+    "description": "Code generation tools for React Native",
+    "type": "MIT",
+    "url": "https://github.com/react/react-native",
+    "version": "0.86.2",
+    "requiredVersion": "0.86.2",
+    "parentPackages": [
+      {
+        "name": "react-native",
+        "requiredVersion": "npm:react-native-tvos@0.86-stable",
+        "resolvedVersion": "0.86.2-0"
+      }
+    ],
+    "parentPackageRequiredVersion": "npm:react-native-tvos@0.86-stable",
+    "parentPackageResolvedVersion": "0.86.2-0",
+    "dependencyType": "transitiveDependency"
+  },
   "@react-native/community-cli-plugin@0.86.2": {
     "name": "@react-native/community-cli-plugin",
     "description": "Core CLI commands for React Native",
@@ -11341,6 +11414,60 @@
     ],
     "parentPackageRequiredVersion": "npm:react-native-tvos@0.86-stable",
     "parentPackageResolvedVersion": "0.86.2-0",
+    "dependencyType": "transitiveDependency"
+  },
+  "@react-native/dev-middleware@0.86.2": {
+    "name": "@react-native/dev-middleware",
+    "description": "Dev server middleware for React Native",
+    "type": "MIT",
+    "url": "https://github.com/react/react-native",
+    "version": "0.86.2",
+    "requiredVersion": "0.86.2",
+    "parentPackages": [
+      {
+        "name": "@react-native/community-cli-plugin",
+        "requiredVersion": "0.86.2",
+        "resolvedVersion": "0.86.2"
+      }
+    ],
+    "parentPackageRequiredVersion": "0.86.2",
+    "parentPackageResolvedVersion": "0.86.2",
+    "dependencyType": "transitiveDependency"
+  },
+  "@react-native/debugger-frontend@0.86.2": {
+    "name": "@react-native/debugger-frontend",
+    "description": "Debugger frontend for React Native based on Chrome DevTools",
+    "type": "BSD-3-Clause",
+    "url": "https://github.com/react/react-native",
+    "version": "0.86.2",
+    "requiredVersion": "0.86.2",
+    "parentPackages": [
+      {
+        "name": "@react-native/dev-middleware",
+        "requiredVersion": "0.86.2",
+        "resolvedVersion": "0.86.2"
+      }
+    ],
+    "parentPackageRequiredVersion": "0.86.2",
+    "parentPackageResolvedVersion": "0.86.2",
+    "dependencyType": "transitiveDependency"
+  },
+  "@react-native/debugger-shell@0.86.2": {
+    "name": "@react-native/debugger-shell",
+    "description": "Experimental debugger shell for React Native for use with @react-native/debugger-frontend",
+    "type": "MIT",
+    "url": "https://github.com/react/react-native",
+    "version": "0.86.2",
+    "requiredVersion": "0.86.2",
+    "parentPackages": [
+      {
+        "name": "@react-native/dev-middleware",
+        "requiredVersion": "0.86.2",
+        "resolvedVersion": "0.86.2"
+      }
+    ],
+    "parentPackageRequiredVersion": "0.86.2",
+    "parentPackageResolvedVersion": "0.86.2",
     "dependencyType": "transitiveDependency"
   },
   "@react-native/gradle-plugin@0.86.2": {
@@ -11379,15 +11506,13 @@
     "parentPackageResolvedVersion": "0.86.2-0",
     "dependencyType": "transitiveDependency"
   },
-  "babel-plugin-syntax-hermes-parser@0.36.0": {
-    "name": "babel-plugin-syntax-hermes-parser",
-    "content": "MIT License\n\nCopyright (c) Meta Platforms, Inc. and affiliates.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
-    "file": "LICENSE",
-    "description": "Babel plugin which switches Babel to use the Hermes parser.",
+  "@react-native/normalize-colors@0.86.2": {
+    "name": "@react-native/normalize-colors",
+    "description": "Color normalization for React Native.",
     "type": "MIT",
-    "url": "https://github.com/facebook/hermes",
-    "version": "0.36.0",
-    "requiredVersion": "0.36.0",
+    "url": "https://github.com/react/react-native",
+    "version": "0.86.2",
+    "requiredVersion": "0.86.2",
     "parentPackages": [
       {
         "name": "react-native",
@@ -14704,7 +14829,7 @@
     "parentPackageResolvedVersion": "0.9.4",
     "dependencyType": "transitiveDependency"
   },
-  "eslint-config-expo@57.0.1": {
+  "eslint-config-expo@57.0.2": {
     "name": "eslint-config-expo",
     "author": "Expo",
     "content": "The MIT License (MIT)\n\nCopyright (c) 2016-present Expo\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
@@ -14712,8 +14837,8 @@
     "description": "ESLint config for Expo apps",
     "type": "MIT",
     "url": "https://github.com/expo/expo",
-    "version": "57.0.1",
-    "requiredVersion": "~57.0.1",
+    "version": "57.0.2",
+    "requiredVersion": "~57.0.2",
     "parentPackages": [],
     "dependencyType": "devDependency"
   },
@@ -14729,12 +14854,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "ignore@7.0.6": {
@@ -14990,12 +15115,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "eslint-import-resolver-typescript@3.10.1": {
@@ -15011,12 +15136,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "@nolyfill/is-core-module@1.0.39": {
@@ -15190,12 +15315,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "eslint-plugin-import@2.32.0": {
@@ -15211,12 +15336,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "@rtsao/scc@1.1.0": {
@@ -17740,12 +17865,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "array.prototype.findlast@1.2.5": {
@@ -17905,12 +18030,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "hermes-parser@0.25.1": {
@@ -18008,12 +18133,12 @@
     "parentPackages": [
       {
         "name": "eslint-config-expo",
-        "requiredVersion": "~57.0.1",
-        "resolvedVersion": "57.0.1"
+        "requiredVersion": "~57.0.2",
+        "resolvedVersion": "57.0.2"
       }
     ],
-    "parentPackageRequiredVersion": "~57.0.1",
-    "parentPackageResolvedVersion": "57.0.1",
+    "parentPackageRequiredVersion": "~57.0.2",
+    "parentPackageResolvedVersion": "57.0.2",
     "dependencyType": "transitiveDependency"
   },
   "license-kit@0.3.5": {
