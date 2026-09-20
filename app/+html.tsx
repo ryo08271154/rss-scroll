@@ -4,6 +4,8 @@ import {
 } from "expo-router/html";
 import type { PropsWithChildren } from "react";
 
+const googleTagId = process.env.EXPO_PUBLIC_GOOGLE_TAG_ID;
+
 // This file is web-only and used to configure the root HTML for every
 // web page during server rendering.
 // The contents of this function only run in Node.js environments and
@@ -22,6 +24,25 @@ export default function Root({ children }: PropsWithChildren) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <title>RSS Scroll</title>
+
+        {googleTagId ? (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "${googleTagId}");
+`,
+              }}
+            />
+          </>
+        ) : null}
 
         {/* Link the PWA manifest file. */}
         <link rel="manifest" href="/manifest.json" />
