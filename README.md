@@ -2,6 +2,10 @@
 
 RSS Scrollは、ExpoとReact Nativeを使って作成されたRSSリーダーアプリです。
 
+## Web版
+
+- [https://rss-scroll.vercel.app/](https://rss-scroll.vercel.app/)
+
 ## ダウンロード
 
 - **Android**

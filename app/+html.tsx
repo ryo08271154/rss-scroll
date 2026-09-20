@@ -4,6 +4,51 @@ import {
 } from "expo-router/html";
 import type { PropsWithChildren } from "react";
 
+const googleTagId = process.env.EXPO_PUBLIC_GOOGLE_TAG_ID;
+const appDescription =
+  "A sleek RSS reader that shows your feeds in card and list views.";
+const supportedLanguages = ["ja", "en", "de", "es", "fr", "it", "ko", "pt"];
+const creator = {
+  "@type": "Person",
+  name: "ryo08271154",
+  url: "https://ryo08271154.wordpress.com/",
+  sameAs: ["https://github.com/ryo08271154", "https://x.com/ryo08271154"],
+};
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: "RSS Scroll",
+      inLanguage: supportedLanguages,
+      isAccessibleForFree: true,
+      description: appDescription,
+      publisher: creator,
+    },
+    {
+      "@type": "WebApplication",
+      name: "RSS Scroll",
+      creator,
+      applicationCategory: "NewsApplication",
+      applicationSubCategory: "RSS Reader",
+      operatingSystem: "Web, Android",
+      browserRequirements: "Requires JavaScript",
+      inLanguage: supportedLanguages,
+      isAccessibleForFree: true,
+      description: appDescription,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+  ],
+};
+const structuredDataJson = JSON.stringify(structuredData).replace(
+  /</g,
+  "\\u003c",
+);
+
 // This file is web-only and used to configure the root HTML for every
 // web page during server rendering.
 // The contents of this function only run in Node.js environments and
@@ -22,6 +67,32 @@ export default function Root({ children }: PropsWithChildren) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <title>RSS Scroll</title>
+        <meta name="description" content={appDescription} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: structuredDataJson,
+          }}
+        />
+
+        {googleTagId ? (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "${googleTagId}");
+`,
+              }}
+            />
+          </>
+        ) : null}
 
         {/* Link the PWA manifest file. */}
         <link rel="manifest" href="/manifest.json" />
