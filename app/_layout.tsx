@@ -98,7 +98,11 @@ let AppRoot = RootLayout;
 
 if (Constants.executionEnvironment !== "storeClient") {
   const { Observe, ObserveRoot } = require("expo-observe");
-  Observe.configure({ integrations: { "expo-router": true } });
+  Observe.configure({
+    integrations: {
+      "expo-router": { filteredParams: ["url"] },
+    },
+  });
   AppRoot = ObserveRoot.wrap(RootLayout);
 }
 
