@@ -15,6 +15,8 @@ import { useTranslation } from "react-i18next";
 import {
   FlatList,
   Modal,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
   Platform,
   Pressable,
   RefreshControl,
@@ -50,12 +52,26 @@ export default function HomeScreen() {
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
   const insets = useSafeAreaInsets();
+  const scrollEndTimerRef = useRef(setTimeout(() => {}, 0));
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
 
   const [isFocused, setIsFocused] = useState(false);
   const { toggleSavedArticle } = useToggleSavedArticle();
+
+  const handleScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    // スクロール位置から現在のインデックスを計算
+    indexRef.current =
+      height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+
+    // 表示済みに追加
+    const article = articles[indexRef.current];
+
+    if (!article) return;
+
+    addViewedArticleId(article.id);
+  };
 
   const updateArticles = useCallback(
     async (useCache: boolean = true): Promise<Article[]> => {
@@ -217,6 +233,7 @@ export default function HomeScreen() {
       text1: t("autoScroll"),
       text2: t("autoScrollHint"),
       position: "bottom",
+      onPress: () => setAutoScroll((prev) => !prev),
     });
 
     if (Platform.OS === "android" || Platform.OS === "ios") {
@@ -356,18 +373,20 @@ export default function HomeScreen() {
           />
         }
         ref={flatListRef}
-        onMomentumScrollEnd={(e) => {
-          // スクロール位置から現在のインデックスを計算
-          indexRef.current =
-            height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+        onScroll={(e) => {
+          if (Platform.OS !== "web") return;
 
-          // 表示済みに追加
-          const article = articles[indexRef.current];
+          if (scrollEndTimerRef.current) {
+            clearTimeout(scrollEndTimerRef.current);
+          }
 
-          if (!article) return;
-
-          addViewedArticleId(article.id);
+          scrollEndTimerRef.current = setTimeout(() => {
+            handleScrollEnd(e);
+          }, 500);
         }}
+        onMomentumScrollEnd={(e) =>
+          Platform.OS !== "web" ? handleScrollEnd(e) : undefined
+        }
       />
       <Modal
         animationType="slide"
