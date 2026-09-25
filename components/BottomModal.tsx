@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Pressable, StyleProp, View, ViewStyle } from "react-native";
+import { Modal, Pressable, StyleProp, ViewStyle } from "react-native";
 
 type BottomModalProps = {
   visible: boolean;
@@ -35,7 +35,7 @@ export default function BottomModal({
         ]}
         onPress={onClose}
       >
-        <View
+        <Pressable
           style={[
             {
               backgroundColor: "white",
@@ -46,9 +46,10 @@ export default function BottomModal({
             },
             contentStyle,
           ]}
+          onPress={(e) => e.stopPropagation()}
         >
           {children}
-        </View>
+        </Pressable>
       </Pressable>
     </Modal>
   );
