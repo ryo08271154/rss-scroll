@@ -56,7 +56,7 @@ export default function CategoryCustomizationScreen() {
         onClose={() => setIsModalVisible(false)}
         contentStyle={{ width: "100%" }}
       >
-        <Text style={{ color: c.title }}>{t("categoryName")}</Text>
+        <Text>{t("categoryName")}</Text>
         <TextInput
           style={styles.input}
           placeholder={t("categoryName")}
@@ -65,7 +65,7 @@ export default function CategoryCustomizationScreen() {
             setNewCategoryName(text);
           }}
         />
-        <Text style={{ color: c.title }}>{t("keywords")}</Text>
+        <Text>{t("keywords")}</Text>
         <TextInput
           style={[styles.input, { color: c.text }]}
           placeholder={t("keywords")}

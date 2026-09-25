@@ -51,7 +51,7 @@ export default function HomeScreen() {
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
   const insets = useSafeAreaInsets();
-  const scrollEndTimerRef = useRef(setTimeout(() => {}, 0));
+  const scrollEndTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
@@ -383,6 +383,7 @@ export default function HomeScreen() {
             handleScrollEnd(e);
           }, 500);
         }}
+        scrollEventThrottle={16}
         onMomentumScrollEnd={(e) =>
           Platform.OS !== "web" ? handleScrollEnd(e) : undefined
         }
