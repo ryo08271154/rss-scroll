@@ -1,3 +1,4 @@
+import BottomModal from "@/components/BottomModal";
 import { ThemeContext } from "@/context/ThemeContext";
 import { Category } from "@/types/categories";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -6,9 +7,7 @@ import { Stack } from "expo-router";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
-  Alert,
   Button,
-  Modal,
   StyleSheet,
   Text,
   TextInput,
@@ -24,6 +23,7 @@ export default function CategoryCustomizationScreen() {
   const [newCategoryName, setNewCategoryName] = useState<string>("");
   const [newCategoryKeywords, setNewCategoryKeywords] = useState<string>("");
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [removeTarget, setRemoveTarget] = useState<Category | null>(null);
 
   useEffect(() => {
     AsyncStorage.getItem("categories").then((value) => {
@@ -50,67 +50,58 @@ export default function CategoryCustomizationScreen() {
           ),
         }}
       />
-      <Modal
-        animationType="slide"
-        visible={isModalVisible}
-        onRequestClose={() => setIsModalVisible(false)}
-      >
-        <View
-          style={{
-            flex: 1,
-            gap: 16,
-            backgroundColor: c.background,
-          }}
-        >
-          <Text style={{ color: c.title }}>{t("categoryName")}</Text>
-          <TextInput
-            style={[styles.input, { color: c.text }]}
-            placeholder={t("categoryName")}
-            value={newCategoryName}
-            onChangeText={(text) => {
-              setNewCategoryName(text);
-            }}
-          />
-          <Text style={{ color: c.title }}>{t("keywords")}</Text>
-          <TextInput
-            style={[styles.input, { color: c.text }]}
-            placeholder={t("keywords")}
-            value={newCategoryKeywords}
-            onChangeText={(text) => {
-              setNewCategoryKeywords(text);
-            }}
-          />
-          <Button
-            title={t("add")}
-            onPress={() => {
-              if (!newCategoryName || !newCategoryKeywords) return;
-              if (categories.find((c) => c.name === newCategoryName)) return;
 
-              setCategories([
-                ...categories,
-                {
-                  name: newCategoryName,
-                  keywords: newCategoryKeywords
-                    .split(/[\s,、]+/)
-                    .filter((k) => k !== ""),
-                },
-              ]);
-              setNewCategoryName("");
-              setNewCategoryKeywords("");
-              setIsModalVisible(false);
-            }}
-          />
-          <Button
-            title={t("cancel")}
-            onPress={() => {
-              setIsModalVisible(false);
-            }}
-          />
-        </View>
-      </Modal>
-      <Text style={[styles.itemText, { color: c.title }]}>
-        {t("settingCategoryCustomizationName")}
-      </Text>
+      <BottomModal
+        visible={isModalVisible}
+        onClose={() => setIsModalVisible(false)}
+        contentStyle={{ width: "100%" }}
+      >
+        <Text style={{ color: c.title }}>{t("categoryName")}</Text>
+        <TextInput
+          style={styles.input}
+          placeholder={t("categoryName")}
+          value={newCategoryName}
+          onChangeText={(text) => {
+            setNewCategoryName(text);
+          }}
+        />
+        <Text style={{ color: c.title }}>{t("keywords")}</Text>
+        <TextInput
+          style={[styles.input, { color: c.text }]}
+          placeholder={t("keywords")}
+          value={newCategoryKeywords}
+          onChangeText={(text) => {
+            setNewCategoryKeywords(text);
+          }}
+        />
+        <Button
+          title={t("add")}
+          onPress={() => {
+            if (!newCategoryName || !newCategoryKeywords) return;
+            if (categories.find((c) => c.name === newCategoryName)) return;
+
+            setCategories([
+              ...categories,
+              {
+                name: newCategoryName,
+                keywords: newCategoryKeywords
+                  .split(/[\s,、]+/)
+                  .filter((k) => k !== ""),
+              },
+            ]);
+            setNewCategoryName("");
+            setNewCategoryKeywords("");
+            setIsModalVisible(false);
+          }}
+        />
+        <Button
+          title={t("cancel")}
+          onPress={() => {
+            setIsModalVisible(false);
+          }}
+        />
+      </BottomModal>
+
       <DraggableFlatList
         data={categories}
         keyExtractor={(item: Category) => item.name}
@@ -118,25 +109,7 @@ export default function CategoryCustomizationScreen() {
           <TouchableOpacity
             style={[styles.item, { backgroundColor: c.background }]}
             onPress={() => {
-              Alert.alert(
-                t("remove"),
-                `${t("categoryName")}: ${item.name}\n${t("keywords")}: ${item.keywords.join(", ")}`,
-                [
-                  {
-                    text: t("no"),
-                    style: "cancel",
-                  },
-                  {
-                    text: t("yes"),
-                    style: "destructive",
-                    onPress: () => {
-                      setCategories(
-                        categories.filter((c) => c.name !== item.name),
-                      );
-                    },
-                  },
-                ],
-              );
+              setRemoveTarget(item);
             }}
             onLongPress={() => {
               drag();
@@ -153,6 +126,37 @@ export default function CategoryCustomizationScreen() {
         )}
         onDragEnd={({ data }) => setCategories(data)}
       />
+
+      <BottomModal
+        visible={removeTarget !== null}
+        onClose={() => setRemoveTarget(null)}
+        contentStyle={{ width: "100%" }}
+      >
+        <Text
+          style={{
+            fontSize: 18,
+            fontWeight: "bold",
+          }}
+        >
+          {t("remove")}
+        </Text>
+        <Text>
+          {`${t("categoryName")}: ${removeTarget?.name}\n${t("keywords")}: ${removeTarget?.keywords.join(", ")}`}
+        </Text>
+        <Button
+          title={t("yes")}
+          color="red"
+          onPress={() => {
+            if (removeTarget) {
+              setCategories(
+                categories.filter((c) => c.name !== removeTarget.name),
+              );
+            }
+            setRemoveTarget(null);
+          }}
+        />
+        <Button title={t("no")} onPress={() => setRemoveTarget(null)} />
+      </BottomModal>
     </>
   );
 }
