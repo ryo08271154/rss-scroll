@@ -1,3 +1,4 @@
+import BottomModal from "@/components/BottomModal";
 import CategoryPicker from "@/components/CategoryPicker";
 import ReelCard from "@/components/ReelCard";
 import { SettingsContext } from "@/context/SettingsContext";
@@ -14,9 +15,9 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FlatList,
-  Modal,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
   Platform,
-  Pressable,
   RefreshControl,
   Switch,
   Text,
@@ -50,12 +51,26 @@ export default function HomeScreen() {
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
   const insets = useSafeAreaInsets();
+  const scrollEndTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
 
   const [isFocused, setIsFocused] = useState(false);
   const { toggleSavedArticle } = useToggleSavedArticle();
+
+  const handleScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    // スクロール位置から現在のインデックスを計算
+    indexRef.current =
+      height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+
+    // 表示済みに追加
+    const article = articles[indexRef.current];
+
+    if (!article) return;
+
+    addViewedArticleId(article.id);
+  };
 
   const updateArticles = useCallback(
     async (useCache: boolean = true): Promise<Article[]> => {
@@ -217,6 +232,7 @@ export default function HomeScreen() {
       text1: t("autoScroll"),
       text2: t("autoScrollHint"),
       position: "bottom",
+      onPress: () => setAutoScroll((prev) => !prev),
     });
 
     if (Platform.OS === "android" || Platform.OS === "ios") {
@@ -356,49 +372,29 @@ export default function HomeScreen() {
           />
         }
         ref={flatListRef}
-        onMomentumScrollEnd={(e) => {
-          // スクロール位置から現在のインデックスを計算
-          indexRef.current =
-            height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+        onScroll={(e) => {
+          if (Platform.OS !== "web") return;
 
-          // 表示済みに追加
-          const article = articles[indexRef.current];
+          if (scrollEndTimerRef.current) {
+            clearTimeout(scrollEndTimerRef.current);
+          }
 
-          if (!article) return;
-
-          addViewedArticleId(article.id);
+          scrollEndTimerRef.current = setTimeout(() => {
+            handleScrollEnd(e);
+          }, 500);
         }}
+        scrollEventThrottle={16}
+        onMomentumScrollEnd={(e) =>
+          Platform.OS !== "web" ? handleScrollEnd(e) : undefined
+        }
       />
-      <Modal
-        animationType="slide"
-        transparent={true}
+      <BottomModal
         visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(false);
-        }}
+        onClose={() => setModalVisible(false)}
       >
-        <Pressable
-          style={{
-            flex: 1,
-            alignItems: "center",
-            justifyContent: "flex-end",
-            backgroundColor: "rgba(0,0,0,0.1)",
-          }}
-          onPress={() => setModalVisible(false)}
-        >
-          <View
-            style={{
-              backgroundColor: "white",
-              padding: 24,
-              marginBottom: 50,
-              borderRadius: 10,
-            }}
-          >
-            <Text>{t("autoScroll")}</Text>
-            <Switch value={autoScroll} onValueChange={setAutoScroll} />
-          </View>
-        </Pressable>
-      </Modal>
+        <Text>{t("autoScroll")}</Text>
+        <Switch value={autoScroll} onValueChange={setAutoScroll} />
+      </BottomModal>
     </View>
   );
 }
