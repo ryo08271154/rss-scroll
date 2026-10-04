@@ -60,6 +60,8 @@ export default function ReaderScreen() {
         document.querySelectorAll(".popup, .modal, .overlay").forEach(el => el.remove());
 
         document.querySelectorAll('[class*="cookie"], [id*="cookie"], [class*="consent"], [id*="consent"]').forEach(el => el.remove());
+        document.querySelectorAll('.fc-message-root, [class*="fc-message-root"]').forEach(el => el.remove());
+        document.querySelectorAll('google-anno-sa, .google-anno-sa, [class*="google-anno-sa"], .adsbygoogle, .adsbygoogle-noablate, [class*="adsbygoogle"]').forEach(el => el.remove());
 
         document.querySelectorAll("*").forEach(el => {
           const style = getComputedStyle(el);
@@ -72,6 +74,8 @@ export default function ReaderScreen() {
           document.querySelectorAll('a[target="_blank"]').forEach(el => {
             el.removeAttribute("target");
           });
+          document.querySelectorAll('.fc-message-root, [class*="fc-message-root"]').forEach(el => el.remove());
+          document.querySelectorAll('google-anno-sa, .google-anno-sa, [class*="google-anno-sa"], .adsbygoogle, .adsbygoogle-noablate, [class*="adsbygoogle"]').forEach(el => el.remove());
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
