@@ -5,19 +5,22 @@ import {
   cancelAllNotifications,
   requestNotificationPermission,
 } from "@/lib/notifications";
+import { fetchRss } from "@/lib/rss";
 import { reloadAppAsync } from "expo";
 import * as Application from "expo-application";
 import Constants from "expo-constants";
 import * as Device from "expo-device";
-import { Tabs } from "expo-router";
+import { router, Tabs } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
+  ActivityIndicator,
   Alert,
   AppState,
   Button,
   Linking,
+  Platform,
   ScrollView,
   StyleSheet,
   Switch,
@@ -31,6 +34,7 @@ export default function SettingsScreen() {
   const { settings, setSettings, saveSettings, resetSettings } =
     useContext(SettingsContext);
   const [newUrl, setNewUrl] = useState("");
+  const [isCheckingUrl, setIsCheckingUrl] = useState(false);
 
   const c = useContext(ThemeContext);
 
@@ -45,6 +49,15 @@ export default function SettingsScreen() {
 
     if (key === "notifications") {
       if (value === true) {
+        // TV用
+        if (Platform.isTV) {
+          Alert.alert(
+            t("error"),
+            "Notifications are not supported on TV devices.",
+          );
+          return;
+        }
+
         const status = await requestNotificationPermission();
         if (status === false) {
           Alert.alert(
@@ -70,24 +83,58 @@ export default function SettingsScreen() {
     saveSettings(newSettings);
   }
 
-  function handleAddUrl(url: string) {
-    if (!url.trim()) {
+  async function handleAddUrl(url: string) {
+    const trimmedUrl = url.trim();
+    if (!trimmedUrl) {
       return;
     }
 
     // URLチェック
     try {
-      new URL(url.trim());
+      const parsedUrl = new URL(trimmedUrl);
+      if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+        Alert.alert(t("error"), t("invalidUrl"));
+        return;
+      }
     } catch (e) {
-      Alert.alert("Error", t("invalidUrl"));
+      Alert.alert(t("error"), t("invalidUrl"));
       return;
     }
 
     const currentItem = settings.find((item) => item.key === "rssFeedUrls");
     const urls = Array.isArray(currentItem?.value) ? currentItem.value : [];
-    const nextUrls = [...urls, url.trim()];
-    handleChange("rssFeedUrls", nextUrls);
-    setNewUrl("");
+    if (urls.includes(trimmedUrl)) {
+      return;
+    }
+
+    setIsCheckingUrl(true);
+    try {
+      const feed = await fetchRss(trimmedUrl);
+      const channel =
+        feed?.rss?.channel ?? feed?.feed ?? feed?.["rdf:RDF"] ?? feed?.channel;
+      const items: any[] = [
+        channel?.item ??
+          channel?.entry ??
+          feed?.["rdf:RDF"]?.item ??
+          feed?.entry ??
+          feed?.item,
+      ]
+        .flat()
+        .filter(Boolean);
+
+      if (items.length === 0) {
+        Alert.alert(t("error"), t("invalidUrl"));
+        return;
+      }
+
+      const nextUrls = [...urls, trimmedUrl];
+      handleChange("rssFeedUrls", nextUrls);
+      setNewUrl("");
+    } catch (error) {
+      Alert.alert(t("error"), t("invalidUrl"));
+    } finally {
+      setIsCheckingUrl(false);
+    }
   }
 
   function handleRemoveUrl(indexToRemove: number) {
@@ -109,8 +156,13 @@ export default function SettingsScreen() {
       );
       return;
     }
-    const { ReactNativeLegal } = require("react-native-legal");
-    ReactNativeLegal.launchLicenseListScreen("OSS Notice");
+
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      const { ReactNativeLegal } = require("react-native-legal");
+      ReactNativeLegal.launchLicenseListScreen("OSS Notice");
+    } else {
+      router.push("/licenses");
+    }
   }
 
   //アップデート確認
@@ -184,8 +236,16 @@ export default function SettingsScreen() {
                   onChangeText={setNewUrl}
                   keyboardType="url"
                   autoCapitalize="none"
+                  editable={!isCheckingUrl}
                 />
-                <Button title={t("add")} onPress={() => handleAddUrl(newUrl)} />
+                {isCheckingUrl ? (
+                  <ActivityIndicator size="small" />
+                ) : (
+                  <Button
+                    title={t("add")}
+                    onPress={() => handleAddUrl(newUrl)}
+                  />
+                )}
                 {Array.isArray(setting.value) && setting.value.length > 0 ? (
                   <View style={styles.urlList}>
                     {setting.value.map((url: string, urlIndex: number) => (
@@ -205,32 +265,37 @@ export default function SettingsScreen() {
                 )}
               </View>
             )}
+            {item.action && item.value && (
+              <Button onPress={item.action} title={item.name} />
+            )}
           </View>
         );
       })}
-      <Button
-        title={t("languageSettings")}
-        onPress={() => {
-          // 設定画面から戻ってきたら再読み込みして言語を反映する
-          const sub = AppState.addEventListener("change", (state) => {
-            if (state === "active") {
-              sub.remove();
-              reloadAppAsync();
+      {!Platform.isTV && Device.brand !== "oculus" && Platform.OS !== "web" && (
+        <Button
+          title={t("languageSettings")}
+          onPress={() => {
+            // 設定画面から戻ってきたら再読み込みして言語を反映する
+            const sub = AppState.addEventListener("change", (state) => {
+              if (state === "active") {
+                sub.remove();
+                reloadAppAsync();
+              }
+            });
+
+            Alert.alert(
+              "Open Settings",
+              "Please open the app settings to change language.",
+            );
+
+            try {
+              Linking.openSettings();
+            } catch (e) {
+              console.log(e);
             }
-          });
-
-          Alert.alert(
-            "Open Settings",
-            "Please open the app settings to change language.",
-          );
-
-          try {
-            Linking.openSettings();
-          } catch (e) {
-            console.log(e);
-          }
-        }}
-      />
+          }}
+        />
+      )}
       <Button title={t("resetSettings")} onPress={resetSettings} />
       <Button
         title="GitHub"

@@ -3,6 +3,10 @@
   "feed": "Feed",
   "saved": "Gespeichert",
   "settings": "Einstellungen",
+  "app": "App",
+
+  "installHowToTv": "Installation auf Android TV (Downloader)",
+  "installTvInstructions": "① Die App \"Downloader by AFTVnews\" auf Android TV installieren und starten\n② Den Code \"{{code}}\" in das Eingabefeld eingeben\n③ \"Download APK (Android / Android TV / Google TV)\" auswählen\n④ Nach Abschluss des Downloads den Anweisungen auf dem Bildschirm folgen, um zu installieren\n※ Bei der ersten Installation muss \"Unbekannte Apps installieren\" in den Einstellungen erlaubt werden",
 
   "add": "Hinzufügen",
   "remove": "Entfernen",
@@ -23,6 +27,10 @@
   "settingReaderModeDescription": "Aktivieren Sie den Lesemodus, damit Artikel leichter lesbar sind.",
   "settingNotificationsName": "Benachrichtigungen",
   "settingNotificationsDescription": "Erhalten Sie Benachrichtigungen über einen zufälligen Artikel.",
+  "settingCategoryCustomizationName": "Kategorien anpassen",
+  "settingCategoryCustomizationDescription": "Reihenfolge und Sichtbarkeit der Kategorien anpassen.",
+  "categoryName": "Kategoriename",
+  "keywords": "Schlüsselwörter",
   "version": "Version",
 
   "updateAvailableTitle": "Update verfügbar",
@@ -46,7 +54,7 @@
   "all": "Alle",
 
   "autoScroll": "Automatisches Scrollen",
-  "autoScrollHint": "Die Artikel werden alle 5 Sekunden automatisch weitergeschaltet. Halten Sie einen Artikel gedrückt, um die Einstellungen zu öffnen.",
+  "autoScrollHint": "Die Artikel werden alle 10 Sekunden automatisch weitergeschaltet. Halten Sie einen Artikel gedrückt, um die Einstellungen zu öffnen.",
 
   "noNewArticlesTitle": "Keine neuen Artikel",
   "noNewArticlesMessage": "Es gibt keine neuen Artikel, daher zeigen wir bereits angesehene Artikel an.",

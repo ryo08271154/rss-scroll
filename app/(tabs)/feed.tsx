@@ -1,22 +1,21 @@
-import ArticleCard from "@/components/ArticleCard";
+import ArticleFlatList from "@/components/ArticleFlatList";
 import CategoryPicker from "@/components/CategoryPicker";
 import { SettingsContext } from "@/context/SettingsContext";
 import { getRssArticles } from "@/lib/rss";
 import { Article } from "@/types/article";
-import { useNavigation, useRouter } from "expo-router";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { Category } from "@/types/categories";
+import { useRouter } from "expo-router";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FlatList,
-  RefreshControl,
-  useWindowDimensions,
-  View,
-} from "react-native";
+import { useWindowDimensions, View } from "react-native";
 
 export default function FeedScreen() {
   const { t } = useTranslation();
   const [articles, setArticles] = useState<Article[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>(t("all"));
+  const [selectedCategory, setSelectedCategory] = useState<Category>({
+    name: t("all"),
+    keywords: [],
+  });
 
   const [refreshing, setRefreshing] = useState(false);
   const { settings, setSettings, saveSettings, resetSettings } =
@@ -25,21 +24,17 @@ export default function FeedScreen() {
   const router = useRouter();
   const { width } = useWindowDimensions();
 
-  const navigation = useNavigation<any>();
-  const flatListRef = useRef<FlatList>(null);
-
   const updateArticles = useCallback(
     async (useCache: boolean = true): Promise<Article[]> => {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        selectedCategory === t("all") ? undefined : selectedCategory,
+        selectedCategory.name === t("all")
+          ? undefined
+          : selectedCategory.keywords,
       );
       setArticles(articlesData);
 
-      try {
-        flatListRef.current?.scrollToIndex({ animated: true, index: 0 });
-      } catch (e) {}
       return articlesData;
     },
     [selectedCategory, settings, t],
@@ -58,17 +53,6 @@ export default function FeedScreen() {
     updateArticles();
   }, [updateArticles]);
 
-  useEffect(() => {
-    const unsubscribe = navigation.addListener("tabPress", (e: any) => {
-      if (navigation.isFocused()) {
-        try {
-          flatListRef.current?.scrollToIndex({ animated: true, index: 0 });
-        } catch (e) {}
-      }
-    });
-    return unsubscribe;
-  }, [navigation]);
-
   // カテゴリー変更で記事を更新
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -76,7 +60,7 @@ export default function FeedScreen() {
   }, [selectedCategory, updateArticles]);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <View
         pointerEvents="box-none"
         style={{
@@ -89,16 +73,10 @@ export default function FeedScreen() {
           setSelectedCategory={setSelectedCategory}
         />
       </View>
-      <FlatList
-        data={articles}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <ArticleCard article={item} />}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
-        ref={flatListRef}
-        key={width >= 768 ? "grid" : "list"}
-        numColumns={width >= 768 ? 2 : 1}
+      <ArticleFlatList
+        articles={articles}
+        refreshing={refreshing}
+        onRefresh={onRefresh}
       />
     </View>
   );

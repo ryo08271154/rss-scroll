@@ -1,0 +1,25 @@
+{
+  "name": "RSS Scroll",
+  "short_name": "RSS Scroll",
+  "description": "A sleek RSS reader that shows your feeds in card and list views.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone"
+}

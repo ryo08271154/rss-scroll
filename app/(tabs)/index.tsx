@@ -1,10 +1,13 @@
+import BottomModal from "@/components/BottomModal";
 import CategoryPicker from "@/components/CategoryPicker";
 import ReelCard from "@/components/ReelCard";
 import { SettingsContext } from "@/context/SettingsContext";
+import { useToggleSavedArticle } from "@/hooks/useToggleSavedArticle";
 import { scheduleArticleNotifications } from "@/lib/notifications";
 import { getRssArticles } from "@/lib/rss";
 import { addViewedArticleId, getViewedArticleIds } from "@/lib/viewedArticles";
 import { Article } from "@/types/article";
+import { Category } from "@/types/categories";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { activateKeepAwakeAsync, deactivateKeepAwake } from "expo-keep-awake";
 import { Stack, Tabs, useNavigation, useRouter } from "expo-router";
@@ -12,18 +15,21 @@ import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FlatList,
-  Modal,
-  Pressable,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  Platform,
   RefreshControl,
   Switch,
   Text,
   View,
+  useTVEventHandler,
 } from "react-native";
 import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
+
 const appIcon = require("@/assets/images/icon.png");
 
 export default function HomeScreen() {
@@ -32,7 +38,10 @@ export default function HomeScreen() {
 
   const indexRef = useRef(0);
   const [articles, setArticles] = useState<Article[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>(t("all"));
+  const [selectedCategory, setSelectedCategory] = useState<Category>({
+    name: t("all"),
+    keywords: [],
+  });
 
   const [refreshing, setRefreshing] = useState(false);
   const { settings, setSettings, saveSettings, resetSettings } =
@@ -42,9 +51,26 @@ export default function HomeScreen() {
   const navigation = useNavigation<any>();
   const flatListRef = useRef<FlatList>(null);
   const insets = useSafeAreaInsets();
+  const scrollEndTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [modalVisible, setModalVisible] = useState(false);
   const [autoScroll, setAutoScroll] = useState(false);
+
+  const [isFocused, setIsFocused] = useState(false);
+  const { toggleSavedArticle } = useToggleSavedArticle();
+
+  const handleScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    // スクロール位置から現在のインデックスを計算
+    indexRef.current =
+      height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+
+    // 表示済みに追加
+    const article = articles[indexRef.current];
+
+    if (!article) return;
+
+    addViewedArticleId(article.id);
+  };
 
   const updateArticles = useCallback(
     async (useCache: boolean = true): Promise<Article[]> => {
@@ -54,7 +80,7 @@ export default function HomeScreen() {
           title: t("hint1Title"),
           description: t("hint1Description"),
           imageUrl: appIcon,
-          url: "https://github.com/ryo08271154/rss-scroll",
+          url: "rssscroll://settings",
           pubDate: "2026-05-10 15:30:00",
           summary: t("hint1Summary"),
           source: t("hintSource"),
@@ -64,7 +90,7 @@ export default function HomeScreen() {
           title: t("hint2Title"),
           description: t("hint2Description"),
           imageUrl: appIcon,
-          url: "https://github.com/ryo08271154/rss-scroll",
+          url: "rssscroll://feed",
           pubDate: "2026-05-10 15:30:00",
           summary: t("hint2Summary"),
           source: t("hintSource"),
@@ -74,7 +100,7 @@ export default function HomeScreen() {
           title: t("hint3Title"),
           description: t("hint3Description"),
           imageUrl: appIcon,
-          url: "https://github.com/ryo08271154/rss-scroll",
+          url: "rssscroll://settings",
           pubDate: "2026-05-10 15:30:00",
           summary: t("hint3Summary"),
           source: t("hintSource"),
@@ -84,7 +110,9 @@ export default function HomeScreen() {
       const articlesData = await getRssArticles(
         useCache,
         settings,
-        selectedCategory === t("all") ? undefined : selectedCategory,
+        selectedCategory.name === t("all")
+          ? undefined
+          : selectedCategory.keywords,
       );
 
       const viewedArticleIds = await getViewedArticleIds();
@@ -126,7 +154,7 @@ export default function HomeScreen() {
       //通知設定がオンのとき
       if (
         settings.find((setting) => setting.key === "notifications")?.value &&
-        selectedCategory === t("all")
+        selectedCategory.name === t("all")
       ) {
         // 通知登録
         await scheduleArticleNotifications(
@@ -193,7 +221,9 @@ export default function HomeScreen() {
   // 自動スクロール
   useEffect(() => {
     if (!autoScroll) {
-      deactivateKeepAwake();
+      if (Platform.OS === "android" || Platform.OS === "ios") {
+        deactivateKeepAwake();
+      }
       return;
     }
 
@@ -202,9 +232,13 @@ export default function HomeScreen() {
       text1: t("autoScroll"),
       text2: t("autoScrollHint"),
       position: "bottom",
+      onPress: () => setAutoScroll((prev) => !prev),
     });
 
-    activateKeepAwakeAsync();
+    if (Platform.OS === "android" || Platform.OS === "ios") {
+      activateKeepAwakeAsync();
+    }
+
     const interval = setInterval(() => {
       if (indexRef.current < articles.length - 1) {
         flatListRef.current?.scrollToIndex({
@@ -214,11 +248,13 @@ export default function HomeScreen() {
       } else {
         onRefresh();
       }
-    }, 5000);
+    }, 10000);
 
     return () => {
+      if (Platform.OS === "android" || Platform.OS === "ios") {
+        deactivateKeepAwake();
+      }
       clearInterval(interval);
-      deactivateKeepAwake();
     };
   }, [t, autoScroll, articles.length, onRefresh]);
 
@@ -227,10 +263,64 @@ export default function HomeScreen() {
     AsyncStorage.setItem("autoScroll", JSON.stringify(autoScroll));
   }, [autoScroll]);
 
+  // TV用
+  useTVEventHandler?.((event) => {
+    if (!isFocused) return;
+
+    if (event.eventType === "select") {
+      router.push(
+        `/reader?url=${encodeURIComponent(articles[indexRef.current].url)}`,
+      );
+    } else if (event.eventType === "down") {
+      if (indexRef.current >= articles.length - 1) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current + 1,
+      });
+    } else if (event.eventType === "up") {
+      if (indexRef.current === 0) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current - 1,
+      });
+    } else if (event.eventType === "longDown") {
+      if (indexRef.current >= articles.length - 1) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current + 1,
+      });
+    } else if (event.eventType === "longUp") {
+      if (indexRef.current === 0) return;
+
+      flatListRef.current?.scrollToIndex({
+        animated: true,
+        index: indexRef.current - 1,
+      });
+    } else if (event.eventType === "right") {
+      if (autoScroll) {
+        toggleSavedArticle(articles[indexRef.current].id);
+        return;
+      }
+
+      setAutoScroll(true);
+    } else if (event.eventType === "left") {
+      setAutoScroll(false);
+    }
+  });
+
   return (
     <View
       style={{ flex: 1 }}
       onLayout={(e) => setHeight(e.nativeEvent.layout.height)}
+      onFocus={() => {
+        setIsFocused(true);
+      }}
+      onBlur={() => {
+        setIsFocused(false);
+      }}
     >
       {autoScroll ? (
         <Tabs.Screen options={{ tabBarStyle: { display: "none" } }} />
@@ -282,49 +372,29 @@ export default function HomeScreen() {
           />
         }
         ref={flatListRef}
-        onMomentumScrollEnd={(e) => {
-          // スクロール位置から現在のインデックスを計算
-          indexRef.current =
-            height > 0 ? Math.round(e.nativeEvent.contentOffset.y / height) : 0;
+        onScroll={(e) => {
+          if (Platform.OS !== "web") return;
 
-          // 表示済みに追加
-          const article = articles[indexRef.current];
+          if (scrollEndTimerRef.current) {
+            clearTimeout(scrollEndTimerRef.current);
+          }
 
-          if (!article) return;
-
-          addViewedArticleId(article.id);
+          scrollEndTimerRef.current = setTimeout(() => {
+            handleScrollEnd(e);
+          }, 500);
         }}
+        scrollEventThrottle={16}
+        onMomentumScrollEnd={(e) =>
+          Platform.OS !== "web" ? handleScrollEnd(e) : undefined
+        }
       />
-      <Modal
-        animationType="slide"
-        transparent={true}
+      <BottomModal
         visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(false);
-        }}
+        onClose={() => setModalVisible(false)}
       >
-        <Pressable
-          style={{
-            flex: 1,
-            alignItems: "center",
-            justifyContent: "flex-end",
-            backgroundColor: "rgba(0,0,0,0.1)",
-          }}
-          onPress={() => setModalVisible(false)}
-        >
-          <View
-            style={{
-              backgroundColor: "white",
-              padding: 24,
-              marginBottom: 50,
-              borderRadius: 10,
-            }}
-          >
-            <Text>{t("autoScroll")}</Text>
-            <Switch value={autoScroll} onValueChange={setAutoScroll} />
-          </View>
-        </Pressable>
-      </Modal>
+        <Text>{t("autoScroll")}</Text>
+        <Switch value={autoScroll} onValueChange={setAutoScroll} />
+      </BottomModal>
     </View>
   );
 }

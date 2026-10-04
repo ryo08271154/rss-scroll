@@ -2,7 +2,7 @@
   "expo": {
     "name": "RSS Scroll",
     "slug": "rss-reels",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "rssscroll",
@@ -21,12 +21,13 @@
       },
       "predictiveBackGestureEnabled": true,
       "package": "com.ryo08271154.rssreels",
-      "versionCode": 7,
+      "versionCode": 8,
       "blockedPermissions": ["android.permission.SYSTEM_ALERT_WINDOW"]
     },
     "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "output": "server",
+      "favicon": "./assets/images/favicon.png",
+      "name": "RSS Scroll"
     },
     "plugins": [
       "expo-router",
@@ -51,10 +52,20 @@
           }
         }
       ],
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "isTV": true,
+          "androidTVBanner": "./assets/images/tv-banner.png",
+          "androidTVIcon": "./assets/images/icon.png"
+        }
+      ],
       "expo-web-browser",
       "react-native-legal",
       "expo-image",
-      "expo-background-task"
+      "expo-background-task",
+      "expo-font",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true,

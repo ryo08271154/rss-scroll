@@ -1,6 +1,7 @@
 import { SettingItem } from "@/types/settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Application from "expo-application";
+import { useRouter } from "expo-router";
 import {
   createContext,
   Dispatch,
@@ -11,6 +12,7 @@ import {
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
+import { Platform } from "react-native";
 
 type SettingsContextType = {
   settings: SettingItem[];
@@ -31,6 +33,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   children: ReactNode;
 }) => {
   const { t } = useTranslation();
+  const router = useRouter();
   const settingItems: SettingItem[] = [
     {
       name: t("settingRssName"),
@@ -44,7 +47,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
       description: t("settingReaderModeDescription"),
       type: "switch",
       key: "readerMode",
-      value: false,
+      value: Platform.isTV,
     },
     {
       name: t("settingNotificationsName"),
@@ -52,6 +55,13 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
       type: "switch",
       key: "notifications",
       value: false,
+    },
+    {
+      name: t("settingCategoryCustomizationName"),
+      description: t("settingCategoryCustomizationDescription"),
+      type: "switch",
+      key: "categoryCustomizationEnabled",
+      action: () => router.push("/category-customization"),
     },
     {
       name: t("version"),
@@ -90,6 +100,12 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   }
 
   useEffect(() => {
+    if (Platform.OS === "web") {
+      settingItems.splice(1, 2);
+      settingItems.splice(2);
+    } else if (Platform.isTV) {
+      settingItems.splice(2);
+    }
     // eslint-disable-next-line react-hooks/set-state-in-effect
     loadSettings();
   }, []);

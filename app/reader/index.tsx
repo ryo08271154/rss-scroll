@@ -3,7 +3,7 @@ import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Alert, Text } from "react-native";
+import { Alert, Linking, Platform, Text } from "react-native";
 import { WebView, WebViewNavigation } from "react-native-webview";
 export default function ReaderScreen() {
   const router = useRouter();
@@ -20,8 +20,17 @@ export default function ReaderScreen() {
       return;
     }
     if (!settings.find((item) => item.key === "readerMode")?.value) {
-      openBrowserAsync(url);
+      if (Platform.OS === "web") {
+        Linking.openURL(url);
+      } else {
+        openBrowserAsync(url);
+      }
       router.back();
+    }
+
+    if (!url.startsWith("http")) {
+      router.back();
+      openBrowserAsync(url);
     }
   }, [settings, url, router]);
 
@@ -51,6 +60,8 @@ export default function ReaderScreen() {
         document.querySelectorAll(".popup, .modal, .overlay").forEach(el => el.remove());
 
         document.querySelectorAll('[class*="cookie"], [id*="cookie"], [class*="consent"], [id*="consent"]').forEach(el => el.remove());
+        document.querySelectorAll('.fc-message-root, [class*="fc-message-root"]').forEach(el => el.remove());
+        document.querySelectorAll('google-anno-sa, .google-anno-sa, [class*="google-anno-sa"], .adsbygoogle, .adsbygoogle-noablate, [class*="adsbygoogle"]').forEach(el => el.remove());
 
         document.querySelectorAll("*").forEach(el => {
           const style = getComputedStyle(el);
@@ -63,6 +74,8 @@ export default function ReaderScreen() {
           document.querySelectorAll('a[target="_blank"]').forEach(el => {
             el.removeAttribute("target");
           });
+          document.querySelectorAll('.fc-message-root, [class*="fc-message-root"]').forEach(el => el.remove());
+          document.querySelectorAll('google-anno-sa, .google-anno-sa, [class*="google-anno-sa"], .adsbygoogle, .adsbygoogle-noablate, [class*="adsbygoogle"]').forEach(el => el.remove());
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
@@ -70,6 +83,11 @@ export default function ReaderScreen() {
       `}
         onNavigationStateChange={handleNavigationStateChange}
         onShouldStartLoadWithRequest={(request) => {
+          if (!url.startsWith("http")) {
+            openBrowserAsync(url);
+            return false;
+          }
+
           if (!url) return false;
           try {
             const hostname = new URL(request.url).hostname;

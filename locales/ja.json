@@ -3,6 +3,10 @@
   "feed": "フィード",
   "saved": "保存",
   "settings": "設定",
+  "app": "アプリ",
+
+  "installHowToTv": "Android TV のインストール方法 (Downloader)",
+  "installTvInstructions": "① Android TVで「Downloader by AFTVnews」アプリをインストールして起動\n② 入力欄にコード「{{code}}」を入力\n③ Download APK (Android / Android TV / Google TV)を選択\n④ ダウンロード完了後、画面の指示に従ってインストール\n※ 初回のみ設定で「提供元不明のアプリ」の許可が必要です",
 
   "add": "追加",
   "remove": "削除",
@@ -23,6 +27,10 @@
   "settingReaderModeDescription": "リーダーモードを有効にすると、記事の内容がより読みやすくなります。",
   "settingNotificationsName": "通知",
   "settingNotificationsDescription": "ランダムな記事を通知します。",
+  "settingCategoryCustomizationName": "カテゴリーカスタマイズ",
+  "settingCategoryCustomizationDescription": "カテゴリーの表示順や表示/非表示をカスタマイズできます。",
+  "categoryName": "カテゴリー名",
+  "keywords": "キーワード",
   "version": "バージョン",
 
   "updateAvailableTitle": "アップデート利用可能",
@@ -46,7 +54,7 @@
   "all": "すべて",
 
   "autoScroll": "自動スクロール",
-  "autoScrollHint": "カードは5秒ごとに自動でスクロールします。記事を長押しすると設定が開きます。",
+  "autoScrollHint": "カードは10秒ごとに自動でスクロールします。記事を長押しすると設定が開きます。",
 
   "noNewArticlesTitle": "新しい記事はありません",
   "noNewArticlesMessage": "新しい記事がないため、表示済みの記事を表示しています。",
