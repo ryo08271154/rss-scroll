@@ -43,10 +43,13 @@ export default function SavedScreen() {
           // 記事が取得できない場合
           try {
             const articleUrl = new URL(articleId);
-            const source = allArticles.find(
-              (article) =>
-                new URL(article.url).hostname === articleUrl.hostname,
-            )?.source;
+            const source = allArticles.find((article) => {
+              try {
+                return new URL(article.url).hostname === articleUrl.hostname;
+              } catch {
+                return false;
+              }
+            })?.source;
 
             articles.push({
               id: articleId,
