@@ -14,6 +14,8 @@ import {
   View,
 } from "react-native";
 
+const appIcon = require("@/assets/images/icon.png");
+
 export default function SavedScreen() {
   const { settings, setSettings, saveSettings, resetSettings } =
     useContext(SettingsContext);
@@ -38,8 +40,25 @@ export default function SavedScreen() {
         if (article?.id) {
           articles.push(article);
         } else {
-          // 記事が取得できない場合は削除
-          await toggleSavedArticleId(articleId);
+          // 記事が取得できない場合
+          try {
+            const articleUrl = new URL(articleId);
+            const source = allArticles.find(
+              (article) =>
+                new URL(article.url).hostname === articleUrl.hostname,
+            )?.source;
+
+            articles.push({
+              id: articleId,
+              title: articleId,
+              description: "",
+              imageUrl: appIcon,
+              url: articleId,
+              source: source,
+            });
+          } catch {
+            await toggleSavedArticleId(articleId);
+          }
         }
       }
       setSavedArticles(articles);
