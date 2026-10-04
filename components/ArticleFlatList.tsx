@@ -6,13 +6,13 @@ import { FlatList, RefreshControl, useWindowDimensions } from "react-native";
 
 type Props = {
   articles: Article[];
-  refreshing: boolean;
+  refreshing?: boolean;
   onRefresh?: () => void;
 };
 
 export default function ArticleFlatList({
   articles,
-  refreshing,
+  refreshing = false,
   onRefresh,
 }: Props) {
   const { width } = useWindowDimensions();

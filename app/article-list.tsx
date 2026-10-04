@@ -42,7 +42,7 @@ export default function ArticleListScreen() {
     <>
       <Stack.Screen options={{ title: keywords }} />
       <GestureDetector gesture={composed}>
-        <ArticleFlatList articles={articles} refreshing={false} />
+        <ArticleFlatList articles={articles} />
       </GestureDetector>
     </>
   );
