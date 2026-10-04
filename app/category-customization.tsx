@@ -8,6 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Button,
+  Modal,
   StyleSheet,
   Text,
   TextInput,
@@ -15,6 +16,7 @@ import {
   View,
 } from "react-native";
 import DraggableFlatList from "react-native-draggable-flatlist";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function CategoryCustomizationScreen() {
   const { t } = useTranslation();
@@ -51,56 +53,64 @@ export default function CategoryCustomizationScreen() {
         }}
       />
 
-      <BottomModal
+      <Modal
+        animationType="slide"
         visible={isModalVisible}
-        onClose={() => setIsModalVisible(false)}
-        contentStyle={{ width: "100%" }}
+        onRequestClose={() => setIsModalVisible(false)}
       >
-        <Text>{t("categoryName")}</Text>
-        <TextInput
-          style={styles.input}
-          placeholder={t("categoryName")}
-          value={newCategoryName}
-          onChangeText={(text) => {
-            setNewCategoryName(text);
+        <SafeAreaView
+          style={{
+            flex: 1,
+            gap: 16,
+            backgroundColor: c.background,
           }}
-        />
-        <Text>{t("keywords")}</Text>
-        <TextInput
-          style={[styles.input, { color: c.text }]}
-          placeholder={t("keywords")}
-          value={newCategoryKeywords}
-          onChangeText={(text) => {
-            setNewCategoryKeywords(text);
-          }}
-        />
-        <Button
-          title={t("add")}
-          onPress={() => {
-            if (!newCategoryName || !newCategoryKeywords) return;
-            if (categories.find((c) => c.name === newCategoryName)) return;
+        >
+          <Text style={{ color: c.title }}>{t("categoryName")}</Text>
+          <TextInput
+            style={[styles.input, { color: c.text }]}
+            placeholder={t("categoryName")}
+            value={newCategoryName}
+            onChangeText={(text) => {
+              setNewCategoryName(text);
+            }}
+          />
+          <Text style={{ color: c.title }}>{t("keywords")}</Text>
+          <TextInput
+            style={[styles.input, { color: c.text }]}
+            placeholder={t("keywords")}
+            value={newCategoryKeywords}
+            onChangeText={(text) => {
+              setNewCategoryKeywords(text);
+            }}
+          />
+          <Button
+            title={t("add")}
+            onPress={() => {
+              if (!newCategoryName || !newCategoryKeywords) return;
+              if (categories.find((c) => c.name === newCategoryName)) return;
 
-            setCategories([
-              ...categories,
-              {
-                name: newCategoryName,
-                keywords: newCategoryKeywords
-                  .split(/[\s,、]+/)
-                  .filter((k) => k !== ""),
-              },
-            ]);
-            setNewCategoryName("");
-            setNewCategoryKeywords("");
-            setIsModalVisible(false);
-          }}
-        />
-        <Button
-          title={t("cancel")}
-          onPress={() => {
-            setIsModalVisible(false);
-          }}
-        />
-      </BottomModal>
+              setCategories([
+                ...categories,
+                {
+                  name: newCategoryName,
+                  keywords: newCategoryKeywords
+                    .split(/[\s,、]+/)
+                    .filter((k) => k !== ""),
+                },
+              ]);
+              setNewCategoryName("");
+              setNewCategoryKeywords("");
+              setIsModalVisible(false);
+            }}
+          />
+          <Button
+            title={t("cancel")}
+            onPress={() => {
+              setIsModalVisible(false);
+            }}
+          />
+        </SafeAreaView>
+      </Modal>
 
       <DraggableFlatList
         data={categories}

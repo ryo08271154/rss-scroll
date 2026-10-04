@@ -102,6 +102,7 @@ export const SettingsProvider: FC<{ children: ReactNode }> = ({
   useEffect(() => {
     if (Platform.OS === "web") {
       settingItems.splice(1, 2);
+      settingItems.splice(2);
     } else if (Platform.isTV) {
       settingItems.splice(2);
     }

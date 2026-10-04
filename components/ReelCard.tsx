@@ -7,7 +7,12 @@ import { useRouter } from "expo-router";
 
 import { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Gesture, GestureDetector } from "react-native-gesture-handler";
+import {
+  Directions,
+  Gesture,
+  GestureDetector,
+} from "react-native-gesture-handler";
+
 const styles = StyleSheet.create({
   card: {
     justifyContent: "flex-end",
@@ -61,10 +66,25 @@ export default function ReelCard({
       setModalVisible(true);
     });
 
+  const swipeLeft = Gesture.Fling()
+    .runOnJS(true)
+    .direction(Directions.LEFT)
+    .onStart(() => {
+      router.push({
+        pathname: "/article-list",
+        params: {
+          keywords: article.source,
+        },
+      });
+    });
+
   // 優先順位
   const composed = Gesture.Simultaneous(
     nativeGesture,
-    Gesture.Exclusive(longPress, doubleTap, singleTap),
+    Gesture.Exclusive(
+      swipeLeft,
+      Gesture.Exclusive(longPress, doubleTap, singleTap),
+    ),
   );
 
   return (

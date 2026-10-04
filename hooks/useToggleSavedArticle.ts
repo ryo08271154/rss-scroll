@@ -15,6 +15,16 @@ export function useToggleSavedArticle() {
       text1: isSaved ? t("add") : t("remove"),
       text2: isSaved ? t("articleSaved") : t("articleRemoved"),
       position: "bottom",
+      visibilityTime: isSaved ? 1000 : 5000,
+      onPress: async () => {
+        if (isSaved) return;
+        await toggleSavedArticle(articleId);
+        Toast.show({
+          type: "success",
+          text1: isSaved ? t("articleRemoved") : t("articleSaved"),
+          position: "bottom",
+        });
+      },
     });
 
     return isSaved;

@@ -34,7 +34,7 @@ export default function ArticleCard({ article, onPress }: Props) {
     >
       <View style={styles.body}>
         <Image
-          source={{ uri: article.imageUrl }}
+          source={article.imageUrl}
           style={styles.image}
           cachePolicy="memory-disk"
         />

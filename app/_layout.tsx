@@ -101,6 +101,7 @@ function RootLayout() {
                     name="category-customization"
                     options={{ title: t("settingCategoryCustomizationName") }}
                   />
+                  <Stack.Screen name="article-list" />
                   <Stack.Screen name="licenses" />
                 </Stack>
                 <StatusBar style="auto" />

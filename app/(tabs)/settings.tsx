@@ -5,6 +5,7 @@ import {
   cancelAllNotifications,
   requestNotificationPermission,
 } from "@/lib/notifications";
+import { fetchRss } from "@/lib/rss";
 import { reloadAppAsync } from "expo";
 import * as Application from "expo-application";
 import Constants from "expo-constants";
@@ -14,6 +15,7 @@ import { openBrowserAsync } from "expo-web-browser";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
+  ActivityIndicator,
   Alert,
   AppState,
   Button,
@@ -32,6 +34,7 @@ export default function SettingsScreen() {
   const { settings, setSettings, saveSettings, resetSettings } =
     useContext(SettingsContext);
   const [newUrl, setNewUrl] = useState("");
+  const [isCheckingUrl, setIsCheckingUrl] = useState(false);
 
   const c = useContext(ThemeContext);
 
@@ -80,24 +83,58 @@ export default function SettingsScreen() {
     saveSettings(newSettings);
   }
 
-  function handleAddUrl(url: string) {
-    if (!url.trim()) {
+  async function handleAddUrl(url: string) {
+    const trimmedUrl = url.trim();
+    if (!trimmedUrl) {
       return;
     }
 
     // URLチェック
     try {
-      new URL(url.trim());
+      const parsedUrl = new URL(trimmedUrl);
+      if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+        Alert.alert(t("error"), t("invalidUrl"));
+        return;
+      }
     } catch (e) {
-      Alert.alert("Error", t("invalidUrl"));
+      Alert.alert(t("error"), t("invalidUrl"));
       return;
     }
 
     const currentItem = settings.find((item) => item.key === "rssFeedUrls");
     const urls = Array.isArray(currentItem?.value) ? currentItem.value : [];
-    const nextUrls = [...urls, url.trim()];
-    handleChange("rssFeedUrls", nextUrls);
-    setNewUrl("");
+    if (urls.includes(trimmedUrl)) {
+      return;
+    }
+
+    setIsCheckingUrl(true);
+    try {
+      const feed = await fetchRss(trimmedUrl);
+      const channel =
+        feed?.rss?.channel ?? feed?.feed ?? feed?.["rdf:RDF"] ?? feed?.channel;
+      const items: any[] = [
+        channel?.item ??
+          channel?.entry ??
+          feed?.["rdf:RDF"]?.item ??
+          feed?.entry ??
+          feed?.item,
+      ]
+        .flat()
+        .filter(Boolean);
+
+      if (items.length === 0) {
+        Alert.alert(t("error"), t("invalidUrl"));
+        return;
+      }
+
+      const nextUrls = [...urls, trimmedUrl];
+      handleChange("rssFeedUrls", nextUrls);
+      setNewUrl("");
+    } catch (error) {
+      Alert.alert(t("error"), t("invalidUrl"));
+    } finally {
+      setIsCheckingUrl(false);
+    }
   }
 
   function handleRemoveUrl(indexToRemove: number) {
@@ -199,8 +236,16 @@ export default function SettingsScreen() {
                   onChangeText={setNewUrl}
                   keyboardType="url"
                   autoCapitalize="none"
+                  editable={!isCheckingUrl}
                 />
-                <Button title={t("add")} onPress={() => handleAddUrl(newUrl)} />
+                {isCheckingUrl ? (
+                  <ActivityIndicator size="small" />
+                ) : (
+                  <Button
+                    title={t("add")}
+                    onPress={() => handleAddUrl(newUrl)}
+                  />
+                )}
                 {Array.isArray(setting.value) && setting.value.length > 0 ? (
                   <View style={styles.urlList}>
                     {setting.value.map((url: string, urlIndex: number) => (

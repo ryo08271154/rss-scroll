@@ -20,6 +20,9 @@ export async function fetchRss(url: string): Promise<any> {
   }
 
   const res = await fetch(fetchUrl);
+  if (res.status !== 200) {
+    throw new Error(`Failed to fetch RSS: ${res}`);
+  }
   console.log(`Fetching RSS: ${url} - Status: ${res.status}`);
   const xml = await res.text();
 
