@@ -3,7 +3,7 @@ import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { openBrowserAsync } from "expo-web-browser";
 import { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Alert, Text } from "react-native";
+import { Alert, Linking, Platform, Text } from "react-native";
 import { WebView, WebViewNavigation } from "react-native-webview";
 export default function ReaderScreen() {
   const router = useRouter();
@@ -20,7 +20,11 @@ export default function ReaderScreen() {
       return;
     }
     if (!settings.find((item) => item.key === "readerMode")?.value) {
-      openBrowserAsync(url);
+      if (Platform.OS === "web") {
+        Linking.openURL(url);
+      } else {
+        openBrowserAsync(url);
+      }
       router.back();
     }
 
