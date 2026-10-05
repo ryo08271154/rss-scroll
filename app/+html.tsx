@@ -5,6 +5,7 @@ import {
 import type { PropsWithChildren } from "react";
 
 const googleTagId = process.env.EXPO_PUBLIC_GOOGLE_TAG_ID;
+const appName = "RSS Scroll";
 const appDescription =
   "A sleek RSS reader that shows your feeds in card and list views.";
 const supportedLanguages = ["ja", "en", "de", "es", "fr", "it", "ko", "pt"];
@@ -19,7 +20,7 @@ const structuredData = {
   "@graph": [
     {
       "@type": "WebSite",
-      name: "RSS Scroll",
+      name: appName,
       inLanguage: supportedLanguages,
       isAccessibleForFree: true,
       description: appDescription,
@@ -27,7 +28,7 @@ const structuredData = {
     },
     {
       "@type": "WebApplication",
-      name: "RSS Scroll",
+      name: appName,
       creator,
       applicationCategory: "NewsApplication",
       applicationSubCategory: "RSS Reader",
@@ -66,8 +67,35 @@ export default function Root({ children }: PropsWithChildren) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <title>RSS Scroll</title>
+        <title>{appName}</title>
         <meta name="description" content={appDescription} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={appName} />
+        <meta property="og:description" content={appDescription} />
+        <meta property="og:image" content="/logo512.png" />
+        <meta property="og:site_name" content={appName} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={appName} />
+        <meta name="twitter:description" content={appDescription} />
+        <meta name="twitter:image" content="/logo512.png" />
+        <meta name="twitter:creator" content="@ryo08271154" />
+
+        {/* Theme & Icons */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content={appName} />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+
+        {/* Additional SEO */}
+        <meta name="application-name" content={appName} />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="robots" content="index, follow" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

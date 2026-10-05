@@ -2,6 +2,7 @@
   "name": "RSS Scroll",
   "short_name": "RSS Scroll",
   "description": "A sleek RSS reader that shows your feeds in card and list views.",
+  "categories": ["news", "productivity"],
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,15 +12,24 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": "/?utm_source=pwa",
   "scope": "/",
-  "display": "standalone"
+  "display": "standalone",
+  "orientation": "any",
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.ryo08271154.rssreels"
+    }
+  ]
 }
