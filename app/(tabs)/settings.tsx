@@ -28,6 +28,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import Toast from "react-native-toast-message";
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
@@ -93,17 +94,28 @@ export default function SettingsScreen() {
     try {
       const parsedUrl = new URL(trimmedUrl);
       if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
-        Alert.alert(t("error"), t("invalidUrl"));
+        Toast.show({
+          type: "error",
+          text1: t("error"),
+          text2: t("invalidUrl"),
+          position: "bottom",
+        });
         return;
       }
     } catch (e) {
-      Alert.alert(t("error"), t("invalidUrl"));
+      Toast.show({
+        type: "error",
+        text1: t("error"),
+        text2: t("invalidUrl"),
+        position: "bottom",
+      });
       return;
     }
 
     const currentItem = settings.find((item) => item.key === "rssFeedUrls");
     const urls = Array.isArray(currentItem?.value) ? currentItem.value : [];
     if (urls.includes(trimmedUrl)) {
+      setNewUrl("");
       return;
     }
 
@@ -123,7 +135,12 @@ export default function SettingsScreen() {
         .filter(Boolean);
 
       if (items.length === 0) {
-        Alert.alert(t("error"), t("invalidUrl"));
+        Toast.show({
+          type: "error",
+          text1: t("error"),
+          text2: t("invalidUrl"),
+          position: "bottom",
+        });
         return;
       }
 
@@ -131,7 +148,12 @@ export default function SettingsScreen() {
       handleChange("rssFeedUrls", nextUrls);
       setNewUrl("");
     } catch (error) {
-      Alert.alert(t("error"), t("invalidUrl"));
+      Toast.show({
+        type: "error",
+        text1: t("error"),
+        text2: t("invalidUrl"),
+        position: "bottom",
+      });
     } finally {
       setIsCheckingUrl(false);
     }
