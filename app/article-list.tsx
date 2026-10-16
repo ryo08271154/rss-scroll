@@ -36,7 +36,7 @@ export default function ArticleListScreen() {
       router.back();
     });
 
-  const composed = Gesture.Exclusive(swipeRight, nativeGesture);
+  const composed = Gesture.Simultaneous(nativeGesture, swipeRight);
 
   return (
     <>
