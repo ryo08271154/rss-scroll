@@ -113,6 +113,9 @@ function decodeNumericHtmlEntities(value: string): string {
     /&#(?:x([0-9a-f]+)|(\d+));?/gi,
     (entity, hex, decimal) => {
       const codePoint = Number.parseInt(hex ?? decimal, hex ? 16 : 10);
+      if (codePoint === 0) {
+        return "\uFFFD";
+      }
       if (
         codePoint > 0x10ffff ||
         (codePoint >= 0xd800 && codePoint <= 0xdfff)
