@@ -108,16 +108,39 @@ function extractImageUrl(item: any): string {
 
   return "";
 }
+function decodeNumericHtmlEntities(value: string): string {
+  return value.replace(
+    /&#(?:x([0-9a-f]+)|(\d+));?/gi,
+    (entity, hex, decimal) => {
+      const codePoint = Number.parseInt(hex ?? decimal, hex ? 16 : 10);
+      if (codePoint === 0) {
+        return "\uFFFD";
+      }
+      if (
+        codePoint > 0x10ffff ||
+        (codePoint >= 0xd800 && codePoint <= 0xdfff)
+      ) {
+        return entity;
+      }
+      return String.fromCodePoint(codePoint);
+    },
+  );
+}
 function extractText(value: any): string {
   if (!value) return "";
-  if (typeof value === "string") return value;
-  return value.__cdata ?? value["#text"] ?? String(value);
+  const text =
+    typeof value === "string"
+      ? value
+      : (value.__cdata ?? value["#text"] ?? String(value));
+  return decodeNumericHtmlEntities(String(text));
 }
 function extractDescription(item: any): string {
   const raw = item.description?.__cdata ?? item.description ?? "";
-  return String(raw)
-    .replace(/<[^>]*>/g, "")
-    .trim();
+  return decodeNumericHtmlEntities(
+    String(raw)
+      .replace(/<[^>]*>/g, "")
+      .trim(),
+  );
 }
 function shuffle<T>(array: T[]): T[] {
   const arr = [...array];

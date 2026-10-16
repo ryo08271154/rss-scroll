@@ -2,7 +2,7 @@
   "expo": {
     "name": "RSS Scroll",
     "slug": "rss-reels",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "rssscroll",
@@ -19,9 +19,9 @@
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/icon.png"
       },
-      "predictiveBackGestureEnabled": true,
+      "predictiveBackGestureEnabled": false,
       "package": "com.ryo08271154.rssreels",
-      "versionCode": 8,
+      "versionCode": 9,
       "blockedPermissions": ["android.permission.SYSTEM_ALERT_WINDOW"]
     },
     "web": {
