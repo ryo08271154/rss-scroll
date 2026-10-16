@@ -12,7 +12,6 @@ import "@/tasks/articleNotificationsTask";
 import { SettingItem } from "@/types/settings";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as BackgroundTask from "expo-background-task";
-import Constants from "expo-constants";
 import { Stack, usePathname } from "expo-router";
 import Head from "expo-router/head";
 import {
@@ -27,7 +26,7 @@ import { Platform, useColorScheme } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Toast from "react-native-toast-message";
 
-function RootLayout() {
+export default function RootLayout() {
   const colorScheme = useColorScheme();
   const { t } = useTranslation();
   const pathname = usePathname();
@@ -114,17 +113,3 @@ function RootLayout() {
     </>
   );
 }
-
-let AppRoot = RootLayout;
-
-if (Constants.executionEnvironment !== "storeClient") {
-  const { Observe, ObserveRoot } = require("expo-observe");
-  Observe.configure({
-    integrations: {
-      "expo-router": { filteredParams: ["url"] },
-    },
-  });
-  AppRoot = ObserveRoot.wrap(RootLayout);
-}
-
-export default AppRoot;
