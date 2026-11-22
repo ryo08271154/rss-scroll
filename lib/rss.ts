@@ -159,14 +159,21 @@ export async function getRssArticles(
   const articles: Article[] = [];
 
   for (const feed of feeds) {
-    const channel = feed?.rss?.channel ?? feed?.feed;
+    const rdf = feed?.["rdf:RDF"];
+    const channel =
+      feed?.rss?.channel ?? feed?.feed ?? rdf?.channel ?? feed?.channel;
     if (!channel) continue;
 
     const source = channel.title?.__cdata ?? channel.title ?? "Unknown Feed";
-    const items: any[] = [channel.item ?? channel.entry].flat().filter(Boolean);
+    const items: any[] = [
+      channel.item ?? channel.entry ?? rdf?.item ?? feed?.item ?? feed?.entry,
+    ]
+      .flat()
+      .filter(Boolean);
 
     for (const item of items) {
-      const url = item.link?.["@_href"] ?? item.link ?? "";
+      const url =
+        item.link?.["@_href"] ?? item.link ?? item["@_rdf:about"] ?? "";
 
       // カテゴリーでフィルタリング
       if (keywords) {
@@ -190,7 +197,11 @@ export async function getRssArticles(
           .join("\n"),
         imageUrl: extractImageUrl(item),
         url,
-        pubDate: item.pubDate ?? item.published ?? item.updated,
+        pubDate:
+          item.pubDate ??
+          item.published ??
+          item.updated ??
+          item["dc:date"],
         source,
       });
     }
