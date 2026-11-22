@@ -318,7 +318,27 @@ export default function SettingsScreen() {
           }}
         />
       )}
-      <Button title={t("resetSettings")} onPress={resetSettings} />
+      <Button
+        title={t("resetSettings")}
+        onPress={() => {
+          if (Platform.OS === "web") {
+            confirm(t("resetSettings")) && resetSettings();
+          } else {
+            Alert.alert(t("resetSettings"), "", [
+              {
+                text: t("cancel"),
+                style: "cancel",
+              },
+              {
+                text: t("ok"),
+                onPress: () => {
+                  resetSettings();
+                },
+              },
+            ]);
+          }
+        }}
+      />
       <Button
         title="GitHub"
         onPress={() =>
