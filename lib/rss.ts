@@ -102,7 +102,7 @@ function extractImageUrl(item: any): string {
   }
 
   // 3. description内のimgタグ
-  const description = item.description?.__cdata ?? item.description ?? "";
+  const description = extractText(item.description);
   const imgMatch = description.match(/<img[^>]+src="([^"]+)"/);
   if (imgMatch) return imgMatch[1];
 
@@ -159,14 +159,23 @@ export async function getRssArticles(
   const articles: Article[] = [];
 
   for (const feed of feeds) {
-    const channel = feed?.rss?.channel ?? feed?.feed;
+    const rdf = feed?.["rdf:RDF"];
+    const channel =
+      feed?.rss?.channel ?? feed?.feed ?? rdf?.channel ?? feed?.channel;
     if (!channel) continue;
 
     const source = channel.title?.__cdata ?? channel.title ?? "Unknown Feed";
-    const items: any[] = [channel.item ?? channel.entry].flat().filter(Boolean);
+    const items: any[] = [
+      channel.item ?? channel.entry ?? rdf?.item ?? feed?.item ?? feed?.entry,
+    ]
+      .flat()
+      .filter(Boolean);
 
     for (const item of items) {
-      const url = item.link?.["@_href"] ?? item.link ?? "";
+      const url =
+        extractText(item.link?.["@_href"]) ||
+        extractText(item.link) ||
+        extractText(item["@_rdf:about"]);
 
       // カテゴリーでフィルタリング
       if (keywords) {
@@ -190,7 +199,12 @@ export async function getRssArticles(
           .join("\n"),
         imageUrl: extractImageUrl(item),
         url,
-        pubDate: item.pubDate ?? item.published ?? item.updated,
+        pubDate: extractText(
+          item.pubDate ??
+            item.published ??
+            item.updated ??
+            item["dc:date"],
+        ),
         source,
       });
     }
