@@ -28,8 +28,6 @@ export default function CategoryCustomizationScreen() {
   const [newCategoryKeywords, setNewCategoryKeywords] = useState<string>("");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [removeTarget, setRemoveTarget] = useState<Category | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-
   useEffect(() => {
     AsyncStorage.getItem("categories").then((value) => {
       if (value) {
@@ -117,7 +115,7 @@ export default function CategoryCustomizationScreen() {
 
       <DraggableFlatList
         style={{ flex: 1 }}
-        {...(isDragging ? {} : { containerStyle: { flex: 1 } })}
+        containerStyle={{ flex: 1 }}
         data={categories}
         keyExtractor={(item: Category) => item.name}
         renderItem={({ item, drag, isActive }) => (
@@ -143,12 +141,8 @@ export default function CategoryCustomizationScreen() {
           </ScaleDecorator>
         )}
         activationDistance={1}
-        onDragBegin={() => {
-          setIsDragging(true);
-        }}
         onDragEnd={({ data }) => {
           setCategories(data);
-          setIsDragging(false);
         }}
       />
 

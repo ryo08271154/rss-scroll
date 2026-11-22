@@ -102,7 +102,7 @@ function extractImageUrl(item: any): string {
   }
 
   // 3. description内のimgタグ
-  const description = item.description?.__cdata ?? item.description ?? "";
+  const description = extractText(item.description);
   const imgMatch = description.match(/<img[^>]+src="([^"]+)"/);
   if (imgMatch) return imgMatch[1];
 
@@ -173,7 +173,9 @@ export async function getRssArticles(
 
     for (const item of items) {
       const url =
-        item.link?.["@_href"] ?? item.link ?? item["@_rdf:about"] ?? "";
+        extractText(item.link?.["@_href"]) ||
+        extractText(item.link) ||
+        extractText(item["@_rdf:about"]);
 
       // カテゴリーでフィルタリング
       if (keywords) {
@@ -197,11 +199,12 @@ export async function getRssArticles(
           .join("\n"),
         imageUrl: extractImageUrl(item),
         url,
-        pubDate:
+        pubDate: extractText(
           item.pubDate ??
-          item.published ??
-          item.updated ??
-          item["dc:date"],
+            item.published ??
+            item.updated ??
+            item["dc:date"],
+        ),
         source,
       });
     }
