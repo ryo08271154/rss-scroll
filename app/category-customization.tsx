@@ -15,7 +15,9 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import DraggableFlatList from "react-native-draggable-flatlist";
+import DraggableFlatList, {
+  ScaleDecorator,
+} from "react-native-draggable-flatlist";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function CategoryCustomizationScreen() {
@@ -26,6 +28,7 @@ export default function CategoryCustomizationScreen() {
   const [newCategoryKeywords, setNewCategoryKeywords] = useState<string>("");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [removeTarget, setRemoveTarget] = useState<Category | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem("categories").then((value) => {
@@ -113,28 +116,40 @@ export default function CategoryCustomizationScreen() {
       </Modal>
 
       <DraggableFlatList
+        style={{ flex: 1 }}
+        {...(isDragging ? {} : { containerStyle: { flex: 1 } })}
         data={categories}
         keyExtractor={(item: Category) => item.name}
-        renderItem={({ item, drag }) => (
-          <TouchableOpacity
-            style={[styles.item, { backgroundColor: c.background }]}
-            onPress={() => {
-              setRemoveTarget(item);
-            }}
-            onLongPress={() => {
-              drag();
-            }}
-          >
-            <View style={{ flex: 1 }}>
-              <Text style={[styles.itemText, { color: c.text }]}>
-                {item.name}
-              </Text>
-              <Text style={{ color: c.text }}>{item.keywords.join(", ")}</Text>
-            </View>
-            <Ionicons name="reorder-three-outline" size={28} color={c.text} />
-          </TouchableOpacity>
+        renderItem={({ item, drag, isActive }) => (
+          <ScaleDecorator>
+            <TouchableOpacity
+              style={[styles.item, { backgroundColor: c.background }]}
+              onPress={() => {
+                setRemoveTarget(item);
+              }}
+              onLongPress={drag}
+              disabled={isActive}
+            >
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.itemText, { color: c.text }]}>
+                  {item.name}
+                </Text>
+                <Text style={{ color: c.text }}>
+                  {item.keywords.join(", ")}
+                </Text>
+              </View>
+              <Ionicons name="reorder-three-outline" size={28} color={c.text} />
+            </TouchableOpacity>
+          </ScaleDecorator>
         )}
-        onDragEnd={({ data }) => setCategories(data)}
+        activationDistance={1}
+        onDragBegin={() => {
+          setIsDragging(true);
+        }}
+        onDragEnd={({ data }) => {
+          setCategories(data);
+          setIsDragging(false);
+        }}
       />
 
       <BottomModal
